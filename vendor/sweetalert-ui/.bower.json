@@ -1,0 +1,32 @@
+{
+  "name": "sweetalert-ui",
+  "version": "1.0.7",
+  "authors": [
+    "Sebastian Duran <sdurane@bancochile.cl>"
+  ],
+  "description": "Mensajeria que reemplaza los alert nativos",
+  "keywords": [
+    "design",
+    "front",
+    "css",
+    "html"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "_release": "1.0.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.7",
+    "commit": "f3ea12c91860ab5938181e513286ae0d780a806a"
+  },
+  "_source": "ssh://git@200.14.166.249:7999/ui/sweetalert-ui.git",
+  "_target": "1.0.7",
+  "_originalSource": "sweetalert-ui"
+}
