@@ -9,6 +9,7 @@
         'ngScrollbar',
         'highcharts-ng',
         'ui-rangeSlider',
-        'angular-ladda'
+        'angular-ladda',
+        'ui.carousel'
     ]);
 })();

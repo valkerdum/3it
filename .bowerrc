@@ -1,0 +1,7 @@
+{
+  "directory": "vendor",
+  "registry" : {
+    "search" : [ "https://bower.herokuapp.com", "https://registry.bower.io"],
+    "register" : "http://200.14.166.249:5678/"
+  }
+}

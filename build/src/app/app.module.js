@@ -6,7 +6,8 @@
             'templates-common',
             'templates-orion',
             'WebBancoChile.template',
-            'WebBancoChile.constants'
+            'WebBancoChile.constants',
+            'ui.carousel'
 
         ]);
 })();

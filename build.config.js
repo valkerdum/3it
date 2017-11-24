@@ -91,7 +91,8 @@ module.exports = {
             'vendor/highcharts-ng/dist/highcharts-ng.js',
             'vendor/sweetalert-ui/lib/sweet-alert.js',
             'vendor/orion-*/**/*.js',
-            'vendor/angular-off-click/dist/angular-off-click.js'
+            'vendor/angular-off-click/dist/angular-off-click.js',
+            'vendor/angular-ui-carousel/dist/ui-carousel.min.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',
@@ -99,7 +100,8 @@ module.exports = {
             'vendor/orion-ui-ionicons/css/ionicons.css',
             'vendor/angular-rangeslider/angular.rangeSlider.css',
             'vendor/ladda/dist/ladda-themeless.min.css',
-            'vendor/sweetalert-ui/lib/sweet-alert.css'
+            'vendor/sweetalert-ui/lib/sweet-alert.css',
+            'vendor/angular-ui-carousel/dist/ui-carousel.min.css'
         ],
         assets: [
             'vendor/bootstrap/fonts/glyphicons-halflings-regular.eot',
@@ -112,7 +114,11 @@ module.exports = {
             'vendor/orion-ui-ionicons/fonts/ionicons.eot',
             'vendor/orion-ui-ionicons/fonts/ionicons.svg',
             'vendor/orion-ui-ionicons/fonts/ionicons.ttf',
-            'vendor/orion-ui-ionicons/fonts/ionicons.woff'
+            'vendor/orion-ui-ionicons/fonts/ionicons.woff',
+            'vendor/angular-ui-carousel/dist/fonts/ui-carousel.svg',
+            'vendor/angular-ui-carousel/dist/fonts/ui-carousel.eot',
+            'vendor/angular-ui-carousel/dist/fonts/ui-carousel.ttf',
+            'vendor/angular-ui-carousel/dist/fonts/ui-carousel.woff'
         ]
     }
 };

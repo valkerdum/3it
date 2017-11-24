@@ -86,6 +86,24 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                    <i class=\"ion-arrow-rightœ\"></i>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "        </div>\n" +
-    "    </div>");
+    "            <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n" +
+    "                <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\">\n" +
+    "                    <carousel-item>\n" +
+    "                      <h2>{{ item.title }}</h2>\n" +
+    "                      <img src=\"{{ item.image }}\" alt=\"Image\" />\n" +
+    "                  </carousel-item>\n" +
+    "                  <carousel-prev>\n" +
+    "                      <button>Prev</button>\n" +
+    "                  </carousel-prev>\n" +
+    "\n" +
+    "                  <carousel-next>\n" +
+    "                      <button>next</button>\n" +
+    "                  </carousel-next>\n" +
+    "              </ui-carousel>\n" +
+    "          </div>\n" +
+    "      </div>\n" +
+    "  </div>\n" +
+    "\n" +
+    "\n" +
+    "");
 }]);

@@ -23,8 +23,7 @@
     "modernizr": "~2.8.3",
     "ng-scrollbar": "~0.0.7",
     "restangular": "~1.4.0",
-    "sweetalert-ui": "1.0.7",
-    "orion-directivas-tablas": "2.0.5-RC.4"
+    "angular-ui-carousel": "^0.1.10"
   },
   "resolutions": {
     "angular": "1.3.8",
