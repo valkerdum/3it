@@ -3,7 +3,8 @@ angular.module('templates-app', ['banco-chile/banco-controller/bancochile.tpl.ht
 angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("banco-chile/banco-controller/bancochile.tpl.html",
     "\n" +
-    "<!-- SECCION IMAGEN PRINCIPAL -->\n" +
+    "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
+    "\n" +
     "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
@@ -18,7 +19,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</section> <!-- END SECCION IMAGEN PRINCIPAL -->\n" +
+    "</section> <!-- END SECCION IMAGEN PRINCIPAL --> \n" +
     "\n" +
     "\n" +
     "<!-- SECCION MISION - VISION - VALORES  / SERVICIOS-->\n" +
@@ -46,8 +47,34 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "</div> <!-- END SECCION MISION - VISION - VALORES / SERVICIOS  -->\n" +
     "\n" +
     "<!-- SECCION INNOVACION -->\n" +
-    "<div class=\"container-fluid seccion-marcas innovacion\">\n" +
+    "<div class=\"container-fluid innovacion pr-30\">\n" +
+    "    <div class=\"row ml-0 mr-0\">\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n" +
+    "            <img src=\"./assets/images/3it-innovacion.svg\" width=\"215\" height=\"34\" class=\"logo-3it-seccion\">\n" +
     "\n" +
+    "            <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"inovaDetalle = !inovaDetalle\" ng-class=\"inovaDetalle ? 'fadeIn' : 'fadeInRight visible-hidden'\">\n" +
+    "                <img src=\"./assets/images/btn-inovacion-back.png\">\n" +
+    "            </a>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-12 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9 informacion text-right animated\" ng-class=\"inovaDetalle ? 'fadeOut visible-hidden' : 'fadeInRight' \">\n" +
+    "            <h2 class=\"uni-heavy\">\n" +
+    "                3IT Labs\n" +
+    "            </h2>\n" +
+    "            <p class=\"text-white uni-bold\">dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n" +
+    "            <button class=\"btn btn-it-base\" ng-click=\"inovaDetalle = !inovaDetalle\">VER MÁS</button>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 info-detalle animated text-center\" ng-class=\"inovaDetalle ? 'fadeInUp' : 'visible-hidden fadeInDown' \">\n" +
+    "             <h2 class=\"uni-heavy\">\n" +
+    "                3IT Labs\n" +
+    "            </h2>\n" +
+    "            <h4 class=\"text-white uni-bold\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n" +
+    "            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n" +
+    "            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n" +
+    "            consequat.</h4>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
     "</div>\n" +
     "<!-- END SECCION INNOVACION -->\n" +
     "\n" +
