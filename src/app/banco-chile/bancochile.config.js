@@ -5,7 +5,7 @@ function bancoChileConfig( $stateProvider ) {
     var urlBase = 'banco-chile/';
     $stateProvider.state('banco-chile', {
         parent: 'root',
-        url: '/banco-chile',
+        url: '/',
         views: {
             "main@": {
                 controller: 'bancoChileCtrl',
@@ -13,7 +13,7 @@ function bancoChileConfig( $stateProvider ) {
                 templateUrl: urlBase + 'banco-controller/bancochile.tpl.html'
             }
         },
-        data:{ pageTitle: 'Vista Nueva' }
+        data:{ pageTitle: 'Home' }
     });
 }
 
