@@ -35,17 +35,6 @@ angular.module( 'WebBancoChile.template')
 			}
 		];
 
-		$(window).scroll(function() {
-			var scroll = $(window).scrollTop();
-
-			if (scroll >= 50) {
-				$(".header-follow").addClass("showheader");
-				$(".header-follow").addClass("fadeInDown");
-			} else {
-				$(".header-follow").removeClass("showheader");
-				$(".header-follow").removeClass("fadeInDown");
-			}
-		});
 
 	}
 
