@@ -5,7 +5,7 @@ function bancoChileConfig( $stateProvider ) {
     var urlBase = 'banco-chile/';
     $stateProvider.state('banco-chile', {
         parent: 'root',
-        url: '/3it',
+        url: '/banco-chile',
         views: {
             "main@": {
                 controller: 'bancoChileCtrl',
