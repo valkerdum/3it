@@ -93,7 +93,8 @@ module.exports = {
             'vendor/orion-*/**/*.js',
             'vendor/angular-off-click/dist/angular-off-click.js',
             'vendor/angular-ui-carousel/dist/ui-carousel.min.js',
-            'vendor/ng-simple-parallax/src/ngParallax.min.js'
+            'vendor/ng-simple-parallax/src/ngParallax.min.js',
+            'vendor/aos/dist/aos.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',
@@ -102,7 +103,9 @@ module.exports = {
             'vendor/angular-rangeslider/angular.rangeSlider.css',
             'vendor/ladda/dist/ladda-themeless.min.css',
             'vendor/sweetalert-ui/lib/sweet-alert.css',
-            'vendor/angular-ui-carousel/dist/ui-carousel.min.css'
+            'vendor/angular-ui-carousel/dist/ui-carousel.min.css',
+            'vendor/animate.css/animate.min.css',
+            'vendor/aos/dist/aos.css'
         ],
         assets: [
             'vendor/bootstrap/fonts/glyphicons-halflings-regular.eot',
