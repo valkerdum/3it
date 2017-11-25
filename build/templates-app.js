@@ -4,7 +4,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
   $templateCache.put("banco-chile/banco-controller/bancochile.tpl.html",
     "\n" +
     "<!-- SECCION IMAGEN PRINCIPAL -->\n" +
-    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative\">\n" +
+    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
     "            <div class=\"linkedin\">\n" +
