@@ -2,15 +2,8 @@ angular.module('templates-app', ['banco-chile/banco-controller/bancochile.tpl.ht
 
 angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("banco-chile/banco-controller/bancochile.tpl.html",
-    "<header class=\"header-follow animated\">\n" +
-    "</header> \n" +
-    "<h1 class=\"fadeInDown\">lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n" +
-    "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n" +
-    "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n" +
-    "consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n" +
-    "cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n" +
-    "proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>\n" +
     "\n" +
+    "<!-- SECCION IMAGEN PRINCIPAL -->\n" +
     "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
@@ -25,8 +18,10 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</section>\n" +
+    "</section> <!-- END SECCION IMAGEN PRINCIPAL -->\n" +
     "\n" +
+    "\n" +
+    "<!-- SECCION MISION - VISION - VALORES  / SERVICIOS-->\n" +
     "<div class=\"container-fluid seccion-marcas\">\n" +
     "    <div class=\"row\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
@@ -48,7 +43,13 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "          </ui-carousel>\n" +
     "      </div>\n" +
     "    </div>\n" +
+    "</div> <!-- END SECCION MISION - VISION - VALORES / SERVICIOS  -->\n" +
+    "\n" +
+    "<!-- SECCION INNOVACION -->\n" +
+    "<div class=\"container-fluid seccion-marcas innovacion\">\n" +
+    "\n" +
     "</div>\n" +
+    "<!-- END SECCION INNOVACION -->\n" +
     "\n" +
     "<div class=\"container-fluid seccion-marcas\">\n" +
     "        <div class=\"row listado-marcas\">\n" +
