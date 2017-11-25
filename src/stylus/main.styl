@@ -2,187 +2,6 @@
 @import 'fonts'
 @import 'variables'
 
-.pt-0
-    padding-top 0 !important
-
-.pt-5
-    padding-top 5px !important
-
-.pt-10
-    padding-top 10px !important
-
-.pt-15
-    padding-top 15px !important
-
-.pt-20
-    padding-top 20px !important
-
-.pt-25
-    padding-top 25px !important
-
-.pt-30
-    padding-top 30px !important
-
-.pr-0
-    padding-right 0 !important
-
-.pr-5
-    padding-right 5px !important
-
-.pr-10
-    padding-right 10px !important
-
-.pr-15
-    padding-right 15px !important
-
-.pr-20
-    padding-right 20px !important
-
-.pr-25
-    padding-right 25px !important
-
-.pr-30
-    padding-right 30px !important
-
-.pb-0
-    padding-bottom 0 !important
-
-.pb-5
-    padding-bottom 5px !important
-
-.pb-10
-    padding-bottom 10px !important
-
-.pb-15
-    padding-bottom 15px !important
-
-.pb-20
-    padding-bottom 20px !important
-
-.pb-25
-    padding-bottom 25px !important
-
-.pb-30
-    padding-bottom 30px !important
-
-.pl-0
-    padding-left 0 !important
-
-.pl-5
-    padding-left 5px !important
-
-.pl-10
-    padding-left 10px !important
-
-.pl-15
-    padding-left 15px !important
-
-.pl-20
-    padding-left 20px !important
-
-.pl-25
-    padding-left 25px !important
-
-.pl-30
-    padding-left 30px !important
-
-.padd-none,
-.remove-padding
-    padding 0 !important
-
-.mt-0
-    margin-top 0 !important
-
-.mt-5
-    margin-top 5px !important
-
-.mt-10
-    margin-top 10px !important
-
-.mt-15
-    margin-top 15px !important
-
-.mt-20
-    margin-top 20px !important
-
-.mt-25
-    margin-top 25px !important
-
-.mt-30
-    margin-top 30px !important
-
-.mr-0
-    margin-right 0 !important
-
-.mr-5
-    margin-right 5px !important
-
-.mr-10
-    margin-right 10px !important
-
-.mr-15
-    margin-right 15px !important
-
-.mr-20
-    margin-right 20px !important
-
-.mr-25
-    margin-right 25px !important
-
-.mr-30
-    margin-right 30px !important
-
-.mb-0
-    margin-bottom 0 !important
-
-.mb-5
-    margin-bottom 5px !important
-
-.mb-10
-    margin-bottom 10px !important
-
-.mb-15
-    margin-bottom 15px !important
-
-.mb-20
-    margin-bottom 20px !important
-
-.mb-25
-    margin-bottom 25px !important
-
-.mb-30
-    margin-bottom 30px !important
-
-.ml-0
-    margin-left 0 !important
-
-.ml-5
-    margin-left 5px !important
-
-.ml-10
-    margin-left 10px !important
-
-.ml-15
-    margin-left 15px !important
-
-.ml-20
-    margin-left 20px !important
-
-.ml-25
-    margin-left 25px !important
-
-.ml-30
-    margin-left 30px !important
-.text-white
-    color white
-.v-100
-    height 100%
-
-
-.border-box
-    box-sizing: border-box
-    -moz-box-sizing: border-box
-
 body > span,
 body > h1
         float: left
@@ -191,6 +10,34 @@ body > h1
         padding: 0
         margin-bottom: 10px
 
+
+// PARALLAX
+.seccion-parallax
+    height 100vh!important
+    max-height 620px
+    background-repeat no-repeat!important
+    background-size cover!important
+    background-position top center!important
+    .container-fluid
+        height 100%     
+.overlap-home
+    background url('./images/super-back-home.png') no-repeat top center
+    background-size cover
+    height 100vh
+    max-height 620px
+    position absolute
+    top 0
+    left 0
+    width 100%
+    z-index 10
+.brand-image
+    max-width 260px
+.linkedin
+    position absolute
+    left 25px
+    bottom 25px
+
+// NAVBAR 
 menu
     display: block
     & > div
@@ -247,11 +94,188 @@ menu
                 -webkit-transform: translate3d(250px, 0, 0)
                 -o-transform: translate3d(250px, 0, 0)
                 -moz-transform: translate3d(250px, 0, 0)
+                
+
+.navbar-icon
+    background transparent
+    border 0
+    outline none
+    position absolute
+    top 15px
+    right 10px
+    z-index 60
+    span.ico
+        width 24px
+        height 18px
+        float right
+        margin-left 8px
+        position relative
+        -webkit-transform rotate(0deg)
+        -moz-transform rotate(0deg)
+        -o-transform rotate(0deg)
+        transform rotate(0deg)
+        transition(0.5s)
+        cursor pointer
+    i
+        background #00748b
+        display block
+        position absolute
+        height 3px
+        width 100%
+        border-radius 2px
+        opacity 1
+        right 0
+        -webkit-transform rotate(0deg)
+        -moz-transform rotate(0deg)
+        -o-transform rotate(0deg)
+        transform rotate(0deg)
+        transition(0.25s)
+        &:first-child 
+            top 2px
+        &:nth-child(2) 
+            left 3px
+            top 8px
+            width 18px
+        &:nth-child(3) 
+            top 14px
+    &.toggle-open
+        outline none
+        position fixed
+        i:nth-child(1)
+            top 8px
+            -webkit-transform rotate(135deg)
+            -moz-transform rotate(135deg)
+            -o-transform rotate(135deg)
+            transform rotate(135deg)
+        i:nth-child(2)            
+            top 20px
+        i:nth-child(3)
+            top 8px
+            -webkit-transform rotate(-135deg)
+            -moz-transform rotate(-135deg)
+            -o-transform rotate(-135deg)
+            transform rotate(-135deg)
+    &.toggle-close
+        i
+            background white
+            height 2px
+        
+
+.nav-bar
+    background $celeste
+    box-shadow 0px 0px 35px 0px rgba(0,0,0, 0.35)
+    height 100vh
+    position absolute
+    top 0
+    right 0
+    width 0
+    z-index -1
+    display flex
+    align-items center
+    justify-content center
+    -webkit-transition .5s all
+    transition .5s all
+    ul
+        margin 0
+        padding 0
+        height 65%
+        display grid
+        li
+            display none
+            list-style none
+            padding 0
+            margin 0
+    a
+        color transparent
+        font-family $uniHeavy
+        font-size 23px
+        position relative
+        text-transform uppercase
+        &:hover
+            text-decoration none
+        &:not(.underline-none):hover:before 
+              -webkit-transform scaleX(1)
+              transform scaleX(1)
+        &:before
+            content ""
+            position absolute
+            bottom 0
+            left 0
+            width 0
+            height 2px
+            width 100%
+            background-color $blanco
+            animation width 0.3s
+            -webkit-transform scaleX(0)
+            transform scaleX(0)
+            -webkit-transition all 0.2s
+            transition all 0.2s
+            border-radius 2px
+    &.open
+        width: 400px
+        z-index 50
+        -webkit-transition .5s all
+        transition .5s all
+        position fixed
+        a
+            color $blanco
+        ul
+            li
+                display block
+    &.close
+        -webkit-transition .5s all
+        transition .5s all
+        
+// MENU ACOSADOR
+.header-follow
+    opacity 0
+    height 50px
+    background #ffffff
+    position fixed
+    top -50px
+    left 0
+    width 100%
+    z-index 11
+    padding 5px 10px
+    .logo-3it-svg
+        width 52px
+        height 40px
+    .navbar-icon
+        i
+            background #00748b
+.header-follow
+    &.showheader
+        opacity 1
+        top 0
+        
+// END MENU ACOSADOR
+// END NAVBAR 
 
 
+// CONFIGURACION SLIDERS
+.slide    
+    img
+        width 100%
+.ui-carousel
+    margin 0
+.carousel-dots
+    bottom 50px
+    li
+        border-radius 2px
+        height 1px
+        width 45px
+        &.carousel-active
+            button
+                opacity 1
+        button
+            background $blanco
+            height 1px
+            opacity .5
+            padding 2px
+            width 100%
 
 
-
+// SECCION MARCAS
 .seccion-marcas
     position relative
     min-height 585px
@@ -398,206 +422,16 @@ menu
     .credichile
         background-color #2e63aa
 
-/////////////////////////////////////////////////
-.relative
-    position relative
-.vertical-center
-    position relative !important
-    top 50% !important
-    -webkit-transform translateY(-50%) !important
-    -moz-transform translateY(-50%) !important
-    -o-transform translateY(-50%) !important
-    -ms-transform translateY(-50%) !important
-    transform translateY(-50%) !important
-#nav-icon
-    background transparent
-    border 0
-    outline none
-    position absolute
-    top 15px
-    right 10px
-    z-index 60
-    span.ico
-        width 24px
-        height 18px
-        float right
-        margin-left 8px
-        position relative
-        -webkit-transform rotate(0deg)
-        -moz-transform rotate(0deg)
-        -o-transform rotate(0deg)
-        transform rotate(0deg)
-        transition(0.5s)
-        cursor pointer
-    i
-        background #00748b
-        display block
-        position absolute
-        height 3px
-        width 100%
-        border-radius 2px
-        opacity 1
-        right 0
-        -webkit-transform rotate(0deg)
-        -moz-transform rotate(0deg)
-        -o-transform rotate(0deg)
-        transform rotate(0deg)
-        transition(0.25s)
-        &:first-child 
-            top 2px
-        &:nth-child(2) 
-            left 3px
-            top 8px
-            width 18px
-        &:nth-child(3) 
-            top 14px
-    &.toggle-open
-        outline none
-        i:nth-child(1)
-            top 8px
-            -webkit-transform rotate(135deg)
-            -moz-transform rotate(135deg)
-            -o-transform rotate(135deg)
-            transform rotate(135deg)
-        i:nth-child(2)            
-            top 20px
-        i:nth-child(3)
-            top 8px
-            -webkit-transform rotate(-135deg)
-            -moz-transform rotate(-135deg)
-            -o-transform rotate(-135deg)
-            transform rotate(-135deg)
-    &.toggle-close
-        i
-            background white
-            height 2px
-        
+// END SECCION MARCAS
 
-.nav-bar
-    background $celeste
-    box-shadow 0px 0px 35px 0px rgba(0,0,0, 0.35)
-    height 100vh
-    position absolute
-    top 0
-    right 0
-    width 0
-    z-index -1
-    display flex
-    align-items center
-    justify-content center
-    -webkit-transition .5s all
-    transition .5s all
-    ul
-        margin 0
-        padding 0
-        height 65%
-        display grid
-        li
-            display none
-            list-style none
-            padding 0
-            margin 0
-    a
-        color transparent
-        font-family $uniHeavy
-        font-size 23px
-        position relative
-        text-transform uppercase
-        &:hover
-            text-decoration none
-        &:not(.underline-none):hover:before 
-              -webkit-transform scaleX(1)
-              transform scaleX(1)
-        &:before
-            content ""
-            position absolute
-            bottom 0
-            left 0
-            width 0
-            height 2px
-            width 100%
-            background-color $blanco
-            animation width 0.3s
-            -webkit-transform scaleX(0)
-            transform scaleX(0)
-            -webkit-transition all 0.2s
-            transition all 0.2s
-            border-radius 2px
-    &.open
-        width: 400px
-        z-index 50
-        -webkit-transition .5s all
-        transition .5s all
-        a
-            color $blanco
-        ul
-            li
-                display block
-    &.close
-        -webkit-transition .5s all
-        transition .5s all
 
-section
-    height 100vh!important
-    max-height 620px
-    background-repeat no-repeat!important
-    background-size cover!important
-    background-position top center!important
-    .container-fluid
-        height 100%     
-        
-.overlap-home
-    background url('./images/super-back-home.png') no-repeat top center
-    background-size cover
-    height 100vh
-    max-height 620px
-    position absolute
-    top 0
-    left 0
-    width 100%
-    z-index 10
-.brand-image
-    max-width 260px
-.linkedin
-    position absolute
-    left 25px
-    bottom 25px
-.slide    
-    img
-        width 100%
 
-.ui-carousel
-    margin 0
-.carousel-dots
-    bottom 50px
-    li
-        border-radius 2px
-        height 1px
-        width 45px
-        &.carousel-active
-            button
-                opacity 1
-        button
-            background $blanco
-            height 1px
-            opacity .5
-            padding 2px
-            width 100%
+
             
-.header-follow
-    opacity 0
-    height 50px
-    background #000
-    position fixed
-    top -50px
-    left 0
-    width 100%
-    z-index 11
+
+        
 
 
-.header-follow
-    &.showheader
-        opacity 1
-        top 0
+
 
 
