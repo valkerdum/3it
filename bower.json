@@ -1,5 +1,5 @@
 {
-  "name": "cl.bancochile.canales.web",
+  "name": "3it",
   "version": "0.0.1",
   "devDependencies": {
     "angular": "1.3.8",
@@ -23,7 +23,8 @@
     "modernizr": "~2.8.3",
     "ng-scrollbar": "~0.0.7",
     "restangular": "~1.4.0",
-    "angular-ui-carousel": "^0.1.10"
+    "angular-ui-carousel": "^0.1.10",
+    "ng-simple-parallax": "*"
   },
   "resolutions": {
     "angular": "1.3.8",

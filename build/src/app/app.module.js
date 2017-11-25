@@ -7,7 +7,8 @@
             'templates-orion',
             'WebBancoChile.template',
             'WebBancoChile.constants',
-            'ui.carousel'
+            'ui.carousel',
+            'ngParallax'
 
         ]);
 })();

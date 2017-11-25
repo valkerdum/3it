@@ -2,31 +2,38 @@
 angular.module( 'WebBancoChile.template')
 .controller('bancoChileCtrl',bancoChileCtrl);
 
-	function bancoChileCtrl(){
+	function bancoChileCtrl($scope){
 		var vm = this;
 
 		vm.etiqueta = 'Hola Mundo';
 
 		vm.slides = [
 	{
-		title: "1 title",
-		image: 'http://lorempixel.com/560/400/sports/1'
+		title: "",
+		image: './assets/images/dummy/vision.jpg'
 	},
 	{
-		title: "2 title",
-		image: 'http://lorempixel.com/560/400/sports/2'
+		title: "",
+		image: './assets/images/dummy/mision.jpg'
 	},
 	{
-		title: "3 title",
-		image: 'http://lorempixel.com/560/400/sports/3'
+		title: "",
+		image: './assets/images/dummy/valores.jpg'
+	}
+	];
+
+		vm.slidesService = [
+	{
+		title: "",
+		image: './assets/images/dummy/servicios-1.jpg'
 	},
 	{
-		title: "4 title",
-		image: 'http://lorempixel.com/560/400/sports/4'
+		title: "",
+		image: './assets/images/dummy/servicios-2.jpg'
 	},
 	{
-		title: "5 title",
-		image: 'http://lorempixel.com/560/400/sports/5'
+		title: "",
+		image: './assets/images/dummy/servicios-3.jpg'
 	}
 	];
 

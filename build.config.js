@@ -92,7 +92,8 @@ module.exports = {
             'vendor/sweetalert-ui/lib/sweet-alert.js',
             'vendor/orion-*/**/*.js',
             'vendor/angular-off-click/dist/angular-off-click.js',
-            'vendor/angular-ui-carousel/dist/ui-carousel.min.js'
+            'vendor/angular-ui-carousel/dist/ui-carousel.min.js',
+            'vendor/ng-simple-parallax/src/ngParallax.min.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',

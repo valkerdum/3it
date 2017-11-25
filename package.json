@@ -1,6 +1,6 @@
 {
-  "author": "Canales Web Banco de Chile",
-  "name": "cl.bancochile.canales.web",
+  "author": "3IT Quality of Service",
+  "name": "it",
   "version": "0.0.1",
   "devDependencies": {
     "browser-sync": "0.6.2",

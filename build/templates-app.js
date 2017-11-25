@@ -2,6 +2,47 @@ angular.module('templates-app', ['banco-chile/banco-controller/bancochile.tpl.ht
 
 angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("banco-chile/banco-controller/bancochile.tpl.html",
+    "\n" +
+    "\n" +
+    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative\">\n" +
+    "    <div class=\"overlap-home\">\n" +
+    "        <div class=\"container-fluid relative\">\n" +
+    "            <div class=\"linkedin\">\n" +
+    "                <a href=\"#\" title=\"Encuéntranos en Linkedin\">\n" +
+    "                    <i class=\"fa fa-2x fa-linkedin text-white\"></i>\n" +
+    "                    <fa name=\"cog\" animation=\"spin\"></fa>\n" +
+    "                </a>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-sm-offset-8 col-sm-4 v-100\">\n" +
+    "                <img src=\"./assets/images/3it-logo.svg\" alt=\"3IT Quality of Service\" class=\"brand-image vertical-center\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</section>\n" +
+    "\n" +
+    "<div class=\"container-fluid seccion-marcas\">\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
+    "            <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\">\n" +
+    "                <carousel-item>\n" +
+    "                  <!-- <h2>{{ item.title }}</h2> -->\n" +
+    "                  <img src=\"{{ item.image }}\" alt=\"Image\" />\n" +
+    "              </carousel-item>                  \n" +
+    "          </ui-carousel>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
+    "            <ui-carousel slides=\"banco.slidesService\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\">\n" +
+    "                <carousel-item>\n" +
+    "                  <!-- <h2>{{ item.title }}</h2> -->\n" +
+    "                  <img src=\"{{ item.image }}\" alt=\"Image\" />\n" +
+    "              </carousel-item>                  \n" +
+    "          </ui-carousel>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
     "<div class=\"container-fluid seccion-marcas\">\n" +
     "        <div class=\"row listado-marcas\">\n" +
     "            <div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch\">\n" +
@@ -80,28 +121,6 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                </a>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <div class=\"row detalle-marcas\">\n" +
-    "            <div class=\"header-acciones credichile\">\n" +
-    "                <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right\">\n" +
-    "                    <i class=\"ion-arrow-rightœ\"></i>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n" +
-    "                <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\">\n" +
-    "                    <carousel-item>\n" +
-    "                      <h2>{{ item.title }}</h2>\n" +
-    "                      <img src=\"{{ item.image }}\" alt=\"Image\" />\n" +
-    "                  </carousel-item>\n" +
-    "                  <carousel-prev>\n" +
-    "                      <button>Prev</button>\n" +
-    "                  </carousel-prev>\n" +
-    "\n" +
-    "                  <carousel-next>\n" +
-    "                      <button>next</button>\n" +
-    "                  </carousel-next>\n" +
-    "              </ui-carousel>\n" +
-    "          </div>\n" +
-    "      </div>\n" +
     "  </div>\n" +
     "\n" +
     "\n" +
