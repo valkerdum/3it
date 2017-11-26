@@ -1,6 +1,5 @@
 
 <!-- SECCION IMAGEN PRINCIPAL  -->
-
 <section ng-parallax pattern="'./assets/images/home-background.jpg'" class="relative seccion-parallax">
     <div class="overlap-home">
         <div class="container-fluid relative">
@@ -44,14 +43,15 @@
                         </svg>
                     </span>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
-            <ui-carousel slides="banco.slides" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1" initial-slide="1" dots="true" arrows="false" on-before-change="banco.onCarouselBeforeChange()">
+            <ui-carousel slides="banco.slides" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1" initial-slide="0" dots="true" arrows="false" on-before-change="banco.onCarouselBeforeChange()">
                 <carousel-item>
-                  <img src="{{item.image}}" alt="Image" / class="img-mvv">
+                  <img src="{{item.image}}" alt="Image" class="img-mvv">
 
                   <div class="description-container">
                       <h4 class="uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}">{{item.textoCabecera}}</h4>
                       <h2 class="uni-heavy">{{item.titulo}}</h2>
                       <h4 class="uni-bold">{{item.textoBajada}}</h4>
+                      <img src="{{item.listado}}">
                   </div>
               </carousel-item>                  
           </ui-carousel>
@@ -108,7 +108,6 @@
                 </carousel-item>      
           </ui-carousel>
       </div>
-
     </div>
 </div> <!-- END SECCION SERVICIOS  -->
 
@@ -164,8 +163,10 @@
 </div>
 <!-- END SECCION INNOVACION -->
 
-<div class="container-fluid seccion-marcas">
-        <div class="row listado-marcas">
+<!-- SECCION MARCAS -->
+
+<div class="container-fluid seccion-marcas servicios">
+       <!--  <div class="row listado-marcas">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch">
                 <a href="">
                     <div class="bg1"></div>
@@ -241,7 +242,34 @@
                     </i>
                 </a>
             </div>
-        </div>
-  </div>
+        </div> -->
 
+
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
+             <ui-carousel slides="banco.slidesMarcas" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="false" arrows="true" >
+                     <carousel-prev>
+                        <button><i class="ion-ios-arrow-left"></i>left</button>
+                    </carousel-prev>
+                    <carousel-next>
+                        <button><i class="ion-ios-arrow-right"></i>right</button>
+                    </carousel-next>  
+                   
+                <carousel-item>
+                    <div class="description-container animated {{item.tituloClase}}">
+                      <img src="{{item.logoEmpresa}}">
+                      <p class="uni-heavy">{{item.proyecto}}</p>
+                      <p class="uni-heavy">{{item.year}}</p>
+                      <p>{{item.descripcion}}</p>
+                  </div>
+                    <img src="{{item.fondoMarca}}" alt="Image" class="img-slider" style="border-top-color:{{item.colorMarca}};">
+
+                </carousel-item> 
+          </ui-carousel>
+      </div>
+    </div>
+
+
+  </div>
+<!-- END SECCION MARCAS -->
 

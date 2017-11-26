@@ -4,7 +4,6 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
   $templateCache.put("banco-chile/banco-controller/bancochile.tpl.html",
     "\n" +
     "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
-    "\n" +
     "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
@@ -48,14 +47,15 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                        </svg>\n" +
     "                    </span>\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
-    "            <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\" initial-slide=\"1\" dots=\"true\" arrows=\"false\" on-before-change=\"banco.onCarouselBeforeChange()\">\n" +
+    "            <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\" initial-slide=\"0\" dots=\"true\" arrows=\"false\" on-before-change=\"banco.onCarouselBeforeChange()\">\n" +
     "                <carousel-item>\n" +
-    "                  <img src=\"{{item.image}}\" alt=\"Image\" / class=\"img-mvv\">\n" +
+    "                  <img src=\"{{item.image}}\" alt=\"Image\" class=\"img-mvv\">\n" +
     "\n" +
     "                  <div class=\"description-container\">\n" +
     "                      <h4 class=\"uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}\">{{item.textoCabecera}}</h4>\n" +
     "                      <h2 class=\"uni-heavy\">{{item.titulo}}</h2>\n" +
     "                      <h4 class=\"uni-bold\">{{item.textoBajada}}</h4>\n" +
+    "                      <img src=\"{{item.listado}}\">\n" +
     "                  </div>\n" +
     "              </carousel-item>                  \n" +
     "          </ui-carousel>\n" +
@@ -112,7 +112,6 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                </carousel-item>      \n" +
     "          </ui-carousel>\n" +
     "      </div>\n" +
-    "\n" +
     "    </div>\n" +
     "</div> <!-- END SECCION SERVICIOS  -->\n" +
     "\n" +
@@ -168,8 +167,10 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "</div>\n" +
     "<!-- END SECCION INNOVACION -->\n" +
     "\n" +
-    "<div class=\"container-fluid seccion-marcas\">\n" +
-    "        <div class=\"row listado-marcas\">\n" +
+    "<!-- SECCION MARCAS -->\n" +
+    "\n" +
+    "<div class=\"container-fluid seccion-marcas servicios\">\n" +
+    "       <!--  <div class=\"row listado-marcas\">\n" +
     "            <div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
@@ -245,9 +246,36 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
-    "        </div>\n" +
-    "  </div>\n" +
+    "        </div> -->\n" +
     "\n" +
+    "\n" +
+    "        <div class=\"row\">\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
+    "             <ui-carousel slides=\"banco.slidesMarcas\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"false\" arrows=\"true\" >\n" +
+    "                     <carousel-prev>\n" +
+    "                        <button><i class=\"ion-ios-arrow-left\"></i>left</button>\n" +
+    "                    </carousel-prev>\n" +
+    "                    <carousel-next>\n" +
+    "                        <button><i class=\"ion-ios-arrow-right\"></i>right</button>\n" +
+    "                    </carousel-next>  \n" +
+    "                   \n" +
+    "                <carousel-item>\n" +
+    "                    <div class=\"description-container animated {{item.tituloClase}}\">\n" +
+    "                      <img src=\"{{item.logoEmpresa}}\">\n" +
+    "                      <p class=\"uni-heavy\">{{item.proyecto}}</p>\n" +
+    "                      <p class=\"uni-heavy\">{{item.year}}</p>\n" +
+    "                      <p>{{item.descripcion}}</p>\n" +
+    "                  </div>\n" +
+    "                    <img src=\"{{item.fondoMarca}}\" alt=\"Image\" class=\"img-slider\" style=\"border-top-color:{{item.colorMarca}};\">\n" +
+    "\n" +
+    "                </carousel-item> \n" +
+    "          </ui-carousel>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "\n" +
+    "  </div>\n" +
+    "<!-- END SECCION MARCAS -->\n" +
     "\n" +
     "");
 }]);
