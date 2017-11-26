@@ -15,7 +15,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                </a>\n" +
     "            </div>\n" +
     "            <div class=\"col-sm-offset-8 col-sm-4 v-100\">\n" +
-    "                <img src=\"./assets/images/3it-logo.svg\" alt=\"3IT Quality of Service\" class=\"brand-image vertical-center\">\n" +
+    "                <img src=\"./assets/images/3it-logo.svg\" alt=\"3IT Quality of Service\" class=\"brand-image vertical-center animated fadeIn\">\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -48,12 +48,12 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                        </svg>\n" +
     "                    </span>\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
-    "            <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\">\n" +
+    "            <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\" initial-slide=\"1\" dots=\"true\" arrows=\"false\" on-before-change=\"banco.onCarouselBeforeChange()\">\n" +
     "                <carousel-item>\n" +
     "                  <img src=\"{{item.image}}\" alt=\"Image\" / class=\"img-mvv\">\n" +
     "\n" +
     "                  <div class=\"description-container\">\n" +
-    "                      <h4 class=\"uni-regular-italic\">{{item.textoCabecera}}</h4>\n" +
+    "                      <h4 class=\"uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}\">{{item.textoCabecera}}</h4>\n" +
     "                      <h2 class=\"uni-heavy\">{{item.titulo}}</h2>\n" +
     "                      <h4 class=\"uni-bold\">{{item.textoBajada}}</h4>\n" +
     "                  </div>\n" +

@@ -11,7 +11,7 @@
                 </a>
             </div>
             <div class="col-sm-offset-8 col-sm-4 v-100">
-                <img src="./assets/images/3it-logo.svg" alt="3IT Quality of Service" class="brand-image vertical-center">
+                <img src="./assets/images/3it-logo.svg" alt="3IT Quality of Service" class="brand-image vertical-center animated fadeIn">
             </div>
         </div>
     </div>
@@ -44,12 +44,12 @@
                         </svg>
                     </span>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
-            <ui-carousel slides="banco.slides" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false">
+            <ui-carousel slides="banco.slides" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1" initial-slide="1" dots="true" arrows="false" on-before-change="banco.onCarouselBeforeChange()">
                 <carousel-item>
                   <img src="{{item.image}}" alt="Image" / class="img-mvv">
 
                   <div class="description-container">
-                      <h4 class="uni-regular-italic">{{item.textoCabecera}}</h4>
+                      <h4 class="uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}">{{item.textoCabecera}}</h4>
                       <h2 class="uni-heavy">{{item.titulo}}</h2>
                       <h4 class="uni-bold">{{item.textoBajada}}</h4>
                   </div>

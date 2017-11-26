@@ -5,20 +5,24 @@ angular.module( 'WebBancoChile.template')
 	function bancoChileCtrl($scope){
 		var vm = this; 
 
+		function onCarouselBeforeChange(){
+			$console.log('test');
+		}
+
 		vm.slides = [
-			{
+			{	textoCabeceraAnimacion:'fadeIn',
 				textoCabecera:"¿Quiénes somos?",
 				titulo:"Valores",
 				textoBajada:"Adoptamos el uso de nuevas tecnologías como base a través de equipos de trabajo inte grales que aporten valor y compromiso a nuestros clientes, asegurando así la continuidad operativa de sus negocios.",
 				image: './assets/images/mvv/valores.png'
 			},
-			{
+			{	textoCabeceraAnimacion:'fadeIn',
 				textoCabecera:"¿Quiénes somos?",
 				titulo:"Visión",
 				textoBajada:"Ser reconocidos como una empresa innovadora, que entrega soluciones tecnológicas y que forma equipos de trabajo integrales, que están constantemente recibiendo retroalimentación e implementando nuevas metodologías en el desarrollo de los servicios. Con el fin de convertirnos en aliados estratégicos de nuestros clientes.",
 				image: './assets/images/mvv/vision.png'
 			},
-			{
+			{	textoCabeceraAnimacion:'fadeIn',
 				textoCabecera:"¿Quiénes somos?",
 				titulo:"Misión",
 				textoBajada:"Adoptamos el uso de nuevas tecnologías como base e inspiración para entregar soluciones innovadoras, a través de equipos de trabajo inte grales que aporten valor y compromiso a nuestros clientes, asegurando así la continuidad operativa de sus negocios.",
