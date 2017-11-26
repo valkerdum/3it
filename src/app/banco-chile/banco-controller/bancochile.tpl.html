@@ -18,7 +18,7 @@
 </section> <!-- END SECCION IMAGEN PRINCIPAL --> 
 
 
-<!-- SECCION MISION - VISION - VALORES  / SERVICIOS-->
+<!-- SECCION MISION - VISION - VALORES -->
 <div class="container-fluid seccion-marcas">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
@@ -30,17 +30,37 @@
           </ui-carousel>
       </div>
     </div>
+</div> <!-- END SECCION MISION - VISION - VALORES  -->
+
+
+<!-- SECCION SERVICIOS-->
+<div class="container-fluid servicios">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
-            <ui-carousel slides="banco.slidesService" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false">
+         <img src="./assets/images/3it-servicios.svg" width="215" height="34" class="logo-3it-servicios">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
+            <ui-carousel slides="banco.slidesService" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false" >
                 <carousel-item>
-                  <!-- <h2>{{ item.title }}</h2> -->
-                  <img src="{{ item.image }}" alt="Image" />
-              </carousel-item>                  
+                    <div class="description-container {{item.tituloClase}}">
+                      <h2 class="uni-heavy" style="color:{{item.tituloColor}};">
+                        {{item.titulo}}
+                        </h2>
+                        <p class="text-white uni-bold">{{item.descripcion}}</p>
+                        <button class="btn btn-it-base clear" style="border-color:{{item.tituloColor}};" ng-click="agiles = !agiles" >{{item.botonText}}</button>
+                    </div>  
+                  <img src="{{ item.image }}" alt="Image" class="img-slider" style="border-top-color:{{item.tituloColor}};" />
+
+                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown' ">
+                     <h2 class="uni-heavy">
+                        {{item.tituloDetalle}}
+                    </h2>
+                    <h4 class="text-white uni-bold">{{item.textoDetalle}}</h4>
+                </div>
+                </carousel-item>      
           </ui-carousel>
       </div>
+
     </div>
-</div> <!-- END SECCION MISION - VISION - VALORES / SERVICIOS  -->
+</div> <!-- END SECCION SERVICIOS  -->
 
 <!-- SECCION INNOVACION -->
 <div class="container-fluid innovacion pr-30">
@@ -53,7 +73,7 @@
             </a>
         </div>
 
-        <div class="col-xs-12 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9 informacion text-right animated" ng-class="inovaDetalle ? 'fadeOut visible-hidden' : 'fadeInRight' ">
+        <div class="col-xs-12 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9 informacion text-right animated" ng-class="inovaDetalle ? 'fadeOut visible-hidden' : 'fadeInRight'">
             <h2 class="uni-heavy">
                 3IT Labs
             </h2>

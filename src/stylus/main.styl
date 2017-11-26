@@ -274,7 +274,47 @@ menu
             opacity .5
             padding 2px
             width 100%
-            
+            &:before
+                content ''    
+.ui-icon-dot
+    &:before
+        content ''
+        
+
+// SECCION SERVICIOS      
+.servicios
+    height 540px
+    position relative
+    overflow hidden
+    .img-slider
+        border-top-style solid
+        border-top-width 28px
+    .logo-3it-servicios
+        position absolute
+        z-index 20
+        left 50px
+        top  50px
+    .description-container
+        position absolute
+        top 200px
+        margin-left 65px
+        h2
+            font-size 55px
+        p
+            max-width 330px
+    .info-detalle
+        opacity 0
+        background-color rgba(25, 62, 29, 0.8)
+        position absolute
+        left 0 
+        bottom 0
+        width 100%
+        padding-bottom 15px
+        z-index 10
+    .carousel-item
+        position relative
+
+    
 
 // SECCION INNOVACION 
 
@@ -286,7 +326,7 @@ menu
     position relative
     overflow hidden
     .logo-3it-seccion
-        margin-top 50px
+        margin-top 70px
         width 215px
         height 34px
     .btn-volver-detalle
@@ -298,13 +338,8 @@ menu
         font-size 55px
     .informacion
         margin-top 110px
-        
         .btn-it-base
             border-color #3f9b49
-            &:hover
-            &:focus
-                color #3f9b49!important
-                background #fff !important
     .info-detalle
         opacity 0
         background-color rgba(25, 62, 29, 0.8)
@@ -314,8 +349,6 @@ menu
         width 100%
         padding-bottom 15px
         z-index 10
-        
-
 
 // SECCION MARCAS
 .seccion-marcas

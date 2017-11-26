@@ -3,7 +3,7 @@ angular.module( 'WebBancoChile.template')
 .controller('bancoChileCtrl',bancoChileCtrl);
 
 	function bancoChileCtrl($scope){
-		var vm = this;
+		var vm = this; 
 
 		vm.slides = [
 			{
@@ -21,17 +21,33 @@ angular.module( 'WebBancoChile.template')
 		];
 
 		vm.slidesService = [
-			{
-				title: "",
-				image: './assets/images/dummy/servicios-1.jpg'
+			{	tituloClase: 'agile',
+				titulo: "Mundo Ágil",
+				tituloColor: '#ebc124',
+				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				botonText: "VER MÁS",
+				image: './assets/images/servicios-agile.jpg',
+				tituloDetalle: "Mundo Ágil",
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 			},
-			{
-				title: "",
-				image: './assets/images/dummy/servicios-2.jpg'
+			{	
+				tituloClase: 'proyectos',
+				titulo: "Proyectos",
+				tituloColor: '#c53f41',
+				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				botonText: "VER MÁS",
+				image: './assets/images/servicios-proyectos.jpg',
+				tituloDetalle: "Proyectos",
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 			},
-			{
-				title: "",
-				image: './assets/images/dummy/servicios-3.jpg'
+			{	tituloClase: 'outsourcing',
+				titulo: "Outsourcing",
+				tituloColor: '#3099ca',
+				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				botonText: "VER MÁS",
+				image: './assets/images/servicios-outsourcing.jpg',
+				tituloDetalle: "Outsourcing",
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 			}
 		];
 

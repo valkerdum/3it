@@ -22,7 +22,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "</section> <!-- END SECCION IMAGEN PRINCIPAL --> \n" +
     "\n" +
     "\n" +
-    "<!-- SECCION MISION - VISION - VALORES  / SERVICIOS-->\n" +
+    "<!-- SECCION MISION - VISION - VALORES -->\n" +
     "<div class=\"container-fluid seccion-marcas\">\n" +
     "    <div class=\"row\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
@@ -34,17 +34,37 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "          </ui-carousel>\n" +
     "      </div>\n" +
     "    </div>\n" +
+    "</div> <!-- END SECCION MISION - VISION - VALORES  -->\n" +
+    "\n" +
+    "\n" +
+    "<!-- SECCION SERVICIOS-->\n" +
+    "<div class=\"container-fluid servicios\">\n" +
     "    <div class=\"row\">\n" +
-    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
-    "            <ui-carousel slides=\"banco.slidesService\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\">\n" +
+    "         <img src=\"./assets/images/3it-servicios.svg\" width=\"215\" height=\"34\" class=\"logo-3it-servicios\">\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
+    "            <ui-carousel slides=\"banco.slidesService\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\" >\n" +
     "                <carousel-item>\n" +
-    "                  <!-- <h2>{{ item.title }}</h2> -->\n" +
-    "                  <img src=\"{{ item.image }}\" alt=\"Image\" />\n" +
-    "              </carousel-item>                  \n" +
+    "                    <div class=\"description-container {{item.tituloClase}}\">\n" +
+    "                      <h2 class=\"uni-heavy\" style=\"color:{{item.tituloColor}};\">\n" +
+    "                        {{item.titulo}}\n" +
+    "                        </h2>\n" +
+    "                        <p class=\"text-white uni-bold\">{{item.descripcion}}</p>\n" +
+    "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{item.tituloColor}};\" ng-click=\"agiles = !agiles\" >{{item.botonText}}</button>\n" +
+    "                    </div>  \n" +
+    "                  <img src=\"{{ item.image }}\" alt=\"Image\" class=\"img-slider\" style=\"border-top-color:{{item.tituloColor}};\" />\n" +
+    "\n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown' \">\n" +
+    "                     <h2 class=\"uni-heavy\">\n" +
+    "                        {{item.tituloDetalle}}\n" +
+    "                    </h2>\n" +
+    "                    <h4 class=\"text-white uni-bold\">{{item.textoDetalle}}</h4>\n" +
+    "                </div>\n" +
+    "                </carousel-item>      \n" +
     "          </ui-carousel>\n" +
     "      </div>\n" +
+    "\n" +
     "    </div>\n" +
-    "</div> <!-- END SECCION MISION - VISION - VALORES / SERVICIOS  -->\n" +
+    "</div> <!-- END SECCION SERVICIOS  -->\n" +
     "\n" +
     "<!-- SECCION INNOVACION -->\n" +
     "<div class=\"container-fluid innovacion pr-30\">\n" +
@@ -57,7 +77,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "            </a>\n" +
     "        </div>\n" +
     "\n" +
-    "        <div class=\"col-xs-12 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9 informacion text-right animated\" ng-class=\"inovaDetalle ? 'fadeOut visible-hidden' : 'fadeInRight' \">\n" +
+    "        <div class=\"col-xs-12 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9 informacion text-right animated\" ng-class=\"inovaDetalle ? 'fadeOut visible-hidden' : 'fadeInRight'\">\n" +
     "            <h2 class=\"uni-heavy\">\n" +
     "                3IT Labs\n" +
     "            </h2>\n" +
