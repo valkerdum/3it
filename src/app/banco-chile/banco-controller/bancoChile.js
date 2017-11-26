@@ -28,7 +28,7 @@ angular.module( 'WebBancoChile.template')
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-agile.jpg',
 				tituloDetalle: "Mundo Ágil",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 			},
 			{	
 				tituloClase: 'proyectos',
@@ -38,7 +38,7 @@ angular.module( 'WebBancoChile.template')
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-proyectos.jpg',
 				tituloDetalle: "Proyectos",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 			},
 			{	tituloClase: 'outsourcing',
 				titulo: "Outsourcing",
@@ -47,7 +47,7 @@ angular.module( 'WebBancoChile.template')
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-outsourcing.jpg',
 				tituloDetalle: "Outsourcing",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 			}
 		];
 

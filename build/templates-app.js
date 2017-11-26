@@ -44,7 +44,30 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
     "            <ui-carousel slides=\"banco.slidesService\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\" >\n" +
     "                <carousel-item>\n" +
-    "                    <div class=\"description-container {{item.tituloClase}}\">\n" +
+    "                    <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"agiles = !agiles\" ng-class=\"agiles ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
+    "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
+    "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
+    "                        <path id=\"icono-grande\" class=\"st0\" d=\"M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z\n" +
+    "                             M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1\n" +
+    "                            c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17\n" +
+    "                            c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z\"/>\n" +
+    "                        <g id=\"circulos-izquierda\" style=\"fill:{{item.tituloColor}};\">\n" +
+    "                            <circle class=\"st0\" cx=\"45.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"35.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"25.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"15.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"5.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                        <g id=\"circulos-abajo\" style=\"fill:{{item.tituloColor}};\">\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"47.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"57.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"67.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"77.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"87.1\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                        </svg>\n" +
+    "                    </a>\n" +
+    "                    <div class=\"description-container animated {{item.tituloClase}}\" ng-class=\"agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'\">\n" +
     "                      <h2 class=\"uni-heavy\" style=\"color:{{item.tituloColor}};\">\n" +
     "                        {{item.titulo}}\n" +
     "                        </h2>\n" +
@@ -53,7 +76,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                    </div>  \n" +
     "                  <img src=\"{{ item.image }}\" alt=\"Image\" class=\"img-slider\" style=\"border-top-color:{{item.tituloColor}};\" />\n" +
     "\n" +
-    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown' \">\n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color:{{item.tituloColor}};\">\n" +
     "                     <h2 class=\"uni-heavy\">\n" +
     "                        {{item.tituloDetalle}}\n" +
     "                    </h2>\n" +
@@ -72,8 +95,28 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n" +
     "            <img src=\"./assets/images/3it-innovacion.svg\" width=\"215\" height=\"34\" class=\"logo-3it-seccion\">\n" +
     "\n" +
-    "            <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"inovaDetalle = !inovaDetalle\" ng-class=\"inovaDetalle ? 'fadeIn' : 'fadeInRight visible-hidden'\">\n" +
-    "                <img src=\"./assets/images/btn-inovacion-back.png\">\n" +
+    "            <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"inovaDetalle = !inovaDetalle\" ng-class=\"inovaDetalle ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
+    "                <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
+    "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
+    "                        <path id=\"icono-grande\" class=\"st0\" d=\"M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z\n" +
+    "                             M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1\n" +
+    "                            c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17\n" +
+    "                            c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z\"/>\n" +
+    "                        <g id=\"circulos-izquierda\">\n" +
+    "                            <circle class=\"st0\" cx=\"45.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"35.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"25.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"15.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"5.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                        <g id=\"circulos-abajo\">\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"47.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"57.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"67.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"77.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"87.1\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                </svg>\n" +
     "            </a>\n" +
     "        </div>\n" +
     "\n" +

@@ -9,8 +9,22 @@ body > h1
         margin: 0
         padding: 0
         margin-bottom: 10px
-
-
+        
+// BOTON VOLVER
+.btn-volver-detalle
+    width 119px
+    height 116px
+    #svg-volver
+        #icono-grande
+        #circulos-izquierda
+        #circulos-abajo
+            fill #fff
+            transition all 0.25s ease-in-out
+    &:hover
+        #svg-volver
+            #circulos-izquierda
+            #circulos-abajo
+                fill #fff!important
 // PARALLAX
 .seccion-parallax
     height 100vh!important
@@ -309,10 +323,22 @@ menu
         left 0 
         bottom 0
         width 100%
-        padding-bottom 15px
+        padding-bottom 25px
         z-index 10
+        h2
+            font-size 55px
+        h4
+            max-width 850px
+            margin 0 auto
     .carousel-item
         position relative
+    .btn-volver-detalle
+        position absolute
+        top 50px
+        right 50px
+        z-index 20
+        
+            
 
     
 
@@ -349,6 +375,15 @@ menu
         width 100%
         padding-bottom 15px
         z-index 10
+        h4
+            max-width 850px
+            margin 0 auto
+        
+    .btn-volver-detalle
+        #svg-volver
+            #circulos-izquierda
+            #circulos-abajo
+                fill #3f9b49
 
 // SECCION MARCAS
 .seccion-marcas
