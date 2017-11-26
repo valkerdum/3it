@@ -268,9 +268,7 @@ menu
 
 
 // CONFIGURACION SLIDERS
-.slide    
-    img
-        width 100%
+
 .ui-carousel
     margin 0
 .carousel-dots
@@ -295,11 +293,61 @@ menu
         content ''
         
 
+// SECCION MISION VISION VALORES
+
+.mvv
+    height 540px
+    position relative
+    overflow hidden
+    background-image url(images/bg-mvv.jpg)
+    background-size cover
+    .btn-volver-detalle
+        position absolute
+        top 50px
+        right 50px
+        z-index 20
+    .carousel-item
+        position relative
+    .btn-volver-detalle
+        #svg-volver
+            #circulos-izquierda
+            #circulos-abajo
+                fill #00748b
+            #icono-grande
+                fill #74c9d2
+        &:hover
+            #svg-volver
+                #circulos-izquierda
+                #circulos-abajo
+                    fill #00748b !important
+                #icono-grande
+                    fill #74c9d2 !important
+    .img-mvv
+        margin-left 50px
+    .description-container
+        position absolute
+        top 145px
+        right 10%
+        width 495px
+        z-index 10
+        .uni-regular-italic
+            font-size 25px
+            color #00748b
+        .uni-heavy
+            font-size 80px
+            color #74c9d2
+        .uni-bold
+            color #00748b
+            font-size 20px
+        
 // SECCION SERVICIOS      
 .servicios
     height 540px
     position relative
     overflow hidden
+    .slide    
+        img
+            width 100%
     .img-slider
         border-top-style solid
         border-top-width 28px

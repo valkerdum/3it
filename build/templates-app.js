@@ -23,13 +23,40 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "\n" +
     "\n" +
     "<!-- SECCION MISION - VISION - VALORES -->\n" +
-    "<div class=\"container-fluid seccion-marcas\">\n" +
+    "<div class=\"container-fluid mvv\">\n" +
     "    <div class=\"row\">\n" +
+    "        <span class=\"btn-volver-detalle\">\n" +
+    "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
+    "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
+    "                        <g id=\"circulos-izquierda\">\n" +
+    "                            <circle class=\"st0\" cx=\"45.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"35.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"25.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"15.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"5.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                        <g id=\"circulos-abajo\">\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"47.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"57.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"67.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"77.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"87.1\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                        <path id=\"icono-grande\" class=\"st1\" d=\"M72,2.3c-10.4,0-18.7,8.3-18.7,18.6S61.6,39.5,72,39.5s18.7-8.3,18.7-18.6S82.3,2.3,72,2.3z\n" +
+    "                             M78,21.1l-11.7,7.2c-0.2,0.1-0.4-0.1-0.3-0.3l4.5-7c0-0.1,0-0.1,0-0.2l-4.5-7c-0.1-0.2,0.1-0.4,0.3-0.3L78,20.7\n" +
+    "                            C78.1,20.8,78.1,21,78,21.1z\"/>\n" +
+    "                        </svg>\n" +
+    "                    </span>\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
     "            <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\">\n" +
     "                <carousel-item>\n" +
-    "                  <!-- <h2>{{ item.title }}</h2> -->\n" +
-    "                  <img src=\"{{ item.image }}\" alt=\"Image\" />\n" +
+    "                  <img src=\"{{item.image}}\" alt=\"Image\" / class=\"img-mvv\">\n" +
+    "\n" +
+    "                  <div class=\"description-container\">\n" +
+    "                      <h4 class=\"uni-regular-italic\">{{item.textoCabecera}}</h4>\n" +
+    "                      <h2 class=\"uni-heavy\">{{item.titulo}}</h2>\n" +
+    "                      <h4 class=\"uni-bold\">{{item.textoBajada}}</h4>\n" +
+    "                  </div>\n" +
     "              </carousel-item>                  \n" +
     "          </ui-carousel>\n" +
     "      </div>\n" +
