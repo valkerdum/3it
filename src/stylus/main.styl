@@ -444,7 +444,85 @@ menu
 // SECCION MARCAS
 .seccion-marcas
     position relative
-    min-height 585px
+    height 535px
+
+    .img-slider
+        border-top-style solid
+        border-top-width 35px
+        width 100%
+        height 535px
+    .description-container
+        position absolute
+        top 100px
+        margin-left 50px
+        width 589px
+        .logo-empresa
+            width auto
+            height 50px
+        p
+            color #fff
+    .carousel-item
+        position relative
+    .carousel-prev
+    .carousel-next
+    .boton-cerrar
+        position absolute
+        top 4px
+        button 
+            background none
+            border 0
+            &:focus
+                outline none
+        i
+            font-size 20px
+            color #fff
+    .carousel-prev
+        right 70px
+        i
+            &:before
+                content '\f124'
+                display inline-block
+                font-family "Ionicons"
+                speak none
+                font-style normal
+                font-weight normal
+                font-variant normal
+                text-transform none
+                text-rendering auto
+                line-height 1
+                -webkit-font-smoothing antialiased
+    .carousel-next
+        right 40px
+        i
+            &:before
+                content '\f125'
+                display inline-block
+                font-family "Ionicons"
+                speak none
+                font-style normal
+                font-weight normal
+                font-variant normal
+                text-transform none
+                text-rendering auto
+                line-height 1
+                -webkit-font-smoothing antialiased
+    .boton-cerrar
+        right 10px    
+        .close
+            opacity 1
+            font-size 25px
+            &:before
+                content '\f2d7'
+                display inline-block
+                font-family "Ionicons"
+                speak none
+                font-style normal
+                font-weight normal
+                font-variant normal
+                text-transform none
+                text-rendering auto
+                line-height 1
+                -webkit-font-smoothing antialiased
     
 
 .listado-marcas

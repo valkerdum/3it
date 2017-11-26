@@ -165,8 +165,8 @@
 
 <!-- SECCION MARCAS -->
 
-<div class="container-fluid seccion-marcas servicios">
-       <!--  <div class="row listado-marcas">
+<div class="container-fluid seccion-marcas">
+        <div class="row listado-marcas">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch">
                 <a href="">
                     <div class="bg1"></div>
@@ -242,30 +242,32 @@
                     </i>
                 </a>
             </div>
-        </div> -->
-
+        </div>
 
         <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
              <ui-carousel slides="banco.slidesMarcas" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="false" arrows="true" >
                      <carousel-prev>
-                        <button><i class="ion-ios-arrow-left"></i>left</button>
+                        <button class="btn-carousel-controller-left"><i class="ion-chevron-left"></i></button>
                     </carousel-prev>
                     <carousel-next>
-                        <button><i class="ion-ios-arrow-right"></i>right</button>
+                        <button class="btn-carousel-controller-right"><i class="ion-chevron-right"></i></button>
                     </carousel-next>  
                    
                 <carousel-item>
                     <div class="description-container animated {{item.tituloClase}}">
-                      <img src="{{item.logoEmpresa}}">
-                      <p class="uni-heavy">{{item.proyecto}}</p>
-                      <p class="uni-heavy">{{item.year}}</p>
-                      <p>{{item.descripcion}}</p>
+                      <img src="{{item.logoEmpresa}}" class="logo-empresa">
+                      <p class="uni-regular ng-binding mt-20 mb-0"><span class="uni-bold">Proyecto:</span> {{item.proyecto}}</p>
+                      <p class="uni-regular mb-20"><span class="uni-bold">Año:</span> {{item.year}}</p>
+                      <p><span class="uni-bold">Descripción:</span> {{item.descripcion}}</p>
                   </div>
                     <img src="{{item.fondoMarca}}" alt="Image" class="img-slider" style="border-top-color:{{item.colorMarca}};">
 
-                </carousel-item> 
+                </carousel-item>
           </ui-carousel>
+          <span class="boton-cerrar">
+              <button><i class="close"></i></button>
+          </span>
       </div>
     </div>
 
