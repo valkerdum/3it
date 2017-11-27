@@ -6,11 +6,11 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
     "<section class=\"view-contacto flex\" id=\"contacto\">\n" +
     "	<div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 backgorund-logo\">\n" +
     "		<ul class=\"steps\">\n" +
-    "			<li class=\"\">1</li>\n" +
-    "			<li class=\"inactivo\">2</li>\n" +
-    "			<li class=\"inactivo\">3</li>\n" +
+    "			<li ng-class='{activo: !step1, inactivo: step1}'>1</li>\n" +
+    "			<li ng-class='{activo: step2 || step3}'>2</li>\n" +
+    "			<li ng-class='{activo: step4}'>3</li>\n" +
     "		</ul> \n" +
-    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-hide=\"step2\">\n" +
+    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-hide=\"step2||step3\">\n" +
     "			<h2 class=\"text-center\">¡Únete a nuestro equipo!</h2>\n" +
     "			<form action=\"\">\n" +
     "				<div class=\"row\">\n" +
@@ -26,7 +26,7 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
     "					</ul>\n" +
     "				</div>\n" +
     "				<div class=\"col-xs-12 text-center mt-100\">\n" +
-    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>				\n" +
+    "					<button type=\"button\" ng-click=\"step1=true;step2=true\" class=\"btn-transparent\">SIGUIENTE</button>	\n" +
     "				</div>\n" +
     "			</form>\n" +
     "		</div>\n" +
@@ -52,7 +52,7 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
     "					<label>Teléfono</label>\n" +
     "				</div>\n" +
     "				<div class=\"col-xs-12 text-center\">\n" +
-    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "					<button type=\"button\" ng-click=\"step1=true;step2=false;step3=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "					<br>\n" +
     "					<button class=\"btn-reload mt-20\" ng-click=\"step2=false\">\n" +
     "						<i class=\"custom-icon icon-reload\"></i>\n" +
@@ -60,6 +60,46 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
     "				</div>\n" +
     "			</form>\n" +
     "		</div>\n" +
+    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-show=\"step3\">\n" +
+    "			<h2 class=\"mb-40 text-center\">¿Qué tienes en mente?</h2>\n" +
+    "			<form class=\"form-text\">\n" +
+    "				<div class=\"group\">\n" +
+    "					<span class=\"plain-select\">      \n" +
+    "						<ui-select ng-required=\"true\" ng-model=\"vm.selectItem.selected\">\n" +
+    "							<ui-select-match placeholder=\"Seleccione...\">\n" +
+    "							{{$select.selected.name}}\n" +
+    "							</ui-select-match>\n" +
+    "								<ui-select-choices repeat=\"item in vm.selectItem\">\n" +
+    "							{{ item.name }}\n" +
+    "							</ui-select-choices>\n" +
+    "						</ui-select>\n" +
+    "					</span>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>Selecciona un servicio</label>\n" +
+    "				</div>			  \n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>Descríbenos tu proyecto</label>\n" +
+    "				</div>\n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>Deseas adjuntar un documento</label>\n" +
+    "				</div>\n" +
+    "				<div class=\"col-xs-12 text-center\">\n" +
+    "					<button type=\"button\" ng-click=\"step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "					<br>\n" +
+    "					<button class=\"btn-reload mt-20\" ng-click=\"step2=false\">\n" +
+    "						<i class=\"custom-icon icon-reload\"></i>\n" +
+    "					</button>\n" +
+    "				</div>\n" +
+    "			</form>\n" +
+    "		</div>\n" +
+    "\n" +
     "	</div>\n" +
     "	<div class=\"col-lg-4 padd-none\">\n" +
     "		<div class=\"mapa\">\n" +

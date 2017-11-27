@@ -2,11 +2,11 @@
 <section class="view-contacto flex" id="contacto">
 	<div ng-parallax pattern="'./assets/images/contacto-background.jpg'" class="col-lg-8 backgorund-logo">
 		<ul class="steps">
-			<li class="">1</li>
-			<li class="inactivo">2</li>
-			<li class="inactivo">3</li>
+			<li ng-class='{activo: !step1, inactivo: step1}'>1</li>
+			<li ng-class='{activo: step2 || step3}'>2</li>
+			<li ng-class='{activo: step4}'>3</li>
 		</ul> 
-		<div class="col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12" ng-hide="step2">
+		<div class="col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12" ng-hide="step2||step3">
 			<h2 class="text-center">¡Únete a nuestro equipo!</h2>
 			<form action="">
 				<div class="row">
@@ -22,7 +22,7 @@
 					</ul>
 				</div>
 				<div class="col-xs-12 text-center mt-100">
-					<button type="button" ng-click="step2=true" class="btn-transparent">SIGUIENTE</button>				
+					<button type="button" ng-click="step1=true;step2=true" class="btn-transparent">SIGUIENTE</button>	
 				</div>
 			</form>
 		</div>
@@ -48,7 +48,7 @@
 					<label>Teléfono</label>
 				</div>
 				<div class="col-xs-12 text-center">
-					<button type="button" ng-click="step2=true" class="btn-transparent">SIGUIENTE</button>
+					<button type="button" ng-click="step1=true;step2=false;step3=true" class="btn-transparent">SIGUIENTE</button>
 					<br>
 					<button class="btn-reload mt-20" ng-click="step2=false">
 						<i class="custom-icon icon-reload"></i>
@@ -56,6 +56,46 @@
 				</div>
 			</form>
 		</div>
+		<div class="col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12" ng-show="step3">
+			<h2 class="mb-40 text-center">¿Qué tienes en mente?</h2>
+			<form class="form-text">
+				<div class="group">
+					<span class="plain-select">      
+						<ui-select ng-required="true" ng-model="vm.selectItem.selected">
+							<ui-select-match placeholder="Seleccione...">
+							{{$select.selected.name}}
+							</ui-select-match>
+								<ui-select-choices repeat="item in vm.selectItem">
+							{{ item.name }}
+							</ui-select-choices>
+						</ui-select>
+					</span>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label>Selecciona un servicio</label>
+				</div>			  
+				<div class="group">      
+					<input type="text" required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label>Descríbenos tu proyecto</label>
+				</div>
+				<div class="group">      
+					<input type="text" required>
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label>Deseas adjuntar un documento</label>
+				</div>
+				<div class="col-xs-12 text-center">
+					<button type="button" ng-click="step4=true" class="btn-transparent">SIGUIENTE</button>
+					<br>
+					<button class="btn-reload mt-20" ng-click="step2=false">
+						<i class="custom-icon icon-reload"></i>
+					</button>
+				</div>
+			</form>
+		</div>
+
 	</div>
 	<div class="col-lg-4 padd-none">
 		<div class="mapa">
