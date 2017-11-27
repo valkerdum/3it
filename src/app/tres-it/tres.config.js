@@ -20,8 +20,8 @@ function bancoChileConfig( $stateProvider ) {
             url: '/contacto',
             views: {
                 "main@": {
-                    controller: 'bancoChileCtrl',
-                    controllerAs: 'banco',
+                    controller: 'tresChileCtrl',
+                    controllerAs: 'tres',
                     templateUrl: urlBase + 'banco-controller/contacto.tpl.html'
                 }
             },

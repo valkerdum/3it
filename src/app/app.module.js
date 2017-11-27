@@ -10,6 +10,7 @@
             'ui.carousel',
             'ngParallax',
             'slickCarousel',
-            'ngMap'
+            'ngMap',
+            'duScroll'
         ]);
 })();

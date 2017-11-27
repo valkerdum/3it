@@ -96,7 +96,8 @@ module.exports = {
             'vendor/ng-simple-parallax/src/ngParallax.min.js',
             'vendor/angular-slick-carousel/dist/angular-slick.js',
             'vendor/angular-slick-carousel/src/slick.js',
-            'vendor/ngmap/build/scripts/ng-map.min.js'
+            'vendor/ngmap/build/scripts/ng-map.min.js',
+            'vendor/angular-scroll/angular-scroll.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',

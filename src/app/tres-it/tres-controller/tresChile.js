@@ -7,6 +7,31 @@ angular.module( 'Tres.template')
 	function tresCtrl($scope,  NgMap){
 		var vm = this;
 
+		var inicio = angular.element(document.getElementById('inicio'));
+		vm.toinicio = function() {
+			$document.scrollToElementAnimated(inicio);
+		};
+
+		var quienes = angular.element(document.getElementById('quienes'));
+		vm.toquienes = function() {
+			$document.scrollToElementAnimated(quienes);
+		};
+
+		var goservicios = angular.element(document.getElementById('goservicios'));
+		vm.togoservicios = function() {
+			$document.scrollToElementAnimated(goservicios);
+		};
+
+		var innovacion = angular.element(document.getElementById('innovacion'));
+		vm.toinnovacion = function() {
+			$document.scrollToElementAnimated(innovacion);
+		};
+
+		var contacto = angular.element(document.getElementById('contacto'));
+		vm.tocontacto = function() {
+			$document.scrollToElementAnimated(contacto);
+		};
+
 		vm.slides = [
 			{	textoCabeceraAnimacion:'fadeIn',
 				textoCabecera:"¿Quiénes somos?",
