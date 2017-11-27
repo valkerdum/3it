@@ -165,8 +165,8 @@
 <!-- SECCION MARCAS -->
 
 <div class="container-fluid seccion-marcas" id="clientes">
-        <div class="row listado-marcas">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch">
+        <div class="row listado-marcas animated" ng-class="marcaDetalle ? 'fadeOut listado-inactivo' : 'listado-activo'">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch" ng-click="marcaDetalle = !marcaDetalle">
                 <a href="">
                     <div class="bg1"></div>
                     <div class="bg2"></div>
@@ -243,7 +243,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row animated" ng-class="marcaDetalle ? 'fadeIn' : 'container-detalle-marca'">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
              <ui-carousel slides="tres.slidesMarcas" on-init="tres.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="false" arrows="true" >
                      <carousel-prev>
@@ -264,7 +264,7 @@
 
                 </carousel-item>
           </ui-carousel>
-          <span class="boton-cerrar">
+          <span class="boton-cerrar" ng-click="marcaDetalle = !marcaDetalle" >
               <button><i class="close"></i></button>
           </span>
       </div>

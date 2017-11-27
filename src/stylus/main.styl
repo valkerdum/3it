@@ -451,13 +451,12 @@ menu
 // SECCION MARCAS
 .seccion-marcas
     position relative
-    height 535px
-
+    background-color #000
     .img-slider
         border-top-style solid
         border-top-width 35px
         width 100%
-        height 535px
+        height 580px
     .description-container
         position absolute
         top 100px
@@ -530,9 +529,27 @@ menu
                 text-rendering auto
                 line-height 1
                 -webkit-font-smoothing antialiased
+    .container-detalle-marca
+        opacity 0
+        visibility hidden 
+        height 0
+        overflow hidden
+    .container-detalle-marca-visible
+        opacity 1
+        visibility visible
+        height 580px
     
 
 .listado-marcas
+    &.listado-inactivo
+        opacity 0
+        visibility hidden
+        overflow hidden
+        height 0
+    &.listado-activo
+        opacity 1
+        visibility visible
+        height 580px
     .marca
         padding-left 0!important
         padding-right 0!important
