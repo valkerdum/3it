@@ -1,4 +1,4 @@
-angular.module('templates-app', ['banco-chile/banco-controller/bancochile.tpl.html']);
+angular.module('templates-app', ['banco-chile/banco-controller/bancochile.tpl.html', 'banco-chile/banco-controller/contacto.tpl.html']);
 
 angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("banco-chile/banco-controller/bancochile.tpl.html",
@@ -169,8 +169,8 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "\n" +
     "<!-- SECCION MARCAS -->\n" +
     "\n" +
-    "<div class=\"container-fluid seccion-marcas servicios\">\n" +
-    "       <!--  <div class=\"row listado-marcas\">\n" +
+    "<div class=\"container-fluid seccion-marcas\">\n" +
+    "        <div class=\"row listado-marcas\">\n" +
     "            <div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
@@ -246,30 +246,32 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
-    "        </div> -->\n" +
-    "\n" +
+    "        </div>\n" +
     "\n" +
     "        <div class=\"row\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
     "             <ui-carousel slides=\"banco.slidesMarcas\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"false\" arrows=\"true\" >\n" +
     "                     <carousel-prev>\n" +
-    "                        <button><i class=\"ion-ios-arrow-left\"></i>left</button>\n" +
+    "                        <button class=\"btn-carousel-controller-left\"><i class=\"ion-chevron-left\"></i></button>\n" +
     "                    </carousel-prev>\n" +
     "                    <carousel-next>\n" +
-    "                        <button><i class=\"ion-ios-arrow-right\"></i>right</button>\n" +
+    "                        <button class=\"btn-carousel-controller-right\"><i class=\"ion-chevron-right\"></i></button>\n" +
     "                    </carousel-next>  \n" +
     "                   \n" +
     "                <carousel-item>\n" +
     "                    <div class=\"description-container animated {{item.tituloClase}}\">\n" +
-    "                      <img src=\"{{item.logoEmpresa}}\">\n" +
-    "                      <p class=\"uni-heavy\">{{item.proyecto}}</p>\n" +
-    "                      <p class=\"uni-heavy\">{{item.year}}</p>\n" +
-    "                      <p>{{item.descripcion}}</p>\n" +
+    "                      <img src=\"{{item.logoEmpresa}}\" class=\"logo-empresa\">\n" +
+    "                      <p class=\"uni-regular ng-binding mt-20 mb-0\"><span class=\"uni-bold\">Proyecto:</span> {{item.proyecto}}</p>\n" +
+    "                      <p class=\"uni-regular mb-20\"><span class=\"uni-bold\">Año:</span> {{item.year}}</p>\n" +
+    "                      <p><span class=\"uni-bold\">Descripción:</span> {{item.descripcion}}</p>\n" +
     "                  </div>\n" +
     "                    <img src=\"{{item.fondoMarca}}\" alt=\"Image\" class=\"img-slider\" style=\"border-top-color:{{item.colorMarca}};\">\n" +
     "\n" +
-    "                </carousel-item> \n" +
+    "                </carousel-item>\n" +
     "          </ui-carousel>\n" +
+    "          <span class=\"boton-cerrar\">\n" +
+    "              <button><i class=\"close\"></i></button>\n" +
+    "          </span>\n" +
     "      </div>\n" +
     "    </div>\n" +
     "\n" +
@@ -278,4 +280,97 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "<!-- END SECCION MARCAS -->\n" +
     "\n" +
     "");
+}]);
+
+angular.module("banco-chile/banco-controller/contacto.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("banco-chile/banco-controller/contacto.tpl.html",
+    "<div class=\"col-xs-12 padd-none\">\n" +
+    "<section class=\"view-contacto flex\" id=\"contacto\">\n" +
+    "	<div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 backgorund-logo\">\n" +
+    "		<ul class=\"steps\">\n" +
+    "			<li class=\"\">1</li>\n" +
+    "			<li class=\"inactivo\">2</li>\n" +
+    "			<li class=\"inactivo\">3</li>\n" +
+    "		</ul> \n" +
+    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-hide=\"step2\">\n" +
+    "			<h2 class=\"text-center\">¡Únete a nuestro equipo!</h2>\n" +
+    "			<form action=\"\">\n" +
+    "				<div class=\"row\">\n" +
+    "					<ul class=\"link-list\">\n" +
+    "						<li>\n" +
+    "							<input type=\"radio\" id=\"proyecto\" name=\"mensaje\" ng-model=\"proyecto\" /> \n" +
+    "							<label for=\"proyecto\">Cuéntanos tu proyecto</label>\n" +
+    "						</li>\n" +
+    "						<li>\n" +
+    "							<input type=\"radio\" id=\"trabajo\" name=\"mensaje\" ng-model=\"trabajo\" /> \n" +
+    "							<label for=\"trabajo\">Trabaja con nosotros</label>\n" +
+    "						</li>\n" +
+    "					</ul>\n" +
+    "				</div>\n" +
+    "				<div class=\"col-xs-12 text-center mt-100\">\n" +
+    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>				\n" +
+    "				</div>\n" +
+    "			</form>\n" +
+    "		</div>\n" +
+    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-show=\"step2\">\n" +
+    "			<h2 class=\"mb-40 text-center\">Completa tus datos:</h2>\n" +
+    "			<form class=\"form-text\">\n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>Nombre</label>\n" +
+    "				</div>			  \n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>E-mail</label>\n" +
+    "				</div>\n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>Teléfono</label>\n" +
+    "				</div>\n" +
+    "				<div class=\"col-xs-12 text-center\">\n" +
+    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "					<br>\n" +
+    "					<button class=\"btn-reload mt-20\" ng-click=\"step2=false\">\n" +
+    "						<i class=\"custom-icon icon-reload\"></i>\n" +
+    "					</button>\n" +
+    "				</div>\n" +
+    "			</form>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "	<div class=\"col-lg-4 padd-none\">\n" +
+    "		<div class=\"mapa\">\n" +
+    "			<ng-map zoom=\"15\" center=\"[-33.4414727,-70.6528376]\" styles=\"[{stylers:[{hue: '#628b99'},{visibility:'simplified'},{gamma:1},{weight:1}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#628b99'}]}]\">\n" +
+    "			    <custom-marker id=\"can\" position=\"[-33.4414727,-70.6528376]\" on-click=\"click()\" style=\"text-align; center;\">\n" +
+    "			        <img src=\"./assets/images/map-marker-icon.png\" alt=\"\" height=\"35\" width=\"35\">\n" +
+    "			        <h4 class=\"mb-0 mt-0 text-center\">3IT</h4>\n" +
+    "			    </custom-marker>\n" +
+    "			</ng-map>\n" +
+    "		</div>\n" +
+    "		<div class=\"datos-contacto\">\n" +
+    "			<ul class=\"contact-list\">\n" +
+    "				<li>\n" +
+    "					<i class=\"custom-icon icon-edificio\"></i>\n" +
+    "					<a href=\"\">Ahumada 131. <br>\n" +
+    "						Oficinas 801, 803, 822, 823. <br>\n" +
+    "						Santiago, Chile.</a>\n" +
+    "				</li>\n" +
+    "				<li>\n" +
+    "					<i class=\"custom-icon icon-phone\"></i>\n" +
+    "					<a href=\"tel:+56942967365\">9 4296 7365</a>\n" +
+    "				</li>\n" +
+    "				<li>\n" +
+    "					<i class=\"custom-icon icon-mail\"></i>\n" +
+    "					<a href=\"mailto:help@3it.cl\">help@3it.cl</a>\n" +
+    "				</li>\n" +
+    "			</ul>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</section>\n" +
+    "</div>");
 }]);
