@@ -97,7 +97,8 @@ module.exports = {
             'vendor/angular-slick-carousel/dist/angular-slick.js',
             'vendor/angular-slick-carousel/src/slick.js',
             'vendor/ngmap/build/scripts/ng-map.min.js',
-            'vendor/angular-scroll/angular-scroll.js'
+            'vendor/angular-scroll/angular-scroll.js',
+            'vendor/angular-upload/angular-upload.min.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',
@@ -109,7 +110,8 @@ module.exports = {
             'vendor/angular-ui-carousel/dist/ui-carousel.min.css',
             'vendor/animate.css/animate.min.css',
             'vendor/slick-carousel/slick/slick.css',
-            'vendor/material-design-icons/icofont/material-icons.css'
+            'vendor/material-design-icons/icofont/material-icons.css',
+            'vendor/angular-upload/src/directives/btnUpload.min.css'
         ],
         assets: [
             'vendor/bootstrap/fonts/glyphicons-halflings-regular.eot',

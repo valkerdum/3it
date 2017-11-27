@@ -6,6 +6,8 @@ h2
 .flex
   display flex!important
 .view-contacto
+  .w-50
+    width 50%
   .form-text
     .group
       position relative
@@ -39,7 +41,8 @@ h2
       -moz-transition 0.2s ease all
       -webkit-transition 0.2s ease all
 
-    input:focus ~ label, input:valid ~ label
+    input:focus ~ label, input:valid ~ label,
+    .activeLabel
       top -20px
       font-size 16px
       color $blanco
@@ -103,7 +106,12 @@ h2
         background transparent
       }
     }
-  
+  .wrap-step
+    height 120px
+    position absolute
+    left 0
+    top 0
+    z-index 10
   .steps
     color $blanco
     font-family $uniBold
@@ -225,6 +233,13 @@ h2
     &:hover
       background $blanco      
       color darken(#74c9d2, 30)
+  .btn-upload
+    position absolute
+    right 0
+    top 0
+    height 100%
+    text-align right
+    width 100%
   .contact-list
     margin 0 0 70px 10%
     padding 0

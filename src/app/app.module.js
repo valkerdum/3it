@@ -11,6 +11,7 @@
             'ngParallax',
             'slickCarousel',
             'ngMap',
-            'duScroll'
+            'duScroll',
+            'lr.upload'
         ]);
 })();
