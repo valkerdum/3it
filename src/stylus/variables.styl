@@ -21,12 +21,20 @@ $uniThinI     = 'Uni Neue Thin Italic'
 $uniRegular   = 'Uni Neue Regular'
 $uniRegularI  = 'Uni Neue Regular Italic'
 
+.visible-hidden
+    visibility hidden
 
 .uni-heavy
     font-family 'Uni Neue Heavy'
     
 .uni-bold
     font-family 'Uni Neue Bold'
+    
+.uni-regular-italic
+    font-family 'Uni Neue Regular Italic'
+    
+.uni-regular
+    font-family 'Uni Neue Regular'
     
 .btn-it-base
     background transparent
@@ -39,8 +47,11 @@ $uniRegularI  = 'Uni Neue Regular Italic'
     font-size 14px
     transition all 0.25s ease-in-out
     &:hover
-        color #fff !important
+    &:focus
+        background #fff !important
+        color #333 !important
         border-color #fff !important
+        outline inherit
 
 .pt-0
     padding-top 0 !important

@@ -13,8 +13,22 @@ body > h1
         margin: 0
         padding: 0
         margin-bottom: 10px
-
-
+        
+// BOTON VOLVER
+.btn-volver-detalle
+    width 119px
+    height 116px
+    #svg-volver
+        #icono-grande
+        #circulos-izquierda
+        #circulos-abajo
+            fill #fff
+            transition all 0.25s ease-in-out
+    &:hover
+        #svg-volver
+            #circulos-izquierda
+            #circulos-abajo
+                fill #fff!important
 // PARALLAX
 .seccion-parallax
     height 100vh!important
@@ -258,9 +272,7 @@ menu
 
 
 // CONFIGURACION SLIDERS
-.slide    
-    img
-        width 100%
+
 .ui-carousel
     margin 0
 .carousel-dots
@@ -278,7 +290,117 @@ menu
             opacity .5
             padding 2px
             width 100%
+            &:before
+                content ''    
+.ui-icon-dot
+    &:before
+        content ''
+        
+
+// SECCION MISION VISION VALORES
+
+.mvv
+    height 540px
+    position relative
+    overflow hidden
+    background-image url(images/bg-mvv.jpg)
+    background-size cover
+    .btn-volver-detalle
+        position absolute
+        top 50px
+        right 50px
+        z-index 20
+    .carousel-item
+        position relative
+    .btn-volver-detalle
+        #svg-volver
+            #circulos-izquierda
+            #circulos-abajo
+                fill #00748b
+            #icono-grande
+                fill #74c9d2
+        &:hover
+            #svg-volver
+                #circulos-izquierda
+                #circulos-abajo
+                    fill #00748b !important
+                #icono-grande
+                    fill #74c9d2 !important
+    .img-mvv
+        margin-left 50px
+    .description-container
+        position absolute
+        top 145px
+        right 10%
+        width 505px
+        z-index 10
+        .uni-regular-italic
+            font-size 25px
+            color #00748b
+            margin-bottom 0
+        .uni-heavy
+            font-size 80px
+            color #74c9d2
+            margin-top 5px
+        .uni-bold
+            color #00748b
+            font-size 20px
+        .delay
+            animation-delay 1s
+    .cls-1
+        font-size 18px
+        fill #00748b
+        font-family 'Uni Neue Bold'
+        
+// SECCION SERVICIOS      
+.servicios
+    height 540px
+    position relative
+    overflow hidden
+    .slide    
+        img
+            width 100%
+    .img-slider
+        border-top-style solid
+        border-top-width 28px
+    .logo-3it-servicios
+        position absolute
+        z-index 20
+        left 50px
+        top  50px
+    .description-container
+        position absolute
+        top 200px
+        margin-left 65px
+        h2
+            font-size 55px
+        p
+            max-width 330px
+    .info-detalle
+        opacity 0
+        background-color rgba(25, 62, 29, 0.8)
+        position absolute
+        left 0 
+        bottom 0
+        width 100%
+        padding-bottom 25px
+        z-index 10
+        h2
+            font-size 55px
+        h4
+            max-width 850px
+            margin 0 auto
+    .carousel-item
+        position relative
+    .btn-volver-detalle
+        position absolute
+        top 50px
+        right 50px
+        z-index 20
+        
             
+
+    
 
 // SECCION INNOVACION 
 
@@ -286,22 +408,126 @@ menu
     border-top solid 28px #3f9b49
     background-image url(images/innovacion-background.jpg)
     background-size cover
+    height 550px
+    position relative
+    overflow hidden
     .logo-3it-seccion
-        margin-top 50px
+        margin-top 70px
         width 215px
         height 34px
+    .btn-volver-detalle
+        margin-top 50px
+        float right
+        display inline-block
+    h2
+        color #3f9b49
+        font-size 55px
     .informacion
-        h2
-            color #3f9b49
-            font-size 55px
+        margin-top 110px
         .btn-it-base
             border-color #3f9b49
-
+    .info-detalle
+        opacity 0
+        background-color rgba(25, 62, 29, 0.8)
+        position absolute
+        left 0 
+        bottom 0
+        width 100%
+        padding-bottom 15px
+        z-index 10
+        h4
+            max-width 850px
+            margin 0 auto
+        
+    .btn-volver-detalle
+        #svg-volver
+            #circulos-izquierda
+            #circulos-abajo
+                fill #3f9b49
 
 // SECCION MARCAS
 .seccion-marcas
     position relative
-    min-height 585px
+    height 535px
+
+    .img-slider
+        border-top-style solid
+        border-top-width 35px
+        width 100%
+        height 535px
+    .description-container
+        position absolute
+        top 100px
+        margin-left 50px
+        width 589px
+        .logo-empresa
+            width auto
+            height 50px
+        p
+            color #fff
+    .carousel-item
+        position relative
+    .carousel-prev
+    .carousel-next
+    .boton-cerrar
+        position absolute
+        top 4px
+        button 
+            background none
+            border 0
+            &:focus
+                outline none
+        i
+            font-size 20px
+            color #fff
+    .carousel-prev
+        right 70px
+        i
+            &:before
+                content '\f124'
+                display inline-block
+                font-family "Ionicons"
+                speak none
+                font-style normal
+                font-weight normal
+                font-variant normal
+                text-transform none
+                text-rendering auto
+                line-height 1
+                -webkit-font-smoothing antialiased
+    .carousel-next
+        right 40px
+        i
+            &:before
+                content '\f125'
+                display inline-block
+                font-family "Ionicons"
+                speak none
+                font-style normal
+                font-weight normal
+                font-variant normal
+                text-transform none
+                text-rendering auto
+                line-height 1
+                -webkit-font-smoothing antialiased
+    .boton-cerrar
+        right 10px    
+        .close
+            opacity 1
+            font-size 25px
+            &:before
+                content '\f2d7'
+                display inline-block
+                font-family "Ionicons"
+                speak none
+                font-style normal
+                font-weight normal
+                font-variant normal
+                text-transform none
+                text-rendering auto
+                line-height 1
+                -webkit-font-smoothing antialiased
+    
 
 .listado-marcas
     .marca

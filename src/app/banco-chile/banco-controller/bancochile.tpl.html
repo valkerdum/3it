@@ -1,6 +1,5 @@
 
 <!-- SECCION IMAGEN PRINCIPAL  -->
-
 <section ng-parallax pattern="'./assets/images/home-background.jpg'" class="relative seccion-parallax">
     <div class="overlap-home">
         <div class="container-fluid relative">
@@ -11,53 +10,160 @@
                 </a>
             </div>
             <div class="col-sm-offset-8 col-sm-4 v-100">
-                <img src="./assets/images/3it-logo.svg" alt="3IT Quality of Service" class="brand-image vertical-center">
+                <img src="./assets/images/3it-logo.svg" alt="3IT Quality of Service" class="brand-image vertical-center animated fadeIn">
             </div>
         </div>
     </div>
 </section> <!-- END SECCION IMAGEN PRINCIPAL --> 
 
 
-<!-- SECCION MISION - VISION - VALORES  / SERVICIOS-->
-<div class="container-fluid seccion-marcas">
+<!-- SECCION MISION - VISION - VALORES -->
+<div class="container-fluid mvv">
     <div class="row">
+        <span class="btn-volver-detalle">
+                        <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 93.8 91.4" style="enable-background:new 0 0 93.8 91.4;" xml:space="preserve">
+                        <g id="circulos-izquierda">
+                            <circle class="st0" cx="45.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="35.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="25.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="15.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="5.8" cy="20.8" r="3.1"/>
+                        </g>
+                        <g id="circulos-abajo">
+                            <circle class="st0" cx="72.1" cy="47.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="57.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="67.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="77.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="87.1" r="3.1"/>
+                        </g>
+                        <path id="icono-grande" class="st1" d="M72,2.3c-10.4,0-18.7,8.3-18.7,18.6S61.6,39.5,72,39.5s18.7-8.3,18.7-18.6S82.3,2.3,72,2.3z
+                             M78,21.1l-11.7,7.2c-0.2,0.1-0.4-0.1-0.3-0.3l4.5-7c0-0.1,0-0.1,0-0.2l-4.5-7c-0.1-0.2,0.1-0.4,0.3-0.3L78,20.7
+                            C78.1,20.8,78.1,21,78,21.1z"/>
+                        </svg>
+                    </span>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
-            <ui-carousel slides="banco.slides" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false">
+            <ui-carousel slides="banco.slides" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1" initial-slide="0" dots="true" arrows="false" on-before-change="banco.onCarouselBeforeChange()">
                 <carousel-item>
-                  <!-- <h2>{{ item.title }}</h2> -->
-                  <img src="{{ item.image }}" alt="Image" />
+                  <img src="{{item.image}}" alt="Image" class="img-mvv">
+
+                  <div class="description-container">
+                      <h4 class="uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}">{{item.textoCabecera}}</h4>
+                      <h2 class="uni-heavy">{{item.titulo}}</h2>
+                      <h4 class="uni-bold">{{item.textoBajada}}</h4>
+                      <img src="{{item.listado}}">
+                  </div>
               </carousel-item>                  
           </ui-carousel>
       </div>
     </div>
+</div> <!-- END SECCION MISION - VISION - VALORES  -->
+
+
+<!-- SECCION SERVICIOS-->
+<div class="container-fluid servicios">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
-            <ui-carousel slides="banco.slidesService" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false">
+         <img src="./assets/images/3it-servicios.svg" width="215" height="34" class="logo-3it-servicios">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
+            <ui-carousel slides="banco.slidesService" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false" >
                 <carousel-item>
-                  <!-- <h2>{{ item.title }}</h2> -->
-                  <img src="{{ item.image }}" alt="Image" />
-              </carousel-item>                  
+                    <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
+                        <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 93.8 91.4" style="enable-background:new 0 0 93.8 91.4;" xml:space="preserve">
+                        <path id="icono-grande" class="st0" d="M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z
+                             M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1
+                            c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17
+                            c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z"/>
+                        <g id="circulos-izquierda" style="fill:{{item.tituloColor}};">
+                            <circle class="st0" cx="45.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="35.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="25.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="15.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="5.8" cy="20.8" r="3.1"/>
+                        </g>
+                        <g id="circulos-abajo" style="fill:{{item.tituloColor}};">
+                            <circle class="st0" cx="72.1" cy="47.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="57.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="67.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="77.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="87.1" r="3.1"/>
+                        </g>
+                        </svg>
+                    </a>
+                    <div class="description-container animated {{item.tituloClase}}" ng-class="agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'">
+                      <h2 class="uni-heavy" style="color:{{item.tituloColor}};">
+                        {{item.titulo}}
+                        </h2>
+                        <p class="text-white uni-bold">{{item.descripcion}}</p>
+                        <button class="btn btn-it-base clear" style="border-color:{{item.tituloColor}};" ng-click="agiles = !agiles" >{{item.botonText}}</button>
+                    </div>  
+                  <img src="{{ item.image }}" alt="Image" class="img-slider" style="border-top-color:{{item.tituloColor}};" />
+
+                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'" style="background-color:{{item.tituloColor}};">
+                     <h2 class="uni-heavy">
+                        {{item.tituloDetalle}}
+                    </h2>
+                    <h4 class="text-white uni-bold">{{item.textoDetalle}}</h4>
+                </div>
+                </carousel-item>      
           </ui-carousel>
       </div>
     </div>
-</div> <!-- END SECCION MISION - VISION - VALORES / SERVICIOS  -->
+</div> <!-- END SECCION SERVICIOS  -->
 
 <!-- SECCION INNOVACION -->
-<div class="container-fluid seccion-marcas innovacion">
-    <div class="row">
+<div class="container-fluid innovacion pr-30">
+    <div class="row ml-0 mr-0">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <img src="./assets/images/3it-innovacion.svg" width="215" height="34" class="logo-3it-seccion">
+
+            <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="inovaDetalle = !inovaDetalle" ng-class="inovaDetalle ? 'fadeIn' : 'fadeOut visible-hidden'">
+                <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 93.8 91.4" style="enable-background:new 0 0 93.8 91.4;" xml:space="preserve">
+                        <path id="icono-grande" class="st0" d="M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z
+                             M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1
+                            c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17
+                            c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z"/>
+                        <g id="circulos-izquierda">
+                            <circle class="st0" cx="45.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="35.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="25.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="15.8" cy="20.8" r="3.1"/>
+                            <circle class="st0" cx="5.8" cy="20.8" r="3.1"/>
+                        </g>
+                        <g id="circulos-abajo">
+                            <circle class="st0" cx="72.1" cy="47.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="57.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="67.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="77.1" r="3.1"/>
+                            <circle class="st0" cx="72.1" cy="87.1" r="3.1"/>
+                        </g>
+                </svg>
+            </a>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-lg-offset-8 informacion">
+
+        <div class="col-xs-12 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9 informacion text-right animated" ng-class="inovaDetalle ? 'fadeOut visible-hidden' : 'fadeInRight'">
             <h2 class="uni-heavy">
                 3IT Labs
             </h2>
             <p class="text-white uni-bold">dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <button class="btn btn-it-base">VER MÁS</button>
+            <button class="btn btn-it-base" ng-click="inovaDetalle = !inovaDetalle">VER MÁS</button>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 info-detalle animated text-center" ng-class="inovaDetalle ? 'fadeInUp' : 'visible-hidden fadeInDown' ">
+             <h2 class="uni-heavy">
+                3IT Labs
+            </h2>
+            <h4 class="text-white uni-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.</h4>
         </div>
     </div>
 </div>
 <!-- END SECCION INNOVACION -->
+
+<!-- SECCION MARCAS -->
 
 <div class="container-fluid seccion-marcas">
         <div class="row listado-marcas">
@@ -137,6 +243,35 @@
                 </a>
             </div>
         </div>
-  </div>
 
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
+             <ui-carousel slides="banco.slidesMarcas" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="false" arrows="true" >
+                     <carousel-prev>
+                        <button class="btn-carousel-controller-left"><i class="ion-chevron-left"></i></button>
+                    </carousel-prev>
+                    <carousel-next>
+                        <button class="btn-carousel-controller-right"><i class="ion-chevron-right"></i></button>
+                    </carousel-next>  
+                   
+                <carousel-item>
+                    <div class="description-container animated {{item.tituloClase}}">
+                      <img src="{{item.logoEmpresa}}" class="logo-empresa">
+                      <p class="uni-regular ng-binding mt-20 mb-0"><span class="uni-bold">Proyecto:</span> {{item.proyecto}}</p>
+                      <p class="uni-regular mb-20"><span class="uni-bold">Año:</span> {{item.year}}</p>
+                      <p><span class="uni-bold">Descripción:</span> {{item.descripcion}}</p>
+                  </div>
+                    <img src="{{item.fondoMarca}}" alt="Image" class="img-slider" style="border-top-color:{{item.colorMarca}};">
+
+                </carousel-item>
+          </ui-carousel>
+          <span class="boton-cerrar">
+              <button><i class="close"></i></button>
+          </span>
+      </div>
+    </div>
+
+
+  </div>
+<!-- END SECCION MARCAS -->
 

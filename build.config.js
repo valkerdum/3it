@@ -99,12 +99,13 @@ module.exports = {
         css: [
             'vendor/angular-ui-select/dist/select.css',
             'vendor/ng-scrollbar/dist/ng-scrollbar.css',
-            'vendor/orion-ui-ionicons/css/ionicons.css',
+            'vendor/ionicons/css/ioioniconsss',
             'vendor/angular-rangeslider/angular.rangeSlider.css',
             'vendor/ladda/dist/ladda-themeless.min.css',
             'vendor/sweetalert-ui/lib/sweet-alert.css',
             'vendor/angular-ui-carousel/dist/ui-carousel.min.css',
-            'vendor/animate.css/animate.min.css'
+            'vendor/animate.css/animate.min.css',
+            'vendor/material-design-icons/icofont/material-icons.css'
         ],
         assets: [
             'vendor/bootstrap/fonts/glyphicons-halflings-regular.eot',
@@ -114,10 +115,14 @@ module.exports = {
             'vendor/orion-*/assets/**'
         ],
         fonts: [
-            'vendor/orion-ui-ionicons/fonts/ionicons.eot',
-            'vendor/orion-ui-ionicons/fonts/ionicons.svg',
-            'vendor/orion-ui-ionicons/fonts/ionicons.ttf',
-            'vendor/orion-ui-ionicons/fonts/ionicons.woff',
+            'vendor/ionicons/fonts/ionicons.eot',
+            'vendor/ionicons/fonts/ionicons.svg',
+            'vendor/ionicons/fonts/ionicons.ttf',
+            'vendor/ionicons/fonts/ionicons.woff',
+            'vendor/material-design-icons/icofont/MaterialIcons-Regular.eot',
+            'vendor/material-design-icons/icofont/MaterialIcons-Regular.svg',
+            'vendor/material-design-icons/icofont/MaterialIcons-Regular.ttf',
+            'vendor/material-design-icons/icofont/MaterialIcons-Regular.woff',
             'vendor/angular-ui-carousel/dist/fonts/ui-carousel.svg',
             'vendor/angular-ui-carousel/dist/fonts/ui-carousel.eot',
             'vendor/angular-ui-carousel/dist/fonts/ui-carousel.ttf',
