@@ -2,7 +2,7 @@
 angular.module( 'WebBancoChile.template')
 .controller('bancoChileCtrl',bancoChileCtrl);
 
-	function bancoChileCtrl($scope){
+	function bancoChileCtrl($scope, NgMap){
 		var vm = this;
 
 		vm.slides = [

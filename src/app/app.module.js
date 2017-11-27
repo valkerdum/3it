@@ -8,7 +8,8 @@
             'WebBancoChile.template',
             'WebBancoChile.constants',
             'ui.carousel',
-            'ngParallax'
+            'ngParallax',
+            'ngMap'
 
         ]);
 })();

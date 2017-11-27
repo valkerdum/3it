@@ -3,18 +3,31 @@ angular.module( 'WebBancoChile.template' ).config(bancoChileConfig);
 
 function bancoChileConfig( $stateProvider ) {
     var urlBase = 'banco-chile/';
-    $stateProvider.state('banco-chile', {
-        parent: 'root',
-        url: '/banco-chile',
-        views: {
-            "main@": {
-                controller: 'bancoChileCtrl',
-                controllerAs: 'banco',
-                templateUrl: urlBase + 'banco-controller/bancochile.tpl.html'
-            }
-        },
-        data:{ pageTitle: 'Home' }
-    });
+    $stateProvider
+        .state('banco-chile', {
+            parent: 'root',
+            url: '/banco-chile',
+            views: {
+                "main@": {
+                    controller: 'bancoChileCtrl',
+                    controllerAs: 'banco',
+                    templateUrl: urlBase + 'banco-controller/bancochile.tpl.html'
+                }
+            },
+            data:{ pageTitle: 'Home' }
+        })
+        .state('contacto', {
+            parent: 'root',
+            url: '/contacto',
+            views: {
+                "main@": {
+                    controller: 'bancoChileCtrl',
+                    controllerAs: 'banco',
+                    templateUrl: urlBase + 'banco-controller/contacto.tpl.html'
+                }
+            },
+            data:{ pageTitle: 'Contacto' }
+        });
 }
 
 })();

@@ -13,6 +13,9 @@ function myAppConfig($stateProvider, $urlRouterProvider,$animateProvider) {
             },
             "main@": {
 
+            },            
+            "contacto@": {
+                templateUrl: 'banco-chile/banco-controller/contacto.tpl.html'
             },
             "footer@": {
                 templateUrl: 'templates/footer.tpl.html'
