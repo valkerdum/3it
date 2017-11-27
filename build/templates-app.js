@@ -1,4 +1,97 @@
-angular.module('templates-app', ['tres-it/tres-controller/tres.tpl.html']);
+angular.module('templates-app', ['tres-it/tres-controller/contacto.tpl.html', 'tres-it/tres-controller/tres.tpl.html']);
+
+angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("tres-it/tres-controller/contacto.tpl.html",
+    "<div class=\"col-xs-12 padd-none\">\n" +
+    "<section class=\"view-contacto flex\" id=\"contacto\">\n" +
+    "	<div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 backgorund-logo\">\n" +
+    "		<ul class=\"steps\">\n" +
+    "			<li class=\"\">1</li>\n" +
+    "			<li class=\"inactivo\">2</li>\n" +
+    "			<li class=\"inactivo\">3</li>\n" +
+    "		</ul> \n" +
+    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-hide=\"step2\">\n" +
+    "			<h2 class=\"text-center\">¡Únete a nuestro equipo!</h2>\n" +
+    "			<form action=\"\">\n" +
+    "				<div class=\"row\">\n" +
+    "					<ul class=\"link-list\">\n" +
+    "						<li>\n" +
+    "							<input type=\"radio\" id=\"proyecto\" name=\"mensaje\" ng-model=\"proyecto\" /> \n" +
+    "							<label for=\"proyecto\">Cuéntanos tu proyecto</label>\n" +
+    "						</li>\n" +
+    "						<li>\n" +
+    "							<input type=\"radio\" id=\"trabajo\" name=\"mensaje\" ng-model=\"trabajo\" /> \n" +
+    "							<label for=\"trabajo\">Trabaja con nosotros</label>\n" +
+    "						</li>\n" +
+    "					</ul>\n" +
+    "				</div>\n" +
+    "				<div class=\"col-xs-12 text-center mt-100\">\n" +
+    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>				\n" +
+    "				</div>\n" +
+    "			</form>\n" +
+    "		</div>\n" +
+    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-show=\"step2\">\n" +
+    "			<h2 class=\"mb-40 text-center\">Completa tus datos:</h2>\n" +
+    "			<form class=\"form-text\">\n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>Nombre</label>\n" +
+    "				</div>			  \n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>E-mail</label>\n" +
+    "				</div>\n" +
+    "				<div class=\"group\">      \n" +
+    "					<input type=\"text\" required>\n" +
+    "					<span class=\"highlight\"></span>\n" +
+    "					<span class=\"bar\"></span>\n" +
+    "					<label>Teléfono</label>\n" +
+    "				</div>\n" +
+    "				<div class=\"col-xs-12 text-center\">\n" +
+    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "					<br>\n" +
+    "					<button class=\"btn-reload mt-20\" ng-click=\"step2=false\">\n" +
+    "						<i class=\"custom-icon icon-reload\"></i>\n" +
+    "					</button>\n" +
+    "				</div>\n" +
+    "			</form>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "	<div class=\"col-lg-4 padd-none\">\n" +
+    "		<div class=\"mapa\">\n" +
+    "			<ng-map zoom=\"15\" center=\"[-33.4414727,-70.6528376]\" styles=\"[{stylers:[{hue: '#628b99'},{visibility:'simplified'},{gamma:1},{weight:1}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#628b99'}]}]\">\n" +
+    "			    <custom-marker id=\"can\" position=\"[-33.4414727,-70.6528376]\" on-click=\"click()\" style=\"text-align; center;\">\n" +
+    "			        <img src=\"./assets/images/map-marker-icon.png\" alt=\"\" height=\"35\" width=\"35\">\n" +
+    "			        <h4 class=\"mb-0 mt-0 text-center\">3IT</h4>\n" +
+    "			    </custom-marker>\n" +
+    "			</ng-map>\n" +
+    "		</div>\n" +
+    "		<div class=\"datos-contacto\">\n" +
+    "			<ul class=\"contact-list\">\n" +
+    "				<li>\n" +
+    "					<i class=\"custom-icon icon-edificio\"></i>\n" +
+    "					<a href=\"\">Ahumada 131. <br>\n" +
+    "						Oficinas 801, 803, 822, 823. <br>\n" +
+    "						Santiago, Chile.</a>\n" +
+    "				</li>\n" +
+    "				<li>\n" +
+    "					<i class=\"custom-icon icon-phone\"></i>\n" +
+    "					<a href=\"tel:+56942967365\">9 4296 7365</a>\n" +
+    "				</li>\n" +
+    "				<li>\n" +
+    "					<i class=\"custom-icon icon-mail\"></i>\n" +
+    "					<a href=\"mailto:help@3it.cl\">help@3it.cl</a>\n" +
+    "				</li>\n" +
+    "			</ul>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</section>\n" +
+    "</div>");
+}]);
 
 angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/tres-controller/tres.tpl.html",

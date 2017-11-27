@@ -4,13 +4,8 @@ angular.module( 'Tres.template')
 
 
 
-	function tresCtrl($scope){
+	function tresCtrl($scope,  NgMap){
 		var vm = this;
-
-
-		
-
-
 
 		vm.slides = [
 			{	textoCabeceraAnimacion:'fadeIn',
@@ -70,9 +65,6 @@ angular.module( 'Tres.template')
 				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 			}
 		];
-
-
-
 
 		vm.slidesMarcas = [
 			{	

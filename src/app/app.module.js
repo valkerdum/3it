@@ -9,7 +9,7 @@
             'Tres.constants',
             'ui.carousel',
             'ngParallax',
-            'slickCarousel'
-
+            'slickCarousel',
+            'ngMap'
         ]);
 })();
