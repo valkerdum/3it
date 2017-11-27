@@ -93,7 +93,9 @@ module.exports = {
             'vendor/orion-*/**/*.js',
             'vendor/angular-off-click/dist/angular-off-click.js',
             'vendor/angular-ui-carousel/dist/ui-carousel.min.js',
-            'vendor/ng-simple-parallax/src/ngParallax.min.js'
+            'vendor/ng-simple-parallax/src/ngParallax.min.js',
+            'vendor/angular-slick-carousel/dist/angular-slick.js',
+            'vendor/angular-slick-carousel/src/slick.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',
@@ -104,6 +106,7 @@ module.exports = {
             'vendor/sweetalert-ui/lib/sweet-alert.css',
             'vendor/angular-ui-carousel/dist/ui-carousel.min.css',
             'vendor/animate.css/animate.min.css',
+            'vendor/slick-carousel/slick/slick.css',
             'vendor/material-design-icons/icofont/material-icons.css'
         ],
         assets: [

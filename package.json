@@ -47,6 +47,7 @@
     "protractor": "protractor protractor/protractor-conf.js"
   },
   "dependencies": {
+    "angular-scroll-magic": "^0.1.8",
     "angular-ui-carousel": "^0.1.10"
   }
 }

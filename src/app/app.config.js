@@ -1,6 +1,6 @@
 (function(){
 angular
-		.module( 'WebBancoChile')
+		.module( 'Tres')
 		.config(myAppConfig);
 
 function myAppConfig($stateProvider, $urlRouterProvider,$animateProvider) {
@@ -14,12 +14,15 @@ function myAppConfig($stateProvider, $urlRouterProvider,$animateProvider) {
             "main@": {
 
             },
+            "contacto@": {
+                templateUrl: 'banco-chile/banco-controller/contacto.tpl.html'
+            },
             "footer@": {
                 templateUrl: 'templates/footer.tpl.html'
             }
         }
     });
-    $urlRouterProvider.otherwise('/banco-chile');
+    $urlRouterProvider.otherwise('/');
 }
 
 })();

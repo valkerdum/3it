@@ -1,15 +1,16 @@
 (function(){
-    angular.module('WebBancoChile.template', [
+    angular.module('Tres.template', [
         'ui.router',
         'ui.bootstrap',
         'ui.utils',
-        'WebBancoChile.constants',
+        'Tres.constants',
         'ngAnimate',
         'ui.select',
         'ngScrollbar',
         'highcharts-ng',
         'ui-rangeSlider',
         'angular-ladda',
-        'ui.carousel'
+        'ui.carousel',
+        'slickCarousel'
     ]);
 })();

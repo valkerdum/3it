@@ -1,4 +1,3 @@
-
 <!-- SECCION IMAGEN PRINCIPAL  -->
 <section ng-parallax pattern="'./assets/images/home-background.jpg'" class="relative seccion-parallax">
     <div class="overlap-home">
@@ -43,15 +42,15 @@
                         </svg>
                     </span>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
-            <ui-carousel slides="banco.slides" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1" initial-slide="0" dots="true" arrows="false" on-before-change="banco.onCarouselBeforeChange()">
-                <carousel-item>
+            <ui-carousel slides="tres.slides" on-init="tres.onCarouselInit()" slides-to-show="1" slides-to-scroll="1" initial-slide="0" dots="true" arrows="false" on-before-change="tres.onCarouselBeforeChange()">
+                <carousel-item class="test1">
                   <img src="{{item.image}}" alt="Image" class="img-mvv">
 
                   <div class="description-container">
                       <h4 class="uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}">{{item.textoCabecera}}</h4>
-                      <h2 class="uni-heavy">{{item.titulo}}</h2>
-                      <h4 class="uni-bold">{{item.textoBajada}}</h4>
-                      <img src="{{item.listado}}">
+                      <h2 class="uni-heavy animated delaytwo {{item.tituloAnimacion}}">{{item.titulo}}</h2>
+                      <h4 class="uni-bold animated {{item.bajadaAnimacion}} delayTres">{{item.textoBajada}}</h4>
+                      <img src="{{item.listado}}" class="animated {{item.bajadaAnimacion}} delayTres">
                   </div>
               </carousel-item>                  
           </ui-carousel>
@@ -65,7 +64,7 @@
     <div class="row">
          <img src="./assets/images/3it-servicios.svg" width="215" height="34" class="logo-3it-servicios">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
-            <ui-carousel slides="banco.slidesService" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false" >
+            <ui-carousel slides="tres.slidesService" on-init="tres.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false" >
                 <carousel-item>
                     <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
                         <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -95,7 +94,7 @@
                         {{item.titulo}}
                         </h2>
                         <p class="text-white uni-bold">{{item.descripcion}}</p>
-                        <button class="btn btn-it-base clear" style="border-color:{{item.tituloColor}};" ng-click="agiles = !agiles" >{{item.botonText}}</button>
+                        <button class="btn btn-it-base clear" style="border-color:{{item.tituloColor}};" ng-click="agiles = !agiles " >{{item.botonText}}</button>
                     </div>  
                   <img src="{{ item.image }}" alt="Image" class="img-slider" style="border-top-color:{{item.tituloColor}};" />
 
@@ -246,7 +245,7 @@
 
         <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
-             <ui-carousel slides="banco.slidesMarcas" on-init="banco.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="false" arrows="true" >
+             <ui-carousel slides="tres.slidesMarcas" on-init="tres.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="false" arrows="true" >
                      <carousel-prev>
                         <button class="btn-carousel-controller-left"><i class="ion-chevron-left"></i></button>
                     </carousel-prev>

@@ -1,8 +1,7 @@
-angular.module('templates-app', ['banco-chile/banco-controller/bancochile.tpl.html']);
+angular.module('templates-app', ['tres-it/tres-controller/tres.tpl.html']);
 
-angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("banco-chile/banco-controller/bancochile.tpl.html",
-    "\n" +
+angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("tres-it/tres-controller/tres.tpl.html",
     "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
     "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\">\n" +
     "    <div class=\"overlap-home\">\n" +
@@ -47,15 +46,15 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                        </svg>\n" +
     "                    </span>\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
-    "            <ui-carousel slides=\"banco.slides\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\" initial-slide=\"0\" dots=\"true\" arrows=\"false\" on-before-change=\"banco.onCarouselBeforeChange()\">\n" +
-    "                <carousel-item>\n" +
+    "            <ui-carousel slides=\"tres.slides\" on-init=\"tres.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\" initial-slide=\"0\" dots=\"true\" arrows=\"false\" on-before-change=\"tres.onCarouselBeforeChange()\">\n" +
+    "                <carousel-item class=\"test1\">\n" +
     "                  <img src=\"{{item.image}}\" alt=\"Image\" class=\"img-mvv\">\n" +
     "\n" +
     "                  <div class=\"description-container\">\n" +
     "                      <h4 class=\"uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}\">{{item.textoCabecera}}</h4>\n" +
-    "                      <h2 class=\"uni-heavy\">{{item.titulo}}</h2>\n" +
-    "                      <h4 class=\"uni-bold\">{{item.textoBajada}}</h4>\n" +
-    "                      <img src=\"{{item.listado}}\">\n" +
+    "                      <h2 class=\"uni-heavy animated delaytwo {{item.tituloAnimacion}}\">{{item.titulo}}</h2>\n" +
+    "                      <h4 class=\"uni-bold animated {{item.bajadaAnimacion}} delayTres\">{{item.textoBajada}}</h4>\n" +
+    "                      <img src=\"{{item.listado}}\" class=\"animated {{item.bajadaAnimacion}} delayTres\">\n" +
     "                  </div>\n" +
     "              </carousel-item>                  \n" +
     "          </ui-carousel>\n" +
@@ -69,7 +68,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "    <div class=\"row\">\n" +
     "         <img src=\"./assets/images/3it-servicios.svg\" width=\"215\" height=\"34\" class=\"logo-3it-servicios\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
-    "            <ui-carousel slides=\"banco.slidesService\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\" >\n" +
+    "            <ui-carousel slides=\"tres.slidesService\" on-init=\"tres.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"true\" arrows=\"false\" >\n" +
     "                <carousel-item>\n" +
     "                    <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"agiles = !agiles\" ng-class=\"agiles ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
     "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
@@ -99,7 +98,7 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                        {{item.titulo}}\n" +
     "                        </h2>\n" +
     "                        <p class=\"text-white uni-bold\">{{item.descripcion}}</p>\n" +
-    "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{item.tituloColor}};\" ng-click=\"agiles = !agiles\" >{{item.botonText}}</button>\n" +
+    "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{item.tituloColor}};\" ng-click=\"agiles = !agiles \" >{{item.botonText}}</button>\n" +
     "                    </div>  \n" +
     "                  <img src=\"{{ item.image }}\" alt=\"Image\" class=\"img-slider\" style=\"border-top-color:{{item.tituloColor}};\" />\n" +
     "\n" +
@@ -169,8 +168,8 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "\n" +
     "<!-- SECCION MARCAS -->\n" +
     "\n" +
-    "<div class=\"container-fluid seccion-marcas servicios\">\n" +
-    "       <!--  <div class=\"row listado-marcas\">\n" +
+    "<div class=\"container-fluid seccion-marcas\">\n" +
+    "        <div class=\"row listado-marcas\">\n" +
     "            <div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
@@ -246,30 +245,32 @@ angular.module("banco-chile/banco-controller/bancochile.tpl.html", []).run(["$te
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
-    "        </div> -->\n" +
-    "\n" +
+    "        </div>\n" +
     "\n" +
     "        <div class=\"row\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
-    "             <ui-carousel slides=\"banco.slidesMarcas\" on-init=\"banco.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"false\" arrows=\"true\" >\n" +
+    "             <ui-carousel slides=\"tres.slidesMarcas\" on-init=\"tres.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"false\" arrows=\"true\" >\n" +
     "                     <carousel-prev>\n" +
-    "                        <button><i class=\"ion-ios-arrow-left\"></i>left</button>\n" +
+    "                        <button class=\"btn-carousel-controller-left\"><i class=\"ion-chevron-left\"></i></button>\n" +
     "                    </carousel-prev>\n" +
     "                    <carousel-next>\n" +
-    "                        <button><i class=\"ion-ios-arrow-right\"></i>right</button>\n" +
+    "                        <button class=\"btn-carousel-controller-right\"><i class=\"ion-chevron-right\"></i></button>\n" +
     "                    </carousel-next>  \n" +
     "                   \n" +
     "                <carousel-item>\n" +
     "                    <div class=\"description-container animated {{item.tituloClase}}\">\n" +
-    "                      <img src=\"{{item.logoEmpresa}}\">\n" +
-    "                      <p class=\"uni-heavy\">{{item.proyecto}}</p>\n" +
-    "                      <p class=\"uni-heavy\">{{item.year}}</p>\n" +
-    "                      <p>{{item.descripcion}}</p>\n" +
+    "                      <img src=\"{{item.logoEmpresa}}\" class=\"logo-empresa\">\n" +
+    "                      <p class=\"uni-regular ng-binding mt-20 mb-0\"><span class=\"uni-bold\">Proyecto:</span> {{item.proyecto}}</p>\n" +
+    "                      <p class=\"uni-regular mb-20\"><span class=\"uni-bold\">Año:</span> {{item.year}}</p>\n" +
+    "                      <p><span class=\"uni-bold\">Descripción:</span> {{item.descripcion}}</p>\n" +
     "                  </div>\n" +
     "                    <img src=\"{{item.fondoMarca}}\" alt=\"Image\" class=\"img-slider\" style=\"border-top-color:{{item.colorMarca}};\">\n" +
     "\n" +
-    "                </carousel-item> \n" +
+    "                </carousel-item>\n" +
     "          </ui-carousel>\n" +
+    "          <span class=\"boton-cerrar\">\n" +
+    "              <button><i class=\"close\"></i></button>\n" +
+    "          </span>\n" +
     "      </div>\n" +
     "    </div>\n" +
     "\n" +

@@ -6,7 +6,7 @@ var isBoolean = function ( obj ) {
     return obj === true || obj === false || Object.prototype.toString.call(obj) === '[object Boolean]';
 };
 
-angular.module('WebBancoChile.filters', [])
+angular.module('Tres.filters', [])
     .filter('lessThanZero', function () {
         return function (input) {
             return input < 0 ? 0 : input;

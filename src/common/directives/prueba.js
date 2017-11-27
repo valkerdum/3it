@@ -1,4 +1,4 @@
-angular.module( 'WebBancoChile.directiva-prueba', [])
+angular.module( 'Tres.directiva-prueba', [])
 
 
 .directive('prueba', function () {

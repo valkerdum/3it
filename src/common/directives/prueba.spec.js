@@ -1,6 +1,6 @@
-describe('Test Unitario para WebBancoChile.directiva-prueba', function () {
+describe('Test Unitario para Tres.directiva-prueba', function () {
 
-    beforeEach(module('WebBancoChile.directiva-prueba'));
+    beforeEach(module('Tres.directiva-prueba'));
     //incluir test
 
 });

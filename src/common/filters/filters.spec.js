@@ -1,5 +1,5 @@
 describe('Test para filters', function() {
-    beforeEach(module('WebBancoChile.filters'));
+    beforeEach(module('Tres.filters'));
 
     it('Debería existir un filtro llamado lessThanZero', inject(function($filter) {
         expect($filter('lessThanZero')).toBeDefined();

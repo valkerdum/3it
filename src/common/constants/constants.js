@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('WebBancoChile.constants',[])
+        .module('Tres.constants',[])
         .constant('rutBancoChile','12112693-1')
         .constant('dummy_productos','assets/dummy-files/datos-usuario-dummy.json')
         .constant('dummy_ultimoAcceso','assets/dummy-files/datos-ultimoAcceso-dummy.json')
