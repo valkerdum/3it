@@ -27,7 +27,6 @@
     "ng-simple-parallax": "*",
     "animate.css": "^3.5.2",
     "Ionicons": "ionicons#^2.0.1",
-    "angular-slick-carousel": "^3.1.7",
     "ngmap": "^1.18.4",
     "angular-scroll": "^1.0.2"
   },
