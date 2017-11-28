@@ -11,6 +11,6 @@
         'ui-rangeSlider',
         'angular-ladda',
         'ui.carousel',
-        'slickCarousel'
+        'slick'
     ]);
 })();

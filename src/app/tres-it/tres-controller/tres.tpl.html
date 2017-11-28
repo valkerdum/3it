@@ -1,3 +1,4 @@
+
 <!-- SECCION IMAGEN PRINCIPAL  -->
 <section ng-parallax pattern="'./assets/images/home-background.jpg'" class="relative seccion-parallax" id="inicio">
     <div class="overlap-home">
@@ -17,9 +18,9 @@
 
 
 <!-- SECCION MISION - VISION - VALORES -->
-<div class="container-fluid mvv" id="quienes">
+<div class="container-fluid mvv"  id="quienes">
     <div class="row">
-        <span class="btn-volver-detalle">
+         <span class="btn-volver-detalle">
                         <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 93.8 91.4" style="enable-background:new 0 0 93.8 91.4;" xml:space="preserve">
                         <g id="circulos-izquierda">
@@ -42,19 +43,31 @@
                         </svg>
                     </span>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
-            <ui-carousel slides="tres.slides" on-init="tres.onCarouselInit()" slides-to-show="1" slides-to-scroll="1" initial-slide="0" dots="true" arrows="false" on-before-change="tres.onCarouselBeforeChange()">
-                <carousel-item class="test1">
-                  <img src="{{item.image}}" alt="Image" class="img-mvv">
+            <slick dots="true"
+                       infinite="false"
+                       speed="300"
+                       slides-to-show="1"
+                       touch-move="false"
+                       slides-to-scroll="1">
+
+        <div ng-repeat="r in tres.slides">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                 <img src="{{r.image}}" alt="Image" class="img-mvv">
 
                   <div class="description-container">
-                      <h4 class="uni-regular-italic animated delay {{item.textoCabeceraAnimacion}}">{{item.textoCabecera}}</h4>
-                      <h2 class="uni-heavy animated delaytwo {{item.tituloAnimacion}}">{{item.titulo}}</h2>
-                      <h4 class="uni-bold animated {{item.bajadaAnimacion}} delayTres">{{item.textoBajada}}</h4>
-                      <img src="{{item.listado}}" class="animated {{item.bajadaAnimacion}} delayTres">
+                      <h4 class="uni-regular-italic animated delay {{r.textoCabeceraAnimacion}}">{{r.textoCabecera}}</h4>
+                      <h2 class="uni-heavy animated delaytwo {{r.tituloAnimacion}}">{{r.titulo}}</h2>
+                      <h4 class="uni-bold animated {{r.bajadaAnimacion}} delayTres">{{r.textoBajada}}</h4>
+                      <img src="{{r.listado}}" class="animated {{r.bajadaAnimacion}} delayTres">
                   </div>
-              </carousel-item>                  
-          </ui-carousel>
-      </div>
+            </div>
+            
+        </div>
+
+    
+    </slick>
+
+        </div>
     </div>
 </div> <!-- END SECCION MISION - VISION - VALORES  -->
 
@@ -63,24 +76,35 @@
 <div class="container-fluid servicios" id="goservicios">
     <div class="row">
          <img src="./assets/images/3it-servicios.svg" width="215" height="34" class="logo-3it-servicios">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
-            <ui-carousel slides="tres.slidesService" on-init="tres.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="true" arrows="false" >
-                <carousel-item>
-                    <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
+            <slick dots="true"
+                       infinite="false"
+                       speed="300"
+                       slides-to-show="1"
+                       touch-move="true"
+                       slides-to-scroll="1"
+                       mobileFirst="true"
+                       respondTo="window"
+                       adaptiveHeight="true"
+                       variableWidth="true">
+
+        <div ng-repeat="serv in tres.slidesService">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider" style="background-image: url({{serv.image}});border-top-color:{{serv.tituloColor}};">
+                <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
                         <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 93.8 91.4" style="enable-background:new 0 0 93.8 91.4;" xml:space="preserve">
                         <path id="icono-grande" class="st0" d="M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z
                              M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1
                             c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17
                             c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z"/>
-                        <g id="circulos-izquierda" style="fill:{{item.tituloColor}};">
+                        <g id="circulos-izquierda" style="fill:{{serv.tituloColor}};">
                             <circle class="st0" cx="45.8" cy="20.8" r="3.1"/>
                             <circle class="st0" cx="35.8" cy="20.8" r="3.1"/>
                             <circle class="st0" cx="25.8" cy="20.8" r="3.1"/>
                             <circle class="st0" cx="15.8" cy="20.8" r="3.1"/>
                             <circle class="st0" cx="5.8" cy="20.8" r="3.1"/>
                         </g>
-                        <g id="circulos-abajo" style="fill:{{item.tituloColor}};">
+                        <g id="circulos-abajo" style="fill:{{serv.tituloColor}};">
                             <circle class="st0" cx="72.1" cy="47.1" r="3.1"/>
                             <circle class="st0" cx="72.1" cy="57.1" r="3.1"/>
                             <circle class="st0" cx="72.1" cy="67.1" r="3.1"/>
@@ -89,26 +113,30 @@
                         </g>
                         </svg>
                     </a>
-                    <div class="description-container animated {{item.tituloClase}}" ng-class="agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'">
-                      <h2 class="uni-heavy" style="color:{{item.tituloColor}};">
-                        {{item.titulo}}
+                <div class="description-container animated {{serv.tituloClase}}" ng-class="agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'">
+                      <h2 class="uni-heavy" style="color:{{serv.tituloColor}};">
+                        {{serv.titulo}}
                         </h2>
-                        <p class="text-white uni-bold">{{item.descripcion}}</p>
-                        <button class="btn btn-it-base clear" style="border-color:{{item.tituloColor}};" ng-click="agiles = !agiles " >{{item.botonText}}</button>
+                        <p class="text-white uni-bold">{{serv.descripcion}}</p>
+                        <button class="btn btn-it-base clear" style="border-color:{{serv.tituloColor}};" ng-click="agiles = !agiles " >{{serv.botonText}}</button>
                     </div>  
-                  <img src="{{ item.image }}" alt="Image" class="img-slider" style="border-top-color:{{item.tituloColor}};" />
-
-                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'" style="background-color:{{item.tituloColor}};">
+                
+                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'" style="background-color:{{serv.tituloColor}};">
                      <h2 class="uni-heavy">
-                        {{item.tituloDetalle}}
+                        {{serv.tituloDetalle}}
                     </h2>
-                    <h4 class="text-white uni-bold">{{item.textoDetalle}}</h4>
+                    <h4 class="text-white uni-bold">{{serv.textoDetalle}}</h4>
                 </div>
-                </carousel-item>      
-          </ui-carousel>
-      </div>
+            </div>
+            
+        </div>
+
+    
+    </slick>
+
+        </div>
     </div>
-</div> <!-- END SECCION SERVICIOS  -->
+</div><!-- END SECCION SERVICIOS  -->
 
 <!-- SECCION INNOVACION -->
 <div class="container-fluid innovacion pr-30" id="innovacion">
@@ -243,32 +271,42 @@
             </div>
         </div>
 
-        <div class="row animated" ng-class="marcaDetalle ? 'fadeIn' : 'container-detalle-marca'">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none" >
-             <ui-carousel slides="tres.slidesMarcas" on-init="tres.onCarouselInit()" slides-to-show="1" slides-to-scroll="1"  dots="false" arrows="true" >
-                     <carousel-prev>
-                        <button class="btn-carousel-controller-left"><i class="ion-chevron-left"></i></button>
-                    </carousel-prev>
-                    <carousel-next>
-                        <button class="btn-carousel-controller-right"><i class="ion-chevron-right"></i></button>
-                    </carousel-next>  
-                   
-                <carousel-item>
-                    <div class="description-container animated {{item.tituloClase}}">
-                      <img src="{{item.logoEmpresa}}" class="logo-empresa">
-                      <p class="uni-regular ng-binding mt-20 mb-0"><span class="uni-bold">Proyecto:</span> {{item.proyecto}}</p>
-                      <p class="uni-regular mb-20"><span class="uni-bold">Año:</span> {{item.year}}</p>
-                      <p><span class="uni-bold">Descripción:</span> {{item.descripcion}}</p>
-                  </div>
-                    <img src="{{item.fondoMarca}}" alt="Image" class="img-slider" style="border-top-color:{{item.colorMarca}};">
+      
 
-                </carousel-item>
-          </ui-carousel>
-          <span class="boton-cerrar" ng-click="marcaDetalle = !marcaDetalle" >
-              <button><i class="close"></i></button>
-          </span>
-      </div>
+    <div class="row animated" ng-class="marcaDetalle ? 'fadeIn' : 'container-detalle-marca fadeOut'">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none cont-slider"> 
+            <slick dots="false"
+                       infinite="false"
+                       speed="300"
+                       slides-to-show="1"
+                       touch-move="false"
+                       slides-to-scroll="1"
+                       arrows="true">
+           
+
+                <div ng-repeat="mark in tres.slidesMarcas">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-detalle pl-0 pr-0" style="background-image: url({{mark.fondoMarca}});border-top-color:{{mark.colorMarca}};">
+
+                          <div class="description-container animated {{mark.tituloClase}}">
+                                  <img src="{{mark.logoEmpresa}}" class="logo-empresa">
+                                  <p class="uni-regular ng-binding mt-20 mb-0"><span class="uni-bold">Proyecto:</span> {{mark.proyecto}}</p>
+                                  <p class="uni-regular mb-20"><span class="uni-bold">Año:</span> {{mark.year}}</p>
+                                  <p><span class="uni-bold">Descripción:</span> {{mark.descripcion}}</p>
+                              </div>
+                           
+                    </div>
+                    
+                </div>
+         <span class="boton-cerrar" ng-click="marcaDetalle = !marcaDetalle" >
+                        <button><i class="close"></i></button>
+                    </span>
+
+    
+    </slick>
+
+        </div>
     </div>
+
 
 
   </div>

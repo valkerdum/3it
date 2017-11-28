@@ -94,8 +94,8 @@ module.exports = {
             'vendor/angular-off-click/dist/angular-off-click.js',
             'vendor/angular-ui-carousel/dist/ui-carousel.min.js',
             'vendor/ng-simple-parallax/src/ngParallax.min.js',
-            'vendor/angular-slick-carousel/dist/angular-slick.js',
-            'vendor/angular-slick-carousel/src/slick.js',
+            'vendor/angular-slick/dist/slick.js',
+            'vendor/slick-carousel/slick/slick.js',
             'vendor/ngmap/build/scripts/ng-map.min.js',
             'vendor/angular-scroll/angular-scroll.js',
             'vendor/angular-upload/angular-upload.min.js'
@@ -110,6 +110,7 @@ module.exports = {
             'vendor/angular-ui-carousel/dist/ui-carousel.min.css',
             'vendor/animate.css/animate.min.css',
             'vendor/slick-carousel/slick/slick.css',
+            'vendor/slick-carousel/slick/slick-theme.css',
             'vendor/material-design-icons/icofont/material-icons.css',
             'vendor/angular-upload/src/directives/btnUpload.min.css'
         ],
@@ -118,17 +119,18 @@ module.exports = {
             'vendor/bootstrap/fonts/glyphicons-halflings-regular.svg',
             'vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf',
             'vendor/bootstrap/fonts/glyphicons-halflings-regular.woff',
-            'vendor/orion-*/assets/**'
+            'vendor/orion-*/assets/**',
+            'vendor/slick-carousel/slick/*.gif'
         ],
         fonts: [
             'vendor/ionicons/fonts/ionicons.eot',
             'vendor/ionicons/fonts/ionicons.svg',
             'vendor/ionicons/fonts/ionicons.ttf',
             'vendor/ionicons/fonts/ionicons.woff',
-            'vendor/material-design-icons/icofont/MaterialIcons-Regular.eot',
-            'vendor/material-design-icons/icofont/MaterialIcons-Regular.svg',
-            'vendor/material-design-icons/icofont/MaterialIcons-Regular.ttf',
-            'vendor/material-design-icons/icofont/MaterialIcons-Regular.woff',
+            'vendor/slick-carousel/slick/fonts/slick.eot',
+            'vendor/slick-carousel/slick/fonts/slick.svg',
+            'vendor/slick-carousel/slick/fonts/slick.ttf',
+            'vendor/slick-carousel/slick/fonts/slick.woff',
             'vendor/angular-ui-carousel/dist/fonts/ui-carousel.svg',
             'vendor/angular-ui-carousel/dist/fonts/ui-carousel.eot',
             'vendor/angular-ui-carousel/dist/fonts/ui-carousel.ttf',

@@ -9,9 +9,9 @@
             'Tres.constants',
             'ui.carousel',
             'ngParallax',
-            'slickCarousel',
             'ngMap',
             'duScroll',
-            'lr.upload'
+            'lr.upload',
+            'slick'
         ]);
 })();

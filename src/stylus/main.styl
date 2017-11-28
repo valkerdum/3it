@@ -276,12 +276,16 @@ menu
 .ui-carousel
     margin 0
 .carousel-dots
-    bottom 50px
+.slick-dots
+    bottom 30px
+    margin-bottom 0
     li
         border-radius 2px
-        height 1px
+        height 15px
         width 45px
+        padding-top 5px
         &.carousel-active
+        &.slick-active
             button
                 opacity 1
         button
@@ -364,9 +368,13 @@ menu
     .slide    
         img
             width 100%
-    .img-slider
+    .cont-slider
         border-top-style solid
         border-top-width 28px
+        background-position center
+        background-size cover
+        height 550px
+        
     .logo-3it-servicios
         position absolute
         z-index 20
@@ -456,39 +464,30 @@ menu
 .seccion-marcas
     position relative
     background-color #000
-    .img-slider
-        border-top-style solid
-        border-top-width 35px
-        width 100%
+    .cont-slider
         height 580px
-    .description-container
-        position absolute
-        top 100px
-        margin-left 50px
-        width 589px
-        .logo-empresa
-            width auto
-            height 50px
-        p
-            color #fff
-    .carousel-item
         position relative
-    .carousel-prev
-    .carousel-next
-    .boton-cerrar
-        position absolute
-        top 4px
-        button 
-            background none
-            border 0
-            &:focus
-                outline none
-        i
-            font-size 20px
-            color #fff
-    .carousel-prev
-        right 70px
-        i
+        .slick-prev
+        .slick-next
+        .boton-cerrar
+            position absolute
+            top 17px
+            button 
+                background none
+                border 0
+                &:focus
+                    outline none
+            i
+                font-size 20px
+                color #fff
+        .boton-cerrar
+            top 2px
+            i
+                font-size 25px
+            
+        .slick-prev
+            right 70px
+            left inherit
             &:before
                 content '\f124'
                 display inline-block
@@ -501,9 +500,8 @@ menu
                 text-rendering auto
                 line-height 1
                 -webkit-font-smoothing antialiased
-    .carousel-next
-        right 40px
-        i
+        .slick-next
+            right 40px
             &:before
                 content '\f125'
                 display inline-block
@@ -516,6 +514,24 @@ menu
                 text-rendering auto
                 line-height 1
                 -webkit-font-smoothing antialiased
+        .slider-detalle
+            border-top-style solid
+            border-top-width 35px
+            background-position center
+            background-size cover
+            height 580px
+    .description-container
+        position absolute
+        top 100px
+        margin-left 50px
+        width 589px
+        .logo-empresa
+            width auto
+            height 50px
+        p
+            color #fff
+    .carousel-item
+        position relative
     .boton-cerrar
         right 10px    
         .close
