@@ -32,8 +32,6 @@ angular.module( 'Tres.template')
 			$document.scrollToElementAnimated(contacto);
 		};
 
-		vm.selectItem = [{name : 'Ahorro Total N° 002100243000'}, {name : 'Tarjeta Multipropósito N° 22-333-55555-222'}];
-
 		vm.slides = [
 			{	textoCabeceraAnimacion:'fadeIn',
 				textoCabecera:"¿Quiénes somos?",

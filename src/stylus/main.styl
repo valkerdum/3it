@@ -335,7 +335,7 @@ menu
         position absolute
         top 145px
         right 10%
-        width 505px
+        max-width 505px
         z-index 10
         .uni-regular-italic
             font-size 25px
@@ -467,11 +467,12 @@ menu
     .cont-slider
         height 580px
         position relative
-        .slick-prev
+        .slick-prev,
         .slick-next
         .boton-cerrar
             position absolute
             top 17px
+            z-index 20
             button 
                 background none
                 border 0
@@ -524,12 +525,14 @@ menu
         position absolute
         top 100px
         margin-left 50px
-        width 589px
+        max-width 589px
         .logo-empresa
             width auto
             height 50px
         p
             color #fff
+        @media (max-width: 768px)
+            margin 0 20px
     .carousel-item
         position relative
     .boton-cerrar
@@ -569,7 +572,6 @@ menu
     &.listado-activo
         opacity 1
         visibility visible
-        height 580px
     .marca
         padding-left 0!important
         padding-right 0!important
@@ -618,6 +620,8 @@ menu
             .bg2
                 opacity 0
                 background-image linear-gradient(to bottom,#3097a8 0,#00748b 100%)
+            @media (max-width: 768px)
+                height 180px
         &.marca-bch
             a
                 .bg1

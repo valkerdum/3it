@@ -1,13 +1,13 @@
 <div class="col-xs-12 padd-none">
 <section class="view-contacto flex relative" id="contacto">
-	<div class="col-lg-8 col-sm-8 padd-none wrap-step">
+	<div class="col-lg-8 col-sm-7 col-xs-12 padd-none wrap-step">
 		<ul class="steps" ng-hide="step4 == true">
 			<li ng-class='{activo: !step1, inactivo: step1}'>1</li>
 			<li ng-class='{activo: step2}'>2</li>
 			<li ng-class='{activo: step3}'>3</li>
 		</ul> 
 	</div>
-	<div ng-parallax pattern="'./assets/images/contacto-background.jpg'" class="col-lg-8 col-sm-8 flex relative backgorund-logo">
+	<div ng-parallax pattern="'./assets/images/contacto-background.jpg'" class="col-lg-8 col-sm-7 col-xs-12 flex relative backgorund-logo">
 		<div class="col-xs-12 vertical-align" ng-hide="step2||step3||step4">
 			<div class="w-50">
 				<h2 class="text-center">¡Únete a nuestro equipo!</h2>
@@ -67,19 +67,17 @@
 				<h2 class="mb-40 text-center">¿Qué tienes en mente?</h2>
 				<form class="form-text">
 					<div class="group">
-						<!-- <span class="plain-select">      
-							<ui-select tagging ng-model="vm.selected" theme="bootstrap">
-						        <ui-select-match placeholder="Pick one...">{{$select.selected.value}}</ui-select-match>
-						        <ui-select-choices repeat="val in vm.values | filter: $select.search track by val.value">
-						            <div ng-bind="val.value | highlight: $select.search"></div>
-						        </ui-select-cfhoices>
-						        
-						    </ui-select>
-						</span> -->
-						<input type="text" required> 
+						<div class="styled-select" ng-click="uploadClick=true">
+							<select name="" id="">
+								<option value="" selected="" disabled=""> </option>
+								<option value="">Servicio 1</option>
+								<option value="">Servicio 2</option>
+								<option value="">Servicio 3</option>
+							</select>
+						</div>
 						<span class="highlight"></span>
 						<span class="bar"></span>
-						<label>Selecciona un servicio</label>
+						<label ng-class="{activeLabel : uploadClick}">Selecciona un servicio</label>
 					</div>			  
 					<div class="group">      
 						<input type="text" required>
@@ -114,7 +112,7 @@
 		</div>
 
 	</div>
-	<div class="col-lg-4 col-sm-4 padd-none">
+	<div class="col-lg-4 col-sm-5 col-xs-12 padd-none">
 		<div class="mapa">
 			<ng-map zoom="15" center="[-33.4414727,-70.6528376]" styles="[{stylers:[{hue: '#628b99'},{visibility:'simplified'},{gamma:1},{weight:1}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#628b99'}]}]">
 			    <custom-marker id="can" position="[-33.4414727,-70.6528376]" on-click="click()" style="text-align; center;">

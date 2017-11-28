@@ -6,8 +6,14 @@ h2
 .flex
   display flex!important
 .view-contacto
+  @media (max-width: 768px)
+    display block!important
   .w-50
     width 50%
+    @media (max-width: 990px)
+      width 90%
+    @media (max-width: 768px)
+      width 100%
   .form-text
     .group
       position relative
@@ -42,9 +48,11 @@ h2
       -webkit-transition 0.2s ease all
 
     input:focus ~ label, input:valid ~ label,
-    .activeLabel
+    select:focus, .activeLabel
       top -20px
       font-size 16px
+      color $blanco
+    select
       color $blanco
 
     .bar
@@ -220,6 +228,33 @@ h2
   [type="radio"]:not(:checked)
     position absolute
     left -9999px
+  .styled-select
+    background url('../images/select-down.png') no-repeat 98% 5px
+    border-bottom 1px solid $blanco
+    color $blanco
+    height 46px
+    line-height 46px
+    overflow hidden
+    position relative
+    width 100%    
+    &:after
+      content "\f078"
+      color rgba(255,255,255 .4)
+      font-family 'FontAwesome'
+      display inline-block
+      vertical-align middle
+      position absolute
+      right 0
+      top 0
+      vertical-align middle
+      z-index 0
+    .form-control
+      background transparent
+    select
+      background transparent
+      -webkit-appearance: inherit
+      border none
+      width 100%
 
   .btn-transparent
     background transparent
@@ -243,6 +278,8 @@ h2
   .contact-list
     margin 0 0 70px 10%
     padding 0
+    @media (max-width: 768px)
+      margin 0 0 0 10%
     li
       list-style none
       margin 35px 0
@@ -254,6 +291,11 @@ h2
         vertical-align middle
   .backgorund-logo
     height auto!important
+    background-repeat no-repeat
+    background-size cover
+    @media (max-width: 768px)
+      padding-top 100px!important
+      padding-bottom 100px!important
   .icon-mail
     font-size 30px
     line-height 45px
