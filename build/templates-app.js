@@ -3,65 +3,122 @@ angular.module('templates-app', ['tres-it/tres-controller/contacto.tpl.html', 't
 angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/tres-controller/contacto.tpl.html",
     "<div class=\"col-xs-12 padd-none\">\n" +
-    "<section class=\"view-contacto flex\" id=\"contacto\">\n" +
-    "	<div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 backgorund-logo\">\n" +
-    "		<ul class=\"steps\">\n" +
-    "			<li class=\"\">1</li>\n" +
-    "			<li class=\"inactivo\">2</li>\n" +
-    "			<li class=\"inactivo\">3</li>\n" +
+    "<section class=\"view-contacto flex relative\" id=\"contacto\">\n" +
+    "	<div class=\"col-lg-8 col-sm-8 padd-none wrap-step\">\n" +
+    "		<ul class=\"steps\" ng-hide=\"step4 == true\">\n" +
+    "			<li ng-class='{activo: !step1, inactivo: step1}'>1</li>\n" +
+    "			<li ng-class='{activo: step2}'>2</li>\n" +
+    "			<li ng-class='{activo: step3}'>3</li>\n" +
     "		</ul> \n" +
-    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-hide=\"step2\">\n" +
-    "			<h2 class=\"text-center\">¡Únete a nuestro equipo!</h2>\n" +
-    "			<form action=\"\">\n" +
-    "				<div class=\"row\">\n" +
-    "					<ul class=\"link-list\">\n" +
-    "						<li>\n" +
-    "							<input type=\"radio\" id=\"proyecto\" name=\"mensaje\" ng-model=\"proyecto\" /> \n" +
-    "							<label for=\"proyecto\">Cuéntanos tu proyecto</label>\n" +
-    "						</li>\n" +
-    "						<li>\n" +
-    "							<input type=\"radio\" id=\"trabajo\" name=\"mensaje\" ng-model=\"trabajo\" /> \n" +
-    "							<label for=\"trabajo\">Trabaja con nosotros</label>\n" +
-    "						</li>\n" +
-    "					</ul>\n" +
-    "				</div>\n" +
-    "				<div class=\"col-xs-12 text-center mt-100\">\n" +
-    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>				\n" +
-    "				</div>\n" +
-    "			</form>\n" +
-    "		</div>\n" +
-    "		<div class=\"col-lg-offset-3 col-lg-6 col-sm-offset-1 col-sm-10 col-xs-12\" ng-show=\"step2\">\n" +
-    "			<h2 class=\"mb-40 text-center\">Completa tus datos:</h2>\n" +
-    "			<form class=\"form-text\">\n" +
-    "				<div class=\"group\">      \n" +
-    "					<input type=\"text\" required>\n" +
-    "					<span class=\"highlight\"></span>\n" +
-    "					<span class=\"bar\"></span>\n" +
-    "					<label>Nombre</label>\n" +
-    "				</div>			  \n" +
-    "				<div class=\"group\">      \n" +
-    "					<input type=\"text\" required>\n" +
-    "					<span class=\"highlight\"></span>\n" +
-    "					<span class=\"bar\"></span>\n" +
-    "					<label>E-mail</label>\n" +
-    "				</div>\n" +
-    "				<div class=\"group\">      \n" +
-    "					<input type=\"text\" required>\n" +
-    "					<span class=\"highlight\"></span>\n" +
-    "					<span class=\"bar\"></span>\n" +
-    "					<label>Teléfono</label>\n" +
-    "				</div>\n" +
-    "				<div class=\"col-xs-12 text-center\">\n" +
-    "					<button type=\"button\" ng-click=\"step2=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
-    "					<br>\n" +
-    "					<button class=\"btn-reload mt-20\" ng-click=\"step2=false\">\n" +
-    "						<i class=\"custom-icon icon-reload\"></i>\n" +
-    "					</button>\n" +
-    "				</div>\n" +
-    "			</form>\n" +
-    "		</div>\n" +
     "	</div>\n" +
-    "	<div class=\"col-lg-4 padd-none\">\n" +
+    "	<div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 col-sm-8 flex relative backgorund-logo\">\n" +
+    "		<div class=\"col-xs-12 vertical-align\" ng-hide=\"step2||step3||step4\">\n" +
+    "			<div class=\"w-50\">\n" +
+    "				<h2 class=\"text-center\">¡Únete a nuestro equipo!</h2>\n" +
+    "				<form action=\"\">\n" +
+    "					<div class=\"row\">\n" +
+    "						<ul class=\"link-list\">\n" +
+    "							<li>\n" +
+    "								<input type=\"radio\" id=\"proyecto\" name=\"mensaje\" ng-model=\"proyecto\" /> \n" +
+    "								<label for=\"proyecto\">Cuéntanos tu proyecto</label>\n" +
+    "							</li>\n" +
+    "							<li>\n" +
+    "								<input type=\"radio\" id=\"trabajo\" name=\"mensaje\" ng-model=\"trabajo\" /> \n" +
+    "								<label for=\"trabajo\">Trabaja con nosotros</label>\n" +
+    "							</li>\n" +
+    "						</ul>\n" +
+    "					</div>\n" +
+    "					<div class=\"col-xs-12 text-center mt-100\">\n" +
+    "						<button type=\"button\" ng-click=\"step1=true;step2=true\" class=\"btn-transparent\">SIGUIENTE</button>	\n" +
+    "					</div>\n" +
+    "				</form>\n" +
+    "			</div>\n" +
+    "		</div>\n" +
+    "		<div class=\"col-xs-12 vertical-align\" ng-show=\"step2\">\n" +
+    "			<div class=\"w-50\">\n" +
+    "				<h2 class=\"mb-40 text-center\">Completa tus datos:</h2>\n" +
+    "				<form class=\"form-text\">\n" +
+    "					<div class=\"group\">      \n" +
+    "						<input type=\"text\" required>\n" +
+    "						<span class=\"highlight\"></span>\n" +
+    "						<span class=\"bar\"></span>\n" +
+    "						<label>Nombre</label>\n" +
+    "					</div>			  \n" +
+    "					<div class=\"group\">      \n" +
+    "						<input type=\"text\" required>\n" +
+    "						<span class=\"highlight\"></span>\n" +
+    "						<span class=\"bar\"></span>\n" +
+    "						<label>E-mail</label>\n" +
+    "					</div>\n" +
+    "					<div class=\"group\">      \n" +
+    "						<input type=\"text\" required>\n" +
+    "						<span class=\"highlight\"></span>\n" +
+    "						<span class=\"bar\"></span>\n" +
+    "						<label>Teléfono</label>\n" +
+    "					</div>\n" +
+    "					<div class=\"col-xs-12 text-center\">\n" +
+    "						<button type=\"button\" ng-click=\"step1=true;step2=false;step3=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "						<br>\n" +
+    "						<button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false\">\n" +
+    "							<i class=\"custom-icon icon-reload\"></i>\n" +
+    "						</button>\n" +
+    "					</div>\n" +
+    "				</form>\n" +
+    "			</div>\n" +
+    "		</div>\n" +
+    "		<div class=\"col-xs-12 vertical-align\" ng-show=\"step3\">\n" +
+    "			<div class=\"w-50\">\n" +
+    "				<h2 class=\"mb-40 text-center\">¿Qué tienes en mente?</h2>\n" +
+    "				<form class=\"form-text\">\n" +
+    "					<div class=\"group\">\n" +
+    "						<!-- <span class=\"plain-select\">      \n" +
+    "							<ui-select tagging ng-model=\"vm.selected\" theme=\"bootstrap\">\n" +
+    "						        <ui-select-match placeholder=\"Pick one...\">{{$select.selected.value}}</ui-select-match>\n" +
+    "						        <ui-select-choices repeat=\"val in vm.values | filter: $select.search track by val.value\">\n" +
+    "						            <div ng-bind=\"val.value | highlight: $select.search\"></div>\n" +
+    "						        </ui-select-cfhoices>\n" +
+    "						        \n" +
+    "						    </ui-select>\n" +
+    "						</span> -->\n" +
+    "						<input type=\"text\" required> \n" +
+    "						<span class=\"highlight\"></span>\n" +
+    "						<span class=\"bar\"></span>\n" +
+    "						<label>Selecciona un servicio</label>\n" +
+    "					</div>			  \n" +
+    "					<div class=\"group\">      \n" +
+    "						<input type=\"text\" required>\n" +
+    "						<span class=\"highlight\"></span>\n" +
+    "						<span class=\"bar\"></span>\n" +
+    "						<label>Descríbenos tu proyecto</label>\n" +
+    "					</div>\n" +
+    "					<div class=\"group\">      \n" +
+    "						<div class=\"btn-upload\" ng-click=\"uploadClick=true\" upload-button url=\"/upload\" param=\"file\" data=\"formData\" accept=\"{{acceptTypes}}\" multiple=\"{{allowMultiple}}\" force-iframe-upload=\"{{forceIframeUpload}}\" required=\"true|false\" on-upload=\"onUpload(files)\" on-success=\"onSuccess(response)\" on-error=\"onError(response)\"  on-complete=\"onComplete(response)\">\n" +
+    "							<i class=\"fa fa-paperclip fa-2x text-white\"></i>\n" +
+    "						</div>\n" +
+    "						<input type=\"text\" required>\n" +
+    "						<span class=\"highlight\"></span>\n" +
+    "						<span class=\"bar\"></span>\n" +
+    "						<label ng-class=\"{activeLabel : uploadClick}\">Deseas adjuntar un documento</label>\n" +
+    "					</div>\n" +
+    "					<div class=\"col-xs-12 text-center\">\n" +
+    "						<button type=\"button\" ng-click=\"step1=false;step2=false;step3=false;step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "						<br>\n" +
+    "						<button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false\">\n" +
+    "							<i class=\"custom-icon icon-reload\"></i>\n" +
+    "						</button>\n" +
+    "					</div>\n" +
+    "				</form>\n" +
+    "			</div>\n" +
+    "		</div>\n" +
+    "		<div class=\"col-xs-12 text-center text-white vertical-align\" ng-show=\"step4\">\n" +
+    "			<div class=\"w-50\">\n" +
+    "				<i class=\"custom-icon icon-checkmail fa-4x\"></i>\n" +
+    "				<h3>¡Gracias por ponerte en contacto con nosotros! Tus datos han sido recepcionados con éxito y muy pronto te contactáremos.</h3>\n" +
+    "			</div>\n" +
+    "		</div>\n" +
+    "\n" +
+    "	</div>\n" +
+    "	<div class=\"col-lg-4 col-sm-4 padd-none\">\n" +
     "		<div class=\"mapa\">\n" +
     "			<ng-map zoom=\"15\" center=\"[-33.4414727,-70.6528376]\" styles=\"[{stylers:[{hue: '#628b99'},{visibility:'simplified'},{gamma:1},{weight:1}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#628b99'}]}]\">\n" +
     "			    <custom-marker id=\"can\" position=\"[-33.4414727,-70.6528376]\" on-click=\"click()\" style=\"text-align; center;\">\n" +
@@ -96,7 +153,7 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
 angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/tres-controller/tres.tpl.html",
     "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
-    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\">\n" +
+    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\" id=\"inicio\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
     "            <div class=\"linkedin\">\n" +
@@ -114,7 +171,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "\n" +
     "\n" +
     "<!-- SECCION MISION - VISION - VALORES -->\n" +
-    "<div class=\"container-fluid mvv\">\n" +
+    "<div class=\"container-fluid mvv\" id=\"quienes\">\n" +
     "    <div class=\"row\">\n" +
     "        <span class=\"btn-volver-detalle\">\n" +
     "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
@@ -157,7 +214,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "\n" +
     "\n" +
     "<!-- SECCION SERVICIOS-->\n" +
-    "<div class=\"container-fluid servicios\">\n" +
+    "<div class=\"container-fluid servicios\" id=\"goservicios\">\n" +
     "    <div class=\"row\">\n" +
     "         <img src=\"./assets/images/3it-servicios.svg\" width=\"215\" height=\"34\" class=\"logo-3it-servicios\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
@@ -208,7 +265,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "</div> <!-- END SECCION SERVICIOS  -->\n" +
     "\n" +
     "<!-- SECCION INNOVACION -->\n" +
-    "<div class=\"container-fluid innovacion pr-30\">\n" +
+    "<div class=\"container-fluid innovacion pr-30\" id=\"innovacion\">\n" +
     "    <div class=\"row ml-0 mr-0\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n" +
     "            <img src=\"./assets/images/3it-innovacion.svg\" width=\"215\" height=\"34\" class=\"logo-3it-seccion\">\n" +
@@ -261,9 +318,9 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "\n" +
     "<!-- SECCION MARCAS -->\n" +
     "\n" +
-    "<div class=\"container-fluid seccion-marcas\">\n" +
-    "        <div class=\"row listado-marcas\">\n" +
-    "            <div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch\">\n" +
+    "<div class=\"container-fluid seccion-marcas\" id=\"clientes\">\n" +
+    "        <div class=\"row listado-marcas animated\" ng-class=\"marcaDetalle ? 'fadeOut listado-inactivo' : 'listado-activo'\">\n" +
+    "            <div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4 marca marca-bch\" ng-click=\"marcaDetalle = !marcaDetalle\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
@@ -340,7 +397,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
-    "        <div class=\"row\">\n" +
+    "        <div class=\"row animated\" ng-class=\"marcaDetalle ? 'fadeIn' : 'container-detalle-marca'\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\" >\n" +
     "             <ui-carousel slides=\"tres.slidesMarcas\" on-init=\"tres.onCarouselInit()\" slides-to-show=\"1\" slides-to-scroll=\"1\"  dots=\"false\" arrows=\"true\" >\n" +
     "                     <carousel-prev>\n" +
@@ -361,7 +418,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "\n" +
     "                </carousel-item>\n" +
     "          </ui-carousel>\n" +
-    "          <span class=\"boton-cerrar\">\n" +
+    "          <span class=\"boton-cerrar\" ng-click=\"marcaDetalle = !marcaDetalle\" >\n" +
     "              <button><i class=\"close\"></i></button>\n" +
     "          </span>\n" +
     "      </div>\n" +
