@@ -1,4 +1,3 @@
-
 <!-- SECCION IMAGEN PRINCIPAL  -->
 <section ng-parallax pattern="'./assets/images/home-background.jpg'" class="relative seccion-parallax" id="inicio">
     <div class="overlap-home">
@@ -90,7 +89,7 @@
 
         <div ng-repeat="serv in tres.slidesService">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider" style="background-image: url({{serv.image}});border-top-color:{{serv.tituloColor}};">
-                <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
+                <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles ; tres.showDots()" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
                         <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 93.8 91.4" style="enable-background:new 0 0 93.8 91.4;" xml:space="preserve">
                         <path id="icono-grande" class="st0" d="M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z
@@ -118,7 +117,7 @@
                         {{serv.titulo}}
                         </h2>
                         <p class="text-white uni-bold">{{serv.descripcion}}</p>
-                        <button class="btn btn-it-base clear" style="border-color:{{serv.tituloColor}};" ng-click="agiles = !agiles " >{{serv.botonText}}</button>
+                        <button class="btn btn-it-base clear" style="border-color:{{serv.tituloColor}};" ng-click="agiles = !agiles ; tres.hideDots() " >{{serv.botonText}}</button>
                     </div>  
                 
                   <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'" style="background-color:{{serv.tituloColor}};">

@@ -2,10 +2,17 @@
 angular.module( 'Tres.template')
 .controller('tresCtrl',tresCtrl);
 
-
-
 	function tresCtrl($scope,  NgMap, upload){
 		var vm = this;
+
+		vm.hideDots = function() {
+			$('.slick-dots').addClass('hide animate');
+		};
+
+		vm.showDots = function() {
+			$('.slick-dots').removeClass('hide');
+			$('.slick-dots').addClass('fadeIn');
+		};
 
 		var inicio = angular.element(document.getElementById('inicio'));
 		vm.toinicio = function() {
