@@ -67,7 +67,7 @@ angular.module( 'Tres.template')
 			}
 		];
 
-		vm.slidesService = [
+		vm.slidesServicios = [
 			{	tituloClase: 'agile',
 				titulo: "Mundo Ágil",
 				tituloColor: '#ebc124',
@@ -100,18 +100,18 @@ angular.module( 'Tres.template')
 
 
 		vm.contenidoBlog = [
-			{	titulo: "Titulo Columna",
+			{	titulo: "Título Columna",
 				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				botonText: "LEER MÁS",
 				image: './assets/images/blog/imagen-blog.jpg'
 			},
 			{	
-				titulo: "Titulo Columna",
+				titulo: "Título Columna",
 				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				botonText: "LEER MÁS",
 				image: './assets/images/blog/imagen-blog.jpg'
 			},
-			{	titulo: "Titulo Columna",
+			{	titulo: "Título Columna",
 				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				botonText: "LEER MÁS",
 				image: './assets/images/blog/imagen-blog.jpg'

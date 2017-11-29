@@ -87,7 +87,7 @@
                        adaptiveHeight="true"
                        variableWidth="true">
 
-        <div ng-repeat="serv in tres.slidesService">
+        <div ng-repeat="serv in tres.slidesServicios">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider" style="background-image: url({{serv.image}});border-top-color:{{serv.tituloColor}};">
                 <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles ; tres.showDots()" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
                         <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
