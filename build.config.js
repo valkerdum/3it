@@ -103,7 +103,7 @@ module.exports = {
         css: [
             'vendor/angular-ui-select/dist/select.css',
             'vendor/ng-scrollbar/dist/ng-scrollbar.css',
-            'vendor/ionicons/css/ioioniconsss',
+            'vendor/ionicons/css/ionicons.css',
             'vendor/angular-rangeslider/angular.rangeSlider.css',
             'vendor/ladda/dist/ladda-themeless.min.css',
             'vendor/sweetalert-ui/lib/sweet-alert.css',
