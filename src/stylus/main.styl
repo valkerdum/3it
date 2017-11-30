@@ -50,6 +50,14 @@ body > h1
     z-index 10
 .brand-image
     max-width 260px
+    @media (max-width: 768px)
+        display block
+        margin 0 auto
+        max-width 45%
+    &.vertical-center
+        @media (max-width: 768px)
+            top 50px!important
+            transform translateY(0)!important
     
 .linkedin
     position absolute
@@ -275,6 +283,9 @@ menu
 
 .ui-carousel
     margin 0
+.slick-dotted.slick-slider
+    @media (max-width: 768px)
+        margin-bottom 0
 .carousel-dots
 .slick-dots
     bottom 30px
@@ -304,7 +315,7 @@ menu
 // SECCION MISION VISION VALORES
 
 .mvv
-    height 540px
+    min-height 540px
     position relative
     overflow hidden
     background-image url(images/bg-mvv.jpg)
@@ -313,6 +324,12 @@ menu
         position absolute
         top 50px
         right 50px
+        @media (max-width: 768px)
+            height auto
+            width 90px
+            top 15px
+            right 15px
+            z-index 10
     .carousel-item
         position relative
     .btn-volver-detalle
@@ -331,23 +348,34 @@ menu
                     fill #74c9d2 !important
     .img-mvv
         margin-left 50px
+        @media (max-width: 768px)
+            margin 250px 0 0 0
+            width 100%
     .description-container
         position absolute
         top 145px
         max-width 505px
         z-index 10
+        @media (max-width: 768px)
+            top 20px                
         .uni-regular-italic
             font-size 25px
             color #00748b
             margin-bottom 0
+            @media (max-width: 768px)
+                font-size 20px
         .uni-heavy
             font-size 80px
             color #74c9d2
             margin-top 5px
             margin-bottom 10px
+            @media (max-width: 768px)
+                font-size 40px
         .uni-bold
             color #00748b
             font-size 20px
+            @media (max-width: 768px)
+                font-size 18px
         .delay
             animation-delay 1.6s
         .delaytwo

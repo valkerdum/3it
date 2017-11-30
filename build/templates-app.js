@@ -141,6 +141,10 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
     "					<i class=\"custom-icon icon-mail\"></i>\n" +
     "					<a href=\"mailto:help@3it.cl\">help@3it.cl</a>\n" +
     "				</li>\n" +
+    "				<li>\n" +
+    "					<i class=\"icon ion-ios-briefcase-outline\"></i>\n" +
+    "					<a href=\"#\">Ofertas Laborales</a>\n" +
+    "				</li>\n" +
     "			</ul>\n" +
     "		</div>\n" +
     "	</div>\n" +
@@ -150,7 +154,6 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
 
 angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/tres-controller/tres.tpl.html",
-    "\n" +
     "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
     "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\" id=\"inicio\">\n" +
     "    <div class=\"overlap-home\">\n" +
@@ -161,7 +164,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                    <fa name=\"cog\" animation=\"spin\"></fa>\n" +
     "                </a>\n" +
     "            </div>\n" +
-    "            <div class=\"col-sm-offset-8 col-sm-4 v-100\">\n" +
+    "            <div class=\"col-sm-offset-8 col-sm-4 col-xs-12 v-100\">\n" +
     "                <img src=\"./assets/images/3it-logo.svg\" alt=\"3IT Quality of Service\" class=\"brand-image vertical-center animated fadeIn\">\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -206,7 +209,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "            <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n" +
     "                 <img src=\"{{r.image}}\" alt=\"Image\" class=\"img-mvv\">\n" +
     "\n" +
-    "                  <div class=\"description-container\">\n" +
+    "                  <div class=\"description-container col-sm-12 col-sm-offset-6\">\n" +
     "                      <h4 class=\"uni-regular-italic animated delay {{r.textoCabeceraAnimacion}}\">{{r.textoCabecera}}</h4>\n" +
     "                      <h2 class=\"uni-heavy animated delaytwo {{r.tituloAnimacion}}\">{{r.titulo}}</h2>\n" +
     "                      <h4 class=\"uni-bold animated {{r.bajadaAnimacion}} delayTres\">{{r.textoBajada}}</h4>\n" +
@@ -240,9 +243,9 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                       adaptiveHeight=\"true\"\n" +
     "                       variableWidth=\"true\">\n" +
     "\n" +
-    "        <div ng-repeat=\"serv in tres.slidesService\">\n" +
+    "        <div ng-repeat=\"serv in tres.slidesServicios\">\n" +
     "            <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider\" style=\"background-image: url({{serv.image}});border-top-color:{{serv.tituloColor}};\">\n" +
-    "                <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"agiles = !agiles\" ng-class=\"agiles ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
+    "                <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"agiles = !agiles ; tres.showDots()\" ng-class=\"agiles ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
     "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
     "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
     "                        <path id=\"icono-grande\" class=\"st0\" d=\"M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z\n" +
@@ -270,7 +273,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                        {{serv.titulo}}\n" +
     "                        </h2>\n" +
     "                        <p class=\"text-white uni-bold\">{{serv.descripcion}}</p>\n" +
-    "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{serv.tituloColor}};\" ng-click=\"agiles = !agiles \" >{{serv.botonText}}</button>\n" +
+    "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{serv.tituloColor}};\" ng-click=\"agiles = !agiles ; tres.hideDots() \" >{{serv.botonText}}</button>\n" +
     "                    </div>  \n" +
     "                \n" +
     "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color:{{serv.tituloColor}};\">\n" +
@@ -343,7 +346,6 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "<!-- END SECCION INNOVACION -->\n" +
     "\n" +
     "<!-- SECCION MARCAS -->\n" +
-    "\n" +
     "<div class=\"container-fluid seccion-marcas\" id=\"clientes\">\n" +
     "        <div class=\"row listado-marcas animated\" ng-class=\"marcaDetalle ? 'fadeOut listado-inactivo' : 'listado-activo'\">\n" +
     "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-bch\" ng-click=\"marcaDetalle = !marcaDetalle\">\n" +
@@ -459,6 +461,75 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "\n" +
     "  </div>\n" +
     "<!-- END SECCION MARCAS -->\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<!-- SECCION BLOG-->\n" +
+    "<div class=\"container-fluid blog\" id=\"blog\">\n" +
+    "    <div class=\"row\">\n" +
+    "         <img src=\"./assets/images/3it-blog.svg\" width=\"215\" height=\"34\" class=\"logo-3it-servicios\">\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
+    "            <slick dots=\"true\"\n" +
+    "                       infinite=\"false\"\n" +
+    "                       speed=\"300\"\n" +
+    "                       slides-to-show=\"1\"\n" +
+    "                       touch-move=\"true\"\n" +
+    "                       slides-to-scroll=\"1\"\n" +
+    "                       mobileFirst=\"true\"\n" +
+    "                       respondTo=\"window\"\n" +
+    "                       adaptiveHeight=\"true\"\n" +
+    "                       variableWidth=\"true\">\n" +
+    "\n" +
+    "        <div ng-repeat=\"blog in tres.contenidoBlog\">\n" +
+    "            <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider\" style=\"background-image: url({{blog.image}});\"\">\n" +
+    "                <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"agiles = !agiles ; tres.showDots()\" ng-class=\"agiles ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
+    "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
+    "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
+    "                        <path id=\"icono-grande\" class=\"st0\" d=\"M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z\n" +
+    "                             M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1\n" +
+    "                            c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17\n" +
+    "                            c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z\"/>\n" +
+    "                        <g id=\"circulos-izquierda\" style=\"fill:{{blog.tituloColor}};\">\n" +
+    "                            <circle class=\"st0\" cx=\"45.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"35.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"25.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"15.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"5.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                        <g id=\"circulos-abajo\" style=\"fill:{{blog.tituloColor}};\">\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"47.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"57.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"67.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"77.1\" r=\"3.1\"/>\n" +
+    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"87.1\" r=\"3.1\"/>\n" +
+    "                        </g>\n" +
+    "                        </svg>\n" +
+    "                    </a>\n" +
+    "                <div class=\"description-container animated {{blog.tituloClase}}\" ng-class=\"agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'\">\n" +
+    "                      <h2 class=\"uni-heavy\" >\n" +
+    "                        {{blog.titulo}}\n" +
+    "                        </h2>\n" +
+    "                        <p class=\"text-white uni-bold\">{{blog.descripcion}}</p>\n" +
+    "                        <button class=\"btn btn-it-base clear\">{{blog.botonText}}</button>\n" +
+    "                    </div>  \n" +
+    "                \n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color:{{blog.tituloColor}};\">\n" +
+    "                     <h2 class=\"uni-heavy\">\n" +
+    "                        {{blog.tituloDetalle}}\n" +
+    "                    </h2>\n" +
+    "                    <h4 class=\"text-white uni-bold\">{{blog.textoDetalle}}</h4>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            \n" +
+    "        </div>\n" +
+    "\n" +
+    "    \n" +
+    "    </slick>\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div><!-- END SECCION BLOG  -->\n" +
+    "\n" +
     "\n" +
     "");
 }]);
