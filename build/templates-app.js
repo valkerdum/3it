@@ -346,9 +346,11 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "<!-- END SECCION INNOVACION -->\n" +
     "\n" +
     "<!-- SECCION MARCAS -->\n" +
+    "\n" +
     "<div class=\"container-fluid seccion-marcas\" id=\"clientes\">\n" +
     "        <div class=\"row listado-marcas animated\" ng-class=\"marcaDetalle ? 'fadeOut listado-inactivo' : 'listado-activo'\">\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-bch\" ng-click=\"marcaDetalle = !marcaDetalle\">\n" +
+    "\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-bch\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(0)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
@@ -360,7 +362,8 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-udla\">\n" +
+    "\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-udla\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(1)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
@@ -372,7 +375,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-intervalores\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-intervalores\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(2)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
@@ -385,7 +388,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                </a>\n" +
     "            </div>\n" +
     "\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-aiep\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-aiep\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(3)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
@@ -398,7 +401,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                </a>\n" +
     "            </div>\n" +
     "\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-credichile\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-credichile\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(4)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
@@ -411,7 +414,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                </a>\n" +
     "            </div>\n" +
     "\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-er\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-er\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(5)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
@@ -435,9 +438,10 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                       slides-to-show=\"1\"\n" +
     "                       touch-move=\"false\"\n" +
     "                       slides-to-scroll=\"1\"\n" +
-    "                       arrows=\"true\">\n" +
-    "           \n" +
-    "\n" +
+    "                       arrows=\"true\"\n" +
+    "                       settings=\"slickConfig\"\n" +
+    "                       fade=\"true\">\n" +
+    "                       \n" +
     "                <div ng-repeat=\"mark in tres.slidesMarcas\">\n" +
     "                    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-detalle pl-0 pr-0\" style=\"background-image: url({{mark.fondoMarca}});border-top-color:{{mark.colorMarca}};\">\n" +
     "\n" +
@@ -451,11 +455,13 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                    </div>\n" +
     "                    \n" +
     "                </div>\n" +
-    "                <span class=\"boton-cerrar\" ng-click=\"marcaDetalle = !marcaDetalle\" >\n" +
-    "                    <button><i class=\"close\"></i></button>\n" +
-    "                </span>\n" +
+    "               \n" +
     "            \n" +
     "            </slick>\n" +
+    "\n" +
+    "             <span class=\"boton-cerrar\" ng-click=\"marcaDetalle = !marcaDetalle\" >\n" +
+    "                    <i class=\"close\"></i>\n" +
+    "                </span>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "\n" +
