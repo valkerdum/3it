@@ -5,6 +5,9 @@ angular.module( 'Tres.template')
 	function tresCtrl($scope,  NgMap, upload){
 		var vm = this;
 
+		
+		$scope.slickConfig = { method: {} } ;
+
 		vm.hideDots = function() {
 			$('.slick-dots').addClass('hide animate');
 		};
@@ -195,6 +198,10 @@ angular.module( 'Tres.template')
 		});
 
 	}
+
+
+
+
 
 
 })();

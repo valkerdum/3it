@@ -95,6 +95,7 @@ module.exports = {
             'vendor/angular-ui-carousel/dist/ui-carousel.min.js',
             'vendor/ng-simple-parallax/src/ngParallax.min.js',
             'vendor/angular-slick/dist/slick.js',
+            'vendor/angular-slick-carousel/dist/angular-slick.js',
             'vendor/slick-carousel/slick/slick.js',
             'vendor/ngmap/build/scripts/ng-map.min.js',
             'vendor/angular-scroll/angular-scroll.js',

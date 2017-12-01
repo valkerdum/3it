@@ -190,9 +190,11 @@
 <!-- END SECCION INNOVACION -->
 
 <!-- SECCION MARCAS -->
+
 <div class="container-fluid seccion-marcas" id="clientes">
         <div class="row listado-marcas animated" ng-class="marcaDetalle ? 'fadeOut listado-inactivo' : 'listado-activo'">
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-bch" ng-click="marcaDetalle = !marcaDetalle">
+
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-bch" ng-click="marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(0)">
                 <a href="">
                     <div class="bg1"></div>
                     <div class="bg2"></div>
@@ -204,7 +206,8 @@
                     </i>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-udla">
+
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-udla" ng-click="marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(1)">
                 <a href="">
                     <div class="bg1"></div>
                     <div class="bg2"></div>
@@ -216,7 +219,7 @@
                     </i>
                 </a>
             </div>
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-intervalores">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-intervalores" ng-click="marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(2)">
                 <a href="">
                     <div class="bg1"></div>
                     <div class="bg2"></div>
@@ -229,7 +232,7 @@
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-aiep">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-aiep" ng-click="marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(3)">
                 <a href="">
                     <div class="bg1"></div>
                     <div class="bg2"></div>
@@ -242,7 +245,7 @@
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-credichile">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-credichile" ng-click="marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(4)">
                 <a href="">
                     <div class="bg1"></div>
                     <div class="bg2"></div>
@@ -255,7 +258,7 @@
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-er">
+            <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-er" ng-click="marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(5)">
                 <a href="">
                     <div class="bg1"></div>
                     <div class="bg2"></div>
@@ -279,9 +282,10 @@
                        slides-to-show="1"
                        touch-move="false"
                        slides-to-scroll="1"
-                       arrows="true">
-           
-
+                       arrows="true"
+                       settings="slickConfig"
+                       fade="true">
+                       
                 <div ng-repeat="mark in tres.slidesMarcas">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-detalle pl-0 pr-0" style="background-image: url({{mark.fondoMarca}});border-top-color:{{mark.colorMarca}};">
 
@@ -295,11 +299,13 @@
                     </div>
                     
                 </div>
-                <span class="boton-cerrar" ng-click="marcaDetalle = !marcaDetalle" >
-                    <button><i class="close"></i></button>
-                </span>
+               
             
             </slick>
+
+             <span class="boton-cerrar" ng-click="marcaDetalle = !marcaDetalle" >
+                    <i class="close"></i>
+                </span>
         </div>
     </div>
 
