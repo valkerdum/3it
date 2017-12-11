@@ -48,6 +48,9 @@ body > h1
     left 0
     width 100%
     z-index 10
+    @media (max-width: 768px)
+        background url('./images/m-super-back-home.png') no-repeat top center
+        background-size cover
 .brand-image
     max-width 260px
     @media (max-width: 768px)
@@ -249,6 +252,8 @@ menu
         ul
             li
                 display block
+        @media (max-width: 400px)
+            width 100%
     &.close
         -webkit-transition .5s all
         transition .5s all

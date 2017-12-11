@@ -155,7 +155,24 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
 angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/tres-controller/tres.tpl.html",
     "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
-    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative seccion-parallax\" id=\"inicio\">\n" +
+    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative hidden-xs seccion-parallax\" id=\"inicio\">\n" +
+    "    <div class=\"overlap-home\">\n" +
+    "        <div class=\"container-fluid relative\">\n" +
+    "            <div class=\"linkedin\">\n" +
+    "                <a href=\"#\" title=\"Encuéntranos en Linkedin\">\n" +
+    "                    <i class=\"fa fa-2x fa-linkedin text-white\"></i>\n" +
+    "                    <fa name=\"cog\" animation=\"spin\"></fa>\n" +
+    "                </a>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-sm-offset-8 col-sm-4 col-xs-12 v-100\">\n" +
+    "                <img src=\"./assets/images/3it-logo.svg\" alt=\"3IT Quality of Service\" class=\"brand-image vertical-center animated fadeIn\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</section> <!-- END SECCION IMAGEN PRINCIPAL --> \n" +
+    "\n" +
+    "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
+    "<section ng-parallax pattern=\"'./assets/images/m-home-background.jpg'\" class=\"relative visible-xs seccion-parallax\" id=\"inicio\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
     "            <div class=\"linkedin\">\n" +

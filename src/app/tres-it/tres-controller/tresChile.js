@@ -47,10 +47,10 @@ angular.module( 'Tres.template')
 				textoCabecera:"¿Quiénes somos?",
 				tituloAnimacion: 'fadeInDown',
 				titulo:"Valores",
-				textoBajada:"",
 				bajadaAnimacion: 'fadeIn',
 				image: './assets/images/mvv/valores.png',
 				listado: './assets/images/mvv/listado-mvv.png'
+				// textoBajada:"<ul> <li>Innovación</li> <li>Calidad</li> <li>Compromiso</li> <li>Responsabilidad</li> <li>Orientación al cliente</li></ul>"
 			},
 			{	textoCabeceraAnimacion:'fadeIn',
 				textoCabecera:"¿Quiénes somos?",
