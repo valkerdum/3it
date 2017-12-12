@@ -13,5 +13,5 @@
             'duScroll',
             'lr.upload',
             'slickCarousel'
-        ]);
+        ]).value('duScrollOffset', 50);
 })();

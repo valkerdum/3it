@@ -294,7 +294,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{serv.tituloColor}};\" ng-click=\"agiles = !agiles ; tres.hideDots() \" >{{serv.botonText}}</button>\n" +
     "                    </div>  \n" +
     "                \n" +
-    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color: rgba({{serv.backgroundColor}},.6);\">\n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeIn' : 'visible-hidden fadeInDown'\" style=\"background-color: rgba({{serv.backgroundColor}},.6);\">\n" +
     "                     <h2 class=\"uni-heavy\">\n" +
     "                        {{serv.tituloDetalle}}\n" +
     "                    </h2>\n" +
@@ -325,7 +325,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "</div><!-- END SECCION SERVICIOS  -->\n" +
     "\n" +
     "<!-- SECCION INNOVACION -->\n" +
-    "<div class=\"container-fluid servicios innovacion\" id=\"goservicios\">\n" +
+    "<div class=\"container-fluid servicios innovacion\" id=\"innovacion\">\n" +
     "    <div class=\"row\">\n" +
     "         <img src=\"./assets/images/3it-innovacion.svg\" width=\"215\" height=\"34\" class=\"logo-3it-servicios\">\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
@@ -366,7 +366,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                        </g>\n" +
     "                        </svg>\n" +
     "                    </a>\n" +
-    "                <div class=\"description-container animated {{serv.tituloClase}}\" ng-class=\"agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'\">\n" +
+    "                <div class=\"description-container animated {{serv.tituloClase}}\" ng-class=\"agiles ? 'fadeOut visible-hidden' : 'fadeIn'\">\n" +
     "                      <h2 class=\"uni-heavy\" style=\"color:{{serv.tituloColor}};\">\n" +
     "                        {{serv.titulo}}\n" +
     "                        </h2>\n" +
@@ -374,7 +374,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{serv.tituloColor}};\" ng-click=\"agiles = !agiles ; tres.hideDots() \" >{{serv.botonText}}</button>\n" +
     "                    </div>  \n" +
     "                \n" +
-    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color: rgba({{serv.backgroundColor}},.6);\">\n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeIn' : 'visible-hidden fadeInDown'\" style=\"background-color: rgba({{serv.backgroundColor}},.6);\">\n" +
     "                     <h2 class=\"uni-heavy\">\n" +
     "                        {{serv.tituloDetalle}}\n" +
     "                    </h2>\n" +
@@ -579,7 +579,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                        <button class=\"btn btn-it-base clear\">{{blog.botonText}}</button>\n" +
     "                    </div>  \n" +
     "                \n" +
-    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color:{{blog.tituloColor}};\">\n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeIn' : 'visible-hidden fadeInDown'\" style=\"background-color:{{blog.tituloColor}};\">\n" +
     "                     <h2 class=\"uni-heavy\">\n" +
     "                        {{blog.tituloDetalle}}\n" +
     "                    </h2>\n" +

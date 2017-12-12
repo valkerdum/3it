@@ -138,7 +138,7 @@
                         <button class="btn btn-it-base clear" style="border-color:{{serv.tituloColor}};" ng-click="agiles = !agiles ; tres.hideDots() " >{{serv.botonText}}</button>
                     </div>  
                 
-                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'" style="background-color: rgba({{serv.backgroundColor}},.6);">
+                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeIn' : 'visible-hidden fadeInDown'" style="background-color: rgba({{serv.backgroundColor}},.6);">
                      <h2 class="uni-heavy">
                         {{serv.tituloDetalle}}
                     </h2>
@@ -169,7 +169,7 @@
 </div><!-- END SECCION SERVICIOS  -->
 
 <!-- SECCION INNOVACION -->
-<div class="container-fluid servicios innovacion" id="goservicios">
+<div class="container-fluid servicios innovacion" id="innovacion">
     <div class="row">
          <img src="./assets/images/3it-innovacion.svg" width="215" height="34" class="logo-3it-servicios">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
@@ -210,7 +210,7 @@
                         </g>
                         </svg>
                     </a>
-                <div class="description-container animated {{serv.tituloClase}}" ng-class="agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'">
+                <div class="description-container animated {{serv.tituloClase}}" ng-class="agiles ? 'fadeOut visible-hidden' : 'fadeIn'">
                       <h2 class="uni-heavy" style="color:{{serv.tituloColor}};">
                         {{serv.titulo}}
                         </h2>
@@ -218,7 +218,7 @@
                         <button class="btn btn-it-base clear" style="border-color:{{serv.tituloColor}};" ng-click="agiles = !agiles ; tres.hideDots() " >{{serv.botonText}}</button>
                     </div>  
                 
-                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'" style="background-color: rgba({{serv.backgroundColor}},.6);">
+                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeIn' : 'visible-hidden fadeInDown'" style="background-color: rgba({{serv.backgroundColor}},.6);">
                      <h2 class="uni-heavy">
                         {{serv.tituloDetalle}}
                     </h2>
@@ -423,7 +423,7 @@
                         <button class="btn btn-it-base clear">{{blog.botonText}}</button>
                     </div>  
                 
-                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'" style="background-color:{{blog.tituloColor}};">
+                  <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeIn' : 'visible-hidden fadeInDown'" style="background-color:{{blog.tituloColor}};">
                      <h2 class="uni-heavy">
                         {{blog.tituloDetalle}}
                     </h2>
