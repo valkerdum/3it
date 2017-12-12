@@ -4,7 +4,7 @@ angular.module( 'Tres.template')
 
 	function tresCtrl($scope,  NgMap, upload){
 		var vm = this;
-
+		
 		
 		$scope.slickConfig = { method: {} } ;
 

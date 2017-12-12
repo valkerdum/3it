@@ -262,6 +262,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "\n" +
     "        <div ng-repeat=\"serv in tres.slidesServicios\">\n" +
     "            <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider\" style=\"background-image: url({{serv.image}});border-top-color:{{serv.tituloColor}};\">\n" +
+    "                <img src=\"{{serv.image}}\" class=\"invisible\" alt=\"\">\n" +
     "                <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"agiles = !agiles ; tres.showDots()\" ng-class=\"agiles ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
     "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
     "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
@@ -293,15 +294,28 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{serv.tituloColor}};\" ng-click=\"agiles = !agiles ; tres.hideDots() \" >{{serv.botonText}}</button>\n" +
     "                    </div>  \n" +
     "                \n" +
-    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color:{{serv.tituloColor}};\">\n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color: rgba({{serv.backgroundColor}},.6);\">\n" +
     "                     <h2 class=\"uni-heavy\">\n" +
     "                        {{serv.tituloDetalle}}\n" +
     "                    </h2>\n" +
     "                    <h4 class=\"text-white uni-bold\">{{serv.textoDetalle}}</h4>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            \n" +
-    "        </div>\n" +
+    "            <div class=\"detalle-servicio\" ng-class=\"agiles ? 'fadeInDown' : 'hidden fadeInUp'\">\n" +
+    "                <div style=\"background:{{serv.tituloColor}};\" class=\"col-xs-12 pl-0 pr-0 pt-25 pb-25\">\n" +
+    "                    <div class=\"col-xs-12 col-sm-6 pl-0 pr-0\">\n" +
+    "                        <h2 class=\"servicios__detalle__titulo col-xs-offset-1 col-xs-10 uni-heavy mt-0 mb-0\">{{serv.seccion}}</h2>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 servicios__detalle\">\n" +
+    "                    <div class=\"servicios__detalle__cell col-xs-12 col-sm-6 pl-0 pr-0\" ng-repeat=\"detalle in serv.detalles\">\n" +
+    "                        <div class=\"col-xs-offset-1 col-xs-10\">\n" +
+    "                        <h3 style=\"color: {{serv.tituloColor}};\">{{detalle.titulo}}</h3>\n" +
+    "                        <p>{{detalle.descripcion}}</p></div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div> <!-- servicios -->\n" +
     "\n" +
     "    \n" +
     "    </slick>\n" +
@@ -311,52 +325,81 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "</div><!-- END SECCION SERVICIOS  -->\n" +
     "\n" +
     "<!-- SECCION INNOVACION -->\n" +
-    "<div class=\"container-fluid innovacion pr-30\" id=\"innovacion\">\n" +
-    "    <div class=\"row ml-0 mr-0\">\n" +
-    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n" +
-    "            <img src=\"./assets/images/3it-innovacion.svg\" width=\"215\" height=\"34\" class=\"logo-3it-seccion\">\n" +
+    "<div class=\"container-fluid servicios innovacion\" id=\"goservicios\">\n" +
+    "    <div class=\"row\">\n" +
+    "         <img src=\"./assets/images/3it-innovacion.svg\" width=\"215\" height=\"34\" class=\"logo-3it-servicios\">\n" +
+    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
+    "            <slick dots=\"true\"\n" +
+    "                       infinite=\"false\"\n" +
+    "                       speed=\"300\"\n" +
+    "                       slides-to-show=\"1\"\n" +
+    "                       touch-move=\"true\"\n" +
+    "                       slides-to-scroll=\"1\"\n" +
+    "                       mobileFirst=\"true\"\n" +
+    "                       respondTo=\"window\"\n" +
+    "                       adaptiveHeight=\"true\"\n" +
+    "                       variableWidth=\"true\">\n" +
     "\n" +
-    "            <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"inovaDetalle = !inovaDetalle\" ng-class=\"inovaDetalle ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
-    "                <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
+    "        <div ng-repeat=\"serv in tres.slidesInnovacion\">\n" +
+    "            <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider\" style=\"background-image: url({{serv.image}});border-top-color:{{serv.tituloColor}};\">\n" +
+    "                <img src=\"{{serv.image}}\" class=\"invisible\" alt=\"\">\n" +
+    "                <a href=\"javascript:void(0);\" class=\"animated btn-volver-detalle\" ng-click=\"agiles = !agiles ; tres.showDots()\" ng-class=\"agiles ? 'fadeIn' : 'fadeOut visible-hidden'\">\n" +
+    "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
     "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
     "                        <path id=\"icono-grande\" class=\"st0\" d=\"M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z\n" +
     "                             M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1\n" +
     "                            c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17\n" +
     "                            c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z\"/>\n" +
-    "                        <g id=\"circulos-izquierda\">\n" +
+    "                        <g id=\"circulos-izquierda\" style=\"fill:{{serv.tituloColor}};\">\n" +
     "                            <circle class=\"st0\" cx=\"45.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"35.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"25.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"15.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"5.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
     "                        </g>\n" +
-    "                        <g id=\"circulos-abajo\">\n" +
+    "                        <g id=\"circulos-abajo\" style=\"fill:{{serv.tituloColor}};\">\n" +
     "                            <circle class=\"st0\" cx=\"72.1\" cy=\"47.1\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"72.1\" cy=\"57.1\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"72.1\" cy=\"67.1\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"72.1\" cy=\"77.1\" r=\"3.1\"/>\n" +
     "                            <circle class=\"st0\" cx=\"72.1\" cy=\"87.1\" r=\"3.1\"/>\n" +
     "                        </g>\n" +
-    "                </svg>\n" +
-    "            </a>\n" +
-    "        </div>\n" +
+    "                        </svg>\n" +
+    "                    </a>\n" +
+    "                <div class=\"description-container animated {{serv.tituloClase}}\" ng-class=\"agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'\">\n" +
+    "                      <h2 class=\"uni-heavy\" style=\"color:{{serv.tituloColor}};\">\n" +
+    "                        {{serv.titulo}}\n" +
+    "                        </h2>\n" +
+    "                        <p class=\"text-white uni-bold\">{{serv.descripcion}}</p>\n" +
+    "                        <button class=\"btn btn-it-base clear\" style=\"border-color:{{serv.tituloColor}};\" ng-click=\"agiles = !agiles ; tres.hideDots() \" >{{serv.botonText}}</button>\n" +
+    "                    </div>  \n" +
+    "                \n" +
+    "                  <div class=\"info-detalle animated text-center\" ng-class=\"agiles ? 'fadeInUp' : 'visible-hidden fadeInDown'\" style=\"background-color: rgba({{serv.backgroundColor}},.6);\">\n" +
+    "                     <h2 class=\"uni-heavy\">\n" +
+    "                        {{serv.tituloDetalle}}\n" +
+    "                    </h2>\n" +
+    "                    <h4 class=\"text-white uni-bold\">{{serv.textoDetalle}}</h4>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"detalle-servicio\" ng-class=\"agiles ? 'fadeInDown' : 'hidden fadeInUp'\">\n" +
+    "                <div style=\"background:{{serv.tituloColor}};\" class=\"col-xs-12 pl-0 pr-0 pt-25 pb-25\">\n" +
+    "                    <div class=\"col-xs-12 col-sm-6 pl-0 pr-0\">\n" +
+    "                        <h2 class=\"servicios__detalle__titulo col-xs-offset-1 col-xs-10 uni-heavy mt-0 mb-0\">{{serv.seccion}}</h2>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 servicios__detalle\">\n" +
+    "                    <div class=\"servicios__detalle__cell col-xs-12 col-sm-6 pl-0 pr-0\" ng-repeat=\"detalle in serv.detalles\">\n" +
+    "                        <div class=\"col-xs-offset-1 col-xs-10\">\n" +
+    "                        <h3 style=\"color: {{serv.tituloColor}};\">{{detalle.titulo}}</h3>\n" +
+    "                        <p>{{detalle.descripcion}}</p></div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div> <!-- servicios -->\n" +
     "\n" +
-    "        <div class=\"col-xs-12 col-sm-4 col-sm-offset-8 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9 informacion text-right animated\" ng-class=\"inovaDetalle ? 'fadeOut visible-hidden' : 'fadeInRight'\">\n" +
-    "            <h2 class=\"uni-heavy\">\n" +
-    "                3IT Labs\n" +
-    "            </h2>\n" +
-    "            <p class=\"text-white uni-bold\">dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>\n" +
-    "            <button class=\"btn btn-it-base\" ng-click=\"inovaDetalle = !inovaDetalle\">VER MÁS</button>\n" +
-    "        </div>\n" +
+    "    \n" +
+    "    </slick>\n" +
     "\n" +
-    "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 info-detalle animated text-center\" ng-class=\"inovaDetalle ? 'fadeInUp' : 'visible-hidden fadeInDown' \">\n" +
-    "             <h2 class=\"uni-heavy\">\n" +
-    "                3IT Labs\n" +
-    "            </h2>\n" +
-    "            <h4 class=\"text-white uni-bold\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n" +
-    "            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n" +
-    "            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n" +
-    "            consequat.</h4>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
