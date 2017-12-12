@@ -71,33 +71,128 @@ angular.module( 'Tres.template')
 		];
 
 		vm.slidesServicios = [
-			{	tituloClase: 'agile',
+			{	
+				seccion: 'SERVICIOS',
+				tituloClase: 'agile',
 				titulo: "Mundo Ágil",
 				tituloColor: '#ebc124',
+				backgroundColor: '235,193,36',
 				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-agile.jpg',
 				tituloDetalle: "Mundo Ágil",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+				detalles: [
+				{
+					titulo: 'Titulo 1',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 2',
+					descripcion: 'Lorem ipsum dolor sit amet, quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 3',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 4',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				}
+				]
 			},
 			{	
+				seccion: 'SERVICIOS',
 				tituloClase: 'proyectos',
 				titulo: "Proyectos",
 				tituloColor: '#c53f41',
+				backgroundColor: '197,63,65',
 				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-proyectos.jpg',
 				tituloDetalle: "Proyectos",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+				detalles: [
+				{
+					titulo: 'Titulo 1',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 2',
+					descripcion: 'Lorem ipsum dolor sit amet, quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 3',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 4',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				}
+				]
 			},
-			{	tituloClase: 'outsourcing',
+			{	
+				seccion: 'SERVICIOS',
+				tituloClase: 'outsourcing',
 				titulo: "Outsourcing",
 				tituloColor: '#3099ca',
+				backgroundColor: '48,153,202',
 				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-outsourcing.jpg',
 				tituloDetalle: "Outsourcing",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+				detalles: [
+				{
+					titulo: 'Titulo 1',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 2',
+					descripcion: 'Lorem ipsum dolor sit amet, quaerat quia laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi numquam optio delectus perspiciatis, facilis corporis asperiores incidunt rem dicta, exercitationem a laborum doloremque, veritatis aperiam consectetur quos reiciendis consequuntur porro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eum, cumque atque architecto, sint commodi tenetur accusantium. Neque, debitis qui quod vero molestias error ratione distinctio dolor placeat voluptatibus illo.'
+				},
+				{
+					titulo: 'Titulo 3',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 4',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				}
+				]
+			}
+		];
+
+		vm.slidesInnovacion = [
+			{	
+				seccion: 'SERVICIOS',
+				tituloClase: 'agile',
+				titulo: "3IT Labs",
+				tituloColor: '#3f9b49',
+				backgroundColor: '63,155,73',
+				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				botonText: "VER MÁS",
+				image: './assets/images/innovacion-background.jpg',
+				tituloDetalle: "3IT Labs",
+				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+				detalles: [
+				{
+					titulo: 'Titulo 1',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 2',
+					descripcion: 'Lorem ipsum dolor sit amet, quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 3',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				},
+				{
+					titulo: 'Titulo 4',
+					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+				}
+				]
 			}
 		];
 
