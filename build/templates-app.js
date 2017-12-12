@@ -16,7 +16,7 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
     "			<div class=\"w-50\">\n" +
     "				<h2 class=\"text-center\">¡Únete a nuestro equipo!</h2>\n" +
     "				<form action=\"\">\n" +
-    "					<div class=\"row\">\n" +
+    "					<div class=\"row mr-0 ml-0\">\n" +
     "						<ul class=\"link-list\">\n" +
     "							<li>\n" +
     "								<input type=\"radio\" id=\"proyecto\" name=\"mensaje\" ng-model=\"proyecto\" /> \n" +

@@ -273,7 +273,7 @@ menu
     top -50px
     left 0
     width 100%
-    z-index 11
+    z-index 100
     padding 5px 10px
     .logo-3it-svg
         width 52px
@@ -419,6 +419,7 @@ menu
         top  80px
         @media (max-width: 768px)
             left 10px
+            top 50px
     .description-container
         position absolute
         top 180px
@@ -461,6 +462,10 @@ menu
             height 100%
             width 100%
             z-index -1
+        @media (max-width: 768px)
+            padding 0 15px 25px
+            h2
+                font-size 30px
     .carousel-item
         position relative
     .btn-volver-detalle
@@ -468,6 +473,9 @@ menu
         top 50px
         right 50px
         z-index 20
+        @media (max-width: 768px)
+            right 15px
+            top 15px
     &__detalle
         display flex
         flex-wrap wrap
@@ -491,6 +499,8 @@ menu
     &.innovacion
         .description-container
             right 65px
+            @media (max-width: 768px)
+                right inherit
 
 // SECCION MARCAS
 .seccion-marcas
@@ -765,12 +775,16 @@ menu
         background-position center
         background-size cover
         height 100vh
+        @media (max-width: 768px)
+            background-position 75% bottom
         
     .logo-3it-servicios
         position absolute
         z-index 20
         left 50px
         top  50px
+        @media (max-width: 768px)
+            left 10px
     .description-container
         position absolute
         top 180px
@@ -783,5 +797,13 @@ menu
             max-width 390px
         .btn-it-base
             border-color #74c9d2
+        @media (max-width: 768px)
+            bottom 80px
+            margin 0 auto
+            padding 0 20px
+            text-align center
+            top inherit
+            h2
+                font-size 30px
     .carousel-item
         position relative
