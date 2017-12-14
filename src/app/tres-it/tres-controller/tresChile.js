@@ -22,6 +22,11 @@ angular.module( 'Tres.template')
 			$document.scrollToElementAnimated(inicio);
 		};
 
+		var inicioMobile = angular.element(document.getElementById('inicioMobile'));
+		vm.toinicioMobile = function() {
+			$document.scrollToElementAnimated(inicioMobile);
+		};
+
 		var quienes = angular.element(document.getElementById('quienes'));
 		vm.toquienes = function() {
 			$document.scrollToElementAnimated(quienes);

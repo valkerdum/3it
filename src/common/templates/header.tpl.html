@@ -8,7 +8,8 @@
 
 <div class="nav-bar" ng-class="open ? 'open' : 'close' ">
     <ul class="text-center">
-        <li><a href="#inicio" ng-click="open = !open" du-smooth-scroll="inicio" duration="1000">Inicio</a></li>
+        <li class="hidden-xs"><a href="#inicio" ng-click="open = !open" du-smooth-scroll="inicio" duration="1000">Inicio</a></li>
+        <li class="visible-xs"><a href="#inicioMobile" ng-click="open = !open" du-smooth-scroll="inicioMobile" duration="1000">inicio</a></li>
         <li><a href="#quienes" ng-click="open = !open" du-smooth-scroll="quienes" duration="1000">Nosotros</a></li>
         <li><a href="#goservicios" ng-click="open = !open" du-smooth-scroll="goservicios" duration="1000">Servicios</a></li>
         <li><a href="#innovacion" ng-click="open = !open" du-smooth-scroll="innovacion" duration="1000">Innovación</a></li>
@@ -22,7 +23,8 @@
 
 
 <header class="header-follow animated">
-    <a href="#inicio" du-smooth-scroll="inicio" duration="1000"><img src="./assets/images/3it-logo-color.svg" width="52" height="40" class="logo-3it-svg"></a>
+    <a href="#inicio" du-smooth-scroll="inicio" duration="1000" class="hidden-xs"><img src="./assets/images/3it-logo-color.svg" width="52" height="40" class="logo-3it-svg"></a>
+     <a href="#inicioMobile" du-smooth-scroll="inicioMobile" duration="1000" class="visible-xs"><img src="./assets/images/3it-logo-color.svg" width="52" height="40" class="logo-3it-svg"></a>
     <button class="navbar-icon navbar-toggler navbar-toggler-right pull-right"  data-toggle="collapse" id="nav-icon" type="button" ng-click="open = !open" ng-class="open ? 'toggle-open' : 'toggle-close' ">
     <span class="ico">
         <i></i>
