@@ -82,27 +82,29 @@ angular.module( 'Tres.template')
 				titulo: "Mundo Ágil",
 				tituloColor: '#ebc124',
 				backgroundColor: '235,193,36',
-				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				descripcion: "En un mercado que cada vez se mueve más rápido, ayudamos a las empresas a que se puedan adaptar a estas nuevas condiciones, fomentando el trabajo proactivo, la creatividad y el trabajo en equipo.",
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-agile.jpg',
 				tituloDetalle: "Mundo Ágil",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+                textoDetalle: "Ser Ágil es una mentalidad.",
 				detalles: [
 				{
-					titulo: 'Titulo 1',
-					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+					titulo: 'Soporte y continuidad ',
+					descripcion: 'Contamos con equipos especializados para mantener el up-time de tus sistemas. Asimismo, contamos con la resolución de incidencias de los mismos, con equipos dedicados.'
 				},
 				{
-					titulo: 'Titulo 2',
-					descripcion: 'Lorem ipsum dolor sit amet, quaerat quia laudantium.'
+					titulo: 'Especialistas en metodologías ágiles ',
+					descripcion: 'Contamos con equipos certificados y la mejor asesoría en proyectos ágiles, basados en experiencias y proyectos con casos de éxito.'
 				},
 				{
-					titulo: 'Titulo 3',
-					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+					titulo: 'Células ágiles ',
+					descripcion: 'Desarrollamos y potenciamos el talento de nuestro equipo a través de una constante búsqueda de nuevas tecnologías, que permitan entregar un mejor servicio.\n' +
+                    '\n' +
+                    'El resultado: Un equipo de élite integrado por expertos en TI, que desafían los métodos tradicionales y que permiten a nuestros clientes, obtener una mayor eficiencia y productividad en sus negocios.\n'
 				},
 				{
-					titulo: 'Titulo 4',
-					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+					titulo: 'PMO Agile',
+					descripcion: 'Contamos con especialistas de vasta experiencia en control y gestión de proyectos ágiles, lo cual entrega la visibilidad necesaria para la gestión de cada proyecto.'
 				}
 				]
 			},
@@ -112,30 +114,32 @@ angular.module( 'Tres.template')
 				titulo: "Proyectos",
 				tituloColor: '#c53f41',
 				backgroundColor: '197,63,65',
-				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				descripcion: "En base a los requerimientos entregados por nuestros clientes, desarrollamos soluciones innovadoras para su negocio, aportando desde nuestra vereda, dedicación, calidad y compromiso en cada una de ellas. Nuestro equipo cuenta con la capacidad y experiencia necesaria para garantizar el desarrollo e implementación exitosa de cada proyecto.",
 				botonText: "VER MÁS",
 				image: './assets/images/servicios-proyectos.jpg',
 				tituloDetalle: "Proyectos",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+                textoDetalle: "Resolvemos problemas de forma innovadora.",
 				detalles: [
 				{
-					titulo: 'Titulo 1',
-					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+					titulo: 'Desarrollo de software a medida ',
+					descripcion: 'Nos adaptamos a las necesidades de tu empresa, desarrollamos aplicaciones ajustadas a tu negocio con la mejor calidad y a corto plazo.'
 				},
 				{
-					titulo: 'Titulo 2',
-					descripcion: 'Lorem ipsum dolor sit amet, quaerat quia laudantium.'
+					titulo: 'Mantención de sistemas y mejora continua',
+					descripcion: 'Conocemos la importancia de la disponibilidad de los sistemas, contamos con una vasta experiencia en mantención y mejoras de sistemas, plataformas legadas y servicios de integración, procesos batch, conectores, etc.'
 				},
 				{
-					titulo: 'Titulo 3',
-					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+					titulo: 'Oficina (PMO)',
+					descripcion: 'El control y gestión de los proyectos son una herramienta clave para el seguimiento de los desarrollos y aportan al cumplimiento de los hitos relevantes de cada proyecto.'
 				},
 				{
-					titulo: 'Titulo 4',
-					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+					titulo: 'Desarrollo de APPS Móviles y Web',
+					descripcion: 'Hoy en día los canales más importantes para la industria de cara a clientes, y que además deben estar en constante renovación y mejora, contamos con expertos que buscan entregar la mejor herramienta para el negocio.'
 				}
 				]
-			},
+			}
+			/*
+			,
 			{	
 				seccion: 'SERVICIOS',
 				tituloClase: 'outsourcing',
@@ -166,6 +170,7 @@ angular.module( 'Tres.template')
 				}
 				]
 			}
+			*/
 		];
 
 		vm.slidesInnovacion = [
@@ -175,16 +180,22 @@ angular.module( 'Tres.template')
 				titulo: "3IT Labs",
 				tituloColor: '#3f9b49',
 				backgroundColor: '63,155,73',
-				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				descripcion: "Desarrollamos distintas actividades que potencian el espíritu de innovación dentro del equipo, de esta forma destinamos tiempo en investigar y desarrollar nuevas tecnologías con el fin de estar en una mejora continua.",
 				botonText: "VER MÁS",
 				image: './assets/images/innovacion-background.jpg',
 				tituloDetalle: "3IT Labs",
-				textoDetalle:"dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+                textoDetalle: "",
 				detalles: [
 				{
-					titulo: 'Titulo 1',
-					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
+					titulo: 'RA&I',
+					descripcion: 'Contamos con RA&I Squad, especialistas en revivir apps e ideas.'
 				},
+                    {
+                        titulo: 'REVIVING APPS & IDEAS',
+                        descripcion: ''
+                    }
+
+				/*,
 				{
 					titulo: 'Titulo 2',
 					descripcion: 'Lorem ipsum dolor sit amet, quaerat quia laudantium.'
@@ -197,11 +208,18 @@ angular.module( 'Tres.template')
 					titulo: 'Titulo 4',
 					descripcion: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laboriosam rem id porro, tempore eligendi veniam, harum quae voluptatum quos blanditiis. Dolores ullam, molestias maiores dolorem reprehenderit quaerat quia laudantium.'
 				}
+				*/
 				]
 			}
 		];
 
 
+
+		/*
+		* entrada para el blog
+		* */
+
+		/*
 		vm.contenidoBlog = [
 			{	titulo: "Título Columna",
 				descripcion: "dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -220,7 +238,7 @@ angular.module( 'Tres.template')
 				image: './assets/images/blog/imagen-blog.jpg'
 			}
 		];
-
+		*/
 		vm.slidesMarcas = [
 			{	
 				colorMarca: '#293061',

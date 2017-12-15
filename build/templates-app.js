@@ -155,7 +155,7 @@ angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateC
 angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/tres-controller/tres.tpl.html",
     "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
-    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative hidden-xs seccion-parallax\" id=\"inicio\">\n" +
+    "<section ng-parallax pattern=\"'./assets/images/home-background.jpg'\" class=\"relative hidden-xs seccion-parallax\" id=\"inicio\"  speed=\"0\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
     "            <div class=\"linkedin\">\n" +
@@ -172,7 +172,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "</section> <!-- END SECCION IMAGEN PRINCIPAL --> \n" +
     "\n" +
     "<!-- SECCION IMAGEN PRINCIPAL  -->\n" +
-    "<section ng-parallax pattern=\"'./assets/images/m-home-background.jpg'\" class=\"relative visible-xs seccion-parallax\" id=\"inicio\">\n" +
+    "<section  class=\"relative visible-xs seccion-parallax\" id=\"inicioMobile\" style=\"background-image: url(./assets/images/m-home-background.jpg)\">\n" +
     "    <div class=\"overlap-home\">\n" +
     "        <div class=\"container-fluid relative\">\n" +
     "            <div class=\"linkedin\">\n" +
@@ -192,28 +192,6 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "<!-- SECCION MISION - VISION - VALORES -->\n" +
     "<div class=\"container-fluid mvv\"  id=\"quienes\">\n" +
     "    <div class=\"row\">\n" +
-    "         <span class=\"btn-volver-detalle\">\n" +
-    "                        <svg version=\"1.1\" id=\"svg-volver\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n" +
-    "                             viewBox=\"0 0 93.8 91.4\" style=\"enable-background:new 0 0 93.8 91.4;\" xml:space=\"preserve\">\n" +
-    "                        <g id=\"circulos-izquierda\">\n" +
-    "                            <circle class=\"st0\" cx=\"45.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"35.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"25.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"15.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"5.8\" cy=\"20.8\" r=\"3.1\"/>\n" +
-    "                        </g>\n" +
-    "                        <g id=\"circulos-abajo\">\n" +
-    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"47.1\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"57.1\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"67.1\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"77.1\" r=\"3.1\"/>\n" +
-    "                            <circle class=\"st0\" cx=\"72.1\" cy=\"87.1\" r=\"3.1\"/>\n" +
-    "                        </g>\n" +
-    "                        <path id=\"icono-grande\" class=\"st1\" d=\"M72,2.3c-10.4,0-18.7,8.3-18.7,18.6S61.6,39.5,72,39.5s18.7-8.3,18.7-18.6S82.3,2.3,72,2.3z\n" +
-    "                             M78,21.1l-11.7,7.2c-0.2,0.1-0.4-0.1-0.3-0.3l4.5-7c0-0.1,0-0.1,0-0.2l-4.5-7c-0.1-0.2,0.1-0.4,0.3-0.3L78,20.7\n" +
-    "                            C78.1,20.8,78.1,21,78,21.1z\"/>\n" +
-    "                        </svg>\n" +
-    "                    </span>\n" +
     "        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none\">\n" +
     "            <slick dots=\"true\"\n" +
     "                       infinite=\"false\"\n" +
@@ -410,79 +388,83 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "<div class=\"container-fluid seccion-marcas\" id=\"clientes\">\n" +
     "        <div class=\"row listado-marcas animated\" ng-class=\"marcaDetalle ? 'fadeOut listado-inactivo' : 'listado-activo'\">\n" +
     "\n" +
+    "<!--\n" +
     "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-bch\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(0)\">\n" +
+    "-->\n" +
+    "\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-bch\" ng-click___=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(0)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
     "                    <i class=\"i1\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-bch.png\" class=\"logo-bch\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-bch.png\" class=\"logo-bch\">\n" +
     "                    </i>\n" +
     "                    <i class=\"i2\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-bch.png\" class=\"logo-bch\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-bch.png\" class=\"logo-bch\">\n" +
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
     "\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-udla\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(1)\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-udla\" ng-click___=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(1)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
     "                    <i class=\"i1\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-udla.png\" class=\"logo-udla\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-udla.png\" class=\"logo-udla\">\n" +
     "                    </i>\n" +
     "                    <i class=\"i2\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-udla.png\" class=\"logo-udla\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-udla.png\" class=\"logo-udla\">\n" +
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-intervalores\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(2)\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-intervalores\" ng-click___=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(2)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
     "                    <i class=\"i1\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-intervalores.png\" class=\"logo-intervalores\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-intervalores.png\" class=\"logo-intervalores\">\n" +
     "                    </i>\n" +
     "                    <i class=\"i2\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-intervalores.png\" class=\"logo-intervalores\">\n" +
-    "                    </i>\n" +
-    "                </a>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-aiep\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(3)\">\n" +
-    "                <a href=\"\">\n" +
-    "                    <div class=\"bg1\"></div>\n" +
-    "                    <div class=\"bg2\"></div>\n" +
-    "                    <i class=\"i1\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-aiep.png\" class=\"logo-aiep\">\n" +
-    "                    </i>\n" +
-    "                    <i class=\"i2\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-aiep.png\" class=\"logo-aiep\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-intervalores.png\" class=\"logo-intervalores\">\n" +
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
     "\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-credichile\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(4)\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-aiep\" ng-click___=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(3)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
     "                    <i class=\"i1\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-credichile.png\" class=\"logo-credichile\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-aiep.png\" class=\"logo-aiep\">\n" +
     "                    </i>\n" +
     "                    <i class=\"i2\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-credichile.png\" class=\"logo-credichile\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-aiep.png\" class=\"logo-aiep\">\n" +
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
     "\n" +
-    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-er\" ng-click=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(5)\">\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-credichile\" ng-click___=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(4)\">\n" +
     "                <a href=\"\">\n" +
     "                    <div class=\"bg1\"></div>\n" +
     "                    <div class=\"bg2\"></div>\n" +
     "                    <i class=\"i1\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-er.png\" class=\"logo-er\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-credichile.png\" class=\"logo-credichile\">\n" +
     "                    </i>\n" +
     "                    <i class=\"i2\">\n" +
-    "                        <img src=\"../assets/images/marcas/logo-er.png\" class=\"logo-er\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-credichile.png\" class=\"logo-credichile\">\n" +
+    "                    </i>\n" +
+    "                </a>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"col-xs-6 col-sm-4 col-md-4 col-lg-4 marca marca-er\" ng-click___=\"marcaDetalle = !marcaDetalle ; slickConfig.method.slickGoTo(5)\">\n" +
+    "                <a href=\"\">\n" +
+    "                    <div class=\"bg1\"></div>\n" +
+    "                    <div class=\"bg2\"></div>\n" +
+    "                    <i class=\"i1\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-er.png\" class=\"logo-er\">\n" +
+    "                    </i>\n" +
+    "                    <i class=\"i2\">\n" +
+    "                        <img src=\"./assets/images/marcas/logo-er.png\" class=\"logo-er\">\n" +
     "                    </i>\n" +
     "                </a>\n" +
     "            </div>\n" +
