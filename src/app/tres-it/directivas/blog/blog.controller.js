@@ -2,7 +2,7 @@
     angular.module( 'Tres.template')
         .controller('tresblogCtrl',tresblogCtrl);
 
-    function tresblogCtrl($scope,  NgMap, upload , $http) {
+    function tresblogCtrl($scope) {
 
         var vm = this;
 

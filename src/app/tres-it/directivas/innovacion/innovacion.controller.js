@@ -2,7 +2,7 @@
     angular.module( 'Tres.template')
         .controller('tresInnovacionCtrl',tresInnovacionCtrl);
 
-    function tresInnovacionCtrl($scope,  NgMap, upload , $http) {
+    function tresInnovacionCtrl($scope) {
 
 		var vm = this;
 		

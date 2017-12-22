@@ -140,7 +140,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                        <div class=\"group\">\n" +
     "                            <div class=\"styled-select\" ng-click=\"uploadClick=true\">\n" +
     "                                <select name=\"\" id=\"\">\n" +
-    "                                    <option value=\"\" selected=\"\" disabled=\"\"> </option>\n" +
+    "                                    <option value=\"\" selected=\"\" disabled=\"true\"> </option>\n" +
     "                                    <option value=\"\">Servicio 1</option>\n" +
     "                                    <option value=\"\">Servicio 2</option>\n" +
     "                                    <option value=\"\">Servicio 3</option>\n" +

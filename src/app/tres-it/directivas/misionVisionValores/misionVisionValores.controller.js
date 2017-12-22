@@ -2,7 +2,7 @@
     angular.module( 'Tres.template')
         .controller('tresMisionVisionValoresCtrl',tresMisionVisionValoresCtrl);
 
-    function tresMisionVisionValoresCtrl($scope,  NgMap, upload , $http) {
+    function tresMisionVisionValoresCtrl($scope) {
 
         var vm = this;
 

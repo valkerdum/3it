@@ -2,7 +2,7 @@
     angular.module( 'Tres.template')
         .controller('tresMarcasCtrl',tresMarcasCtrl);
 
-    function tresMarcasCtrl($scope,  NgMap, upload , $http) {
+    function tresMarcasCtrl($scope) {
 
         var vm = this;
 

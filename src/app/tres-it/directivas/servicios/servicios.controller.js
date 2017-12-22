@@ -2,7 +2,7 @@
     angular.module( 'Tres.template')
         .controller('tresServiciosCtrl',tresServiciosCtrl);
 
-    function tresServiciosCtrl($scope,  NgMap, upload , $http) {
+    function tresServiciosCtrl($scope) {
 
         var vm = this;
         vm.hideDots = function() {
