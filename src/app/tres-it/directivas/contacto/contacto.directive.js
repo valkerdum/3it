@@ -5,15 +5,15 @@
 
     function contactoDirectiva(){
 
-        var urlBase = 'tres-it/directivas/';
+        var urlBase = 'tres-it/directivas/contacto/';
         return {
             restrict: 'AE',
             scope:{
                 tipo:'@'
             },
-            templateUrl: urlBase+'contacto2.tpl.html',
-            controller: 'tresContacto2Ctrl',
-            controllerAs:'tres2Contacto'
+            templateUrl: urlBase+'contacto.tpl.html',
+            controller: 'tresContactoCtrl',
+            controllerAs:'tresContacto'
 
 
         };

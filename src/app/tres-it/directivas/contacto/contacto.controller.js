@@ -1,8 +1,8 @@
 (function(){
     angular.module( 'Tres.template')
-        .controller('tresContacto2Ctrl',tresContacto2Ctrl);
+        .controller('tresContactoCtrl',tresContactoCtrl);
 
-    function tresContacto2Ctrl($scope,  NgMap, upload , $http) {
+    function tresContactoCtrl($scope,  NgMap, upload , $http) {
 
         var vm = this;
 

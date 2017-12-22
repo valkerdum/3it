@@ -8,9 +8,9 @@ function bancoChileConfig( $stateProvider ) {
         url: '/',
         views: {
             "main@": {
-                controller: 'tresCtrl',
-                controllerAs: 'tres',
-                templateUrl: urlBase + 'tres-controller/tres.tpl.html'
+                controller: 'mainCtrl',
+                controllerAs: 'main',
+                templateUrl: urlBase + 'main.tpl.html'
             }
         },
         data:{ pageTitle: 'Home' }

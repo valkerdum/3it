@@ -1,0 +1,27 @@
+<!-- SECCION MISION - VISION - VALORES -->
+<div class="container-fluid mvv" id="quienes">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
+            <slick dots="true" infinite="false" speed="300" slides-to-show="1" touch-move="false" slides-to-scroll="1">
+
+                <div ng-repeat="r in tresMision.slides">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <img src="{{r.image}}" alt="Image" class="img-mvv">
+
+                        <div class="description-container col-sm-12 col-sm-offset-6">
+                            <h4 class="uni-regular-italic animated delay {{r.textoCabeceraAnimacion}}">{{r.textoCabecera}}</h4>
+                            <h2 class="uni-heavy animated delaytwo {{r.tituloAnimacion}}">{{r.titulo}}</h2>
+                            <h4 class="uni-bold animated {{r.bajadaAnimacion}} delayTres">{{r.textoBajada}}</h4>
+                            <img src="{{r.listado}}" class="animated {{r.bajadaAnimacion}} delayTres">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </slick>
+
+        </div>
+    </div>
+</div>
+<!-- END SECCION MISION - VISION - VALORES  -->

@@ -1,0 +1,74 @@
+<!-- SECCION SERVICIOS-->
+<div class="container-fluid servicios" id="goservicios">
+    <div class="row">
+        <img src="./assets/images/3it-servicios.svg" width="215" height="34" class="logo-3it-servicios">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padd-none">
+            <slick dots="true" infinite="false" speed="300" slides-to-show="1" touch-move="true" slides-to-scroll="1" mobileFirst="true"
+                respondTo="window" adaptiveHeight="true" variableWidth="true">
+
+                <div ng-repeat="serv in tresServicios.slidesServicios">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 cont-slider" style="background-image: url({{serv.image}});border-top-color:{{serv.tituloColor}};">
+                        <img src="{{serv.image}}" class="invisible" alt="">
+                        <a href="javascript:void(0);" class="animated btn-volver-detalle" ng-click="agiles = !agiles ; tresServicios.showDots()" ng-class="agiles ? 'fadeIn' : 'fadeOut visible-hidden'">
+                            <svg version="1.1" id="svg-volver" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 93.8 91.4" style="enable-background:new 0 0 93.8 91.4;" xml:space="preserve">
+                                <path id="icono-grande" class="st0" d="M72.1,2c-10.4,0-18.7,8.4-18.7,18.8s8.4,18.8,18.7,18.8s18.8-8.4,18.8-18.8S82.5,2,72.1,2z
+                             M83.3,28.8c-0.2,0-0.5-0.1-0.6-0.3c-4.6-5.3-11.3-4.1-11.3-4.1v3.7c0,0.4-0.3,0.7-0.7,0.7c-0.2,0-0.3-0.1-0.4-0.1l-9.5-7.1
+                            c-0.5-0.4-0.6-1.1-0.2-1.6c0.1-0.1,0.1-0.2,0.2-0.2l9.5-7.1c0.3-0.2,0.8-0.2,1,0.1c0.1,0.1,0.2,0.3,0.2,0.5V17
+                            c10.3,0,12.3,7.2,12.6,11C84,28.4,83.7,28.8,83.3,28.8z" />
+                                <g id="circulos-izquierda" style="fill:{{serv.tituloColor}};">
+                                    <circle class="st0" cx="45.8" cy="20.8" r="3.1" />
+                                    <circle class="st0" cx="35.8" cy="20.8" r="3.1" />
+                                    <circle class="st0" cx="25.8" cy="20.8" r="3.1" />
+                                    <circle class="st0" cx="15.8" cy="20.8" r="3.1" />
+                                    <circle class="st0" cx="5.8" cy="20.8" r="3.1" />
+                                </g>
+                                <g id="circulos-abajo" style="fill:{{serv.tituloColor}};">
+                                    <circle class="st0" cx="72.1" cy="47.1" r="3.1" />
+                                    <circle class="st0" cx="72.1" cy="57.1" r="3.1" />
+                                    <circle class="st0" cx="72.1" cy="67.1" r="3.1" />
+                                    <circle class="st0" cx="72.1" cy="77.1" r="3.1" />
+                                    <circle class="st0" cx="72.1" cy="87.1" r="3.1" />
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="description-container animated {{serv.tituloClase}}" ng-class="agiles ? 'fadeOutLeft visible-hidden' : 'fadeIn'">
+                            <h2 class="uni-heavy" style="color:{{serv.tituloColor}};">
+                                {{serv.titulo}}
+                            </h2>
+                            <p class="text-white uni-bold">{{serv.descripcion}}</p>
+                            <button class="btn btn-it-base clear" style="border-color:{{serv.tituloColor}};" ng-click="agiles = !agiles ; tresServicios.hideDots() ">{{serv.botonText}}</button>
+                        </div>
+
+                        <div class="info-detalle animated text-center" ng-class="agiles ? 'fadeIn' : 'visible-hidden fadeInDown'" style="background-color: rgba({{serv.backgroundColor}},.6);">
+                            <h2 class="uni-heavy">
+                                {{serv.tituloDetalle}}
+                            </h2>
+                            <h4 class="text-white uni-bold">{{serv.textoDetalle}}</h4>
+                        </div>
+                    </div>
+                    <div class="detalle-servicio" ng-class="agiles ? 'fadeInDown' : 'hidden fadeInUp'">
+                        <div style="background:{{serv.tituloColor}};" class="col-xs-12 pl-0 pr-0 pt-25 pb-25">
+                            <div class="col-xs-12 col-sm-6 pl-0 pr-0">
+                                <h2 class="servicios__detalle__titulo col-xs-offset-1 col-xs-10 uni-heavy mt-0 mb-0">{{serv.seccion}}</h2>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl-0 pr-0 servicios__detalle">
+                            <div class="servicios__detalle__cell col-xs-12 col-sm-6 pl-0 pr-0" ng-repeat="detalle in serv.detalles">
+                                <div class="col-xs-offset-1 col-xs-10">
+                                    <h3 style="color: {{serv.tituloColor}};">{{detalle.titulo}}</h3>
+                                    <p>{{detalle.descripcion}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- servicios -->
+
+
+            </slick>
+
+        </div>
+    </div>
+</div>
+<!-- END SECCION SERVICIOS  -->
