@@ -14,19 +14,7 @@ function bancoChileConfig( $stateProvider ) {
             }
         },
         data:{ pageTitle: 'Home' }
-    })
-    .state('contacto', {
-            parent: 'root',
-            url: '/contacto',
-            views: {
-                "main@": {
-                    controller: 'tresChileCtrl',
-                    controllerAs: 'tres',
-                    templateUrl: urlBase + 'banco-controller/contacto.tpl.html'
-                }
-            },
-            data:{ pageTitle: 'Contacto' }
-        });
+    });
 }
 
 })();

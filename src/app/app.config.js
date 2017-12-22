@@ -13,10 +13,12 @@ function myAppConfig($stateProvider, $urlRouterProvider,$animateProvider) {
             },
             "main@": {
 
-            },            
-            "contacto@": {
+            },
+
+            /*"contacto@": {
                 templateUrl: 'tres-it/tres-controller/contacto.tpl.html'
             },
+            */
             "footer@": {
                 templateUrl: 'templates/footer.tpl.html'
             }

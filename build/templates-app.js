@@ -1,4 +1,156 @@
-angular.module('templates-app', ['tres-it/tres-controller/contacto.tpl.html', 'tres-it/tres-controller/tres.tpl.html']);
+angular.module('templates-app', ['tres-it/directivas/contacto2.tpl.html', 'tres-it/tres-controller/contacto.tpl.html', 'tres-it/tres-controller/tres.tpl.html']);
+
+angular.module("tres-it/directivas/contacto2.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("tres-it/directivas/contacto2.tpl.html",
+    "<div class=\"col-xs-12 padd-none\">\n" +
+    "    <section class=\"view-contacto flex relative\" id=\"contacto\">\n" +
+    "        <div class=\"col-lg-8 col-sm-7 col-xs-12 padd-none wrap-step\">\n" +
+    "            <ul class=\"steps\" ng-hide=\"step4 == true\">\n" +
+    "                <li ng-class='{activo: !step1, inactivo: step1}'>1</li>\n" +
+    "                <li ng-class='{activo: step2}'>2</li>\n" +
+    "                <li ng-class='{activo: step3}'>3</li>\n" +
+    "            </ul>\n" +
+    "        </div>\n" +
+    "        <div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 col-sm-7 col-xs-12 flex relative backgorund-logo\">\n" +
+    "            <div class=\"col-xs-12 vertical-align\" ng-hide=\"step2||step3||step4\">\n" +
+    "                <div class=\"w-50\">\n" +
+    "                    <h2 class=\"text-center\">¡Únete a nuestro equipo!</h2>\n" +
+    "                    <form action=\"\">\n" +
+    "                        <div class=\"row mr-0 ml-0\">\n" +
+    "                            <ul class=\"link-list\">\n" +
+    "                                <li>\n" +
+    "                                    <input type=\"radio\" id=\"proyecto\" name=\"mensaje\" ng-model=\"proyecto\" />\n" +
+    "                                    <label for=\"proyecto\">Cuéntanos tu proyecto</label>\n" +
+    "                                </li>\n" +
+    "                                <li>\n" +
+    "                                    <input type=\"radio\" id=\"trabajo\" name=\"mensaje\" ng-model=\"trabajo\" />\n" +
+    "                                    <label for=\"trabajo\">Trabaja con nosotros</label>\n" +
+    "                                </li>\n" +
+    "                            </ul>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-xs-12 text-center mt-100\">\n" +
+    "                            <button type=\"button\" ng-click=\"step1=true;step2=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "                        </div>\n" +
+    "                    </form>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-xs-12 vertical-align\" ng-show=\"step2\">\n" +
+    "                <div class=\"w-50\">\n" +
+    "                    <h2 class=\"mb-40 text-center\">Completa tus datos:</h2>\n" +
+    "                    <form class=\"form-text\">\n" +
+    "                        <div class=\"group\">\n" +
+    "                            <input type=\"text\" required>\n" +
+    "                            <span class=\"highlight\"></span>\n" +
+    "                            <span class=\"bar\"></span>\n" +
+    "                            <label>Nombre</label>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"group\">\n" +
+    "                            <input type=\"text\" required>\n" +
+    "                            <span class=\"highlight\"></span>\n" +
+    "                            <span class=\"bar\"></span>\n" +
+    "                            <label>E-mail</label>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"group\">\n" +
+    "                            <input type=\"text\" required>\n" +
+    "                            <span class=\"highlight\"></span>\n" +
+    "                            <span class=\"bar\"></span>\n" +
+    "                            <label>Teléfono</label>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-xs-12 text-center\">\n" +
+    "                            <button type=\"button\" ng-click=\"step1=true;step2=false;step3=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "                            <br>\n" +
+    "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false\">\n" +
+    "                                <i class=\"custom-icon icon-reload\"></i>\n" +
+    "                            </button>\n" +
+    "                        </div>\n" +
+    "                    </form>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-xs-12 vertical-align\" ng-show=\"step3\">\n" +
+    "                <div class=\"w-50\">\n" +
+    "                    <h2 class=\"mb-40 text-center\">¿Qué tienes en mente?</h2>\n" +
+    "                    <form class=\"form-text\">\n" +
+    "                        <div class=\"group\">\n" +
+    "                            <div class=\"styled-select\" ng-click=\"uploadClick=true\">\n" +
+    "                                <select name=\"\" id=\"\">\n" +
+    "                                    <option value=\"\" selected=\"\" disabled=\"\"> </option>\n" +
+    "                                    <option value=\"\">Servicio 1</option>\n" +
+    "                                    <option value=\"\">Servicio 2</option>\n" +
+    "                                    <option value=\"\">Servicio 3</option>\n" +
+    "                                </select>\n" +
+    "                            </div>\n" +
+    "                            <span class=\"highlight\"></span>\n" +
+    "                            <span class=\"bar\"></span>\n" +
+    "                            <label ng-class=\"{activeLabel : uploadClick}\">Selecciona un servicio</label>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"group\">\n" +
+    "                            <input type=\"text\" required>\n" +
+    "                            <span class=\"highlight\"></span>\n" +
+    "                            <span class=\"bar\"></span>\n" +
+    "                            <label>Descríbenos tu proyecto</label>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"group\">\n" +
+    "                            <div class=\"btn-upload\" ng-click=\"uploadClick=true\" upload-button url=\"/upload\" param=\"file\" data=\"formData\" accept=\"{{acceptTypes}}\" multiple=\"{{allowMultiple}}\" force-iframe-upload=\"{{forceIframeUpload}}\" required=\"true|false\" on-upload=\"onUpload(files)\" on-success=\"onSuccess(response)\" on-error=\"onError(response)\"  on-complete=\"onComplete(response)\">\n" +
+    "                                <i class=\"fa fa-paperclip fa-2x text-white\"></i>\n" +
+    "                            </div>\n" +
+    "                            <input type=\"text\" required>\n" +
+    "                            <span class=\"highlight\"></span>\n" +
+    "                            <span class=\"bar\"></span>\n" +
+    "                            <label ng-class=\"{activeLabel : uploadClick}\">Deseas adjuntar un documento</label>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-xs-12 text-center\">\n" +
+    "                            <button type=\"button\" ng-click=\"tres2Contacto.onSendMail();step1=false;step2=false;step3=false;step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "                            <br>\n" +
+    "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false\">\n" +
+    "                                <i class=\"custom-icon icon-reload\"></i>\n" +
+    "                            </button>\n" +
+    "                        </div>\n" +
+    "                    </form>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-xs-12 text-center text-white vertical-align\" ng-show=\"step4\">\n" +
+    "                <div class=\"w-50\">\n" +
+    "                    <i class=\"custom-icon icon-checkmail fa-4x\"></i>\n" +
+    "                    <h3>¡Gracias por ponerte en contacto con nosotros! Tus datos han sido recepcionados con éxito y muy pronto te contactáremos.</h3>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "        <div class=\"col-lg-4 col-sm-5 col-xs-12 padd-none\">\n" +
+    "            <div class=\"mapa\">\n" +
+    "                <ng-map zoom=\"15\" center=\"[-33.4414727,-70.6528376]\" styles=\"[{stylers:[{hue: '#628b99'},{visibility:'simplified'},{gamma:1},{weight:1}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#628b99'}]}]\">\n" +
+    "                    <custom-marker id=\"can\" position=\"[-33.4414727,-70.6528376]\" on-click=\"click()\" style=\"text-align; center;\">\n" +
+    "                        <img src=\"./assets/images/map-marker-icon.png\" alt=\"\" height=\"35\" width=\"35\">\n" +
+    "                        <h4 class=\"mb-0 mt-0 text-center\">3IT</h4>\n" +
+    "                    </custom-marker>\n" +
+    "                </ng-map>\n" +
+    "            </div>\n" +
+    "            <div class=\"datos-contacto\">\n" +
+    "                <ul class=\"contact-list\">\n" +
+    "                    <li>\n" +
+    "                        <i class=\"custom-icon icon-edificio\"></i>\n" +
+    "                        <a href=\"\">Ahumada 131. <br>\n" +
+    "                            Oficinas 801, 803, 822, 823. <br>\n" +
+    "                            Santiago, Chile.</a>\n" +
+    "                    </li>\n" +
+    "                    <li>\n" +
+    "                        <i class=\"custom-icon icon-phone\"></i>\n" +
+    "                        <a href=\"tel:+56942967365\">9 4296 7365</a>\n" +
+    "                    </li>\n" +
+    "                    <li>\n" +
+    "                        <i class=\"custom-icon icon-mail\"></i>\n" +
+    "                        <a href=\"mailto:help@3it.cl\">help@3it.cl</a>\n" +
+    "                    </li>\n" +
+    "                    <li>\n" +
+    "                        <i class=\"icon ion-ios-briefcase-outline\"></i>\n" +
+    "                        <a href=\"#\">Ofertas Laborales</a>\n" +
+    "                    </li>\n" +
+    "                </ul>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </section>\n" +
+    "</div>");
+}]);
 
 angular.module("tres-it/tres-controller/contacto.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/tres-controller/contacto.tpl.html",
@@ -510,7 +662,7 @@ angular.module("tres-it/tres-controller/tres.tpl.html", []).run(["$templateCache
     "  </div>\n" +
     "<!-- END SECCION MARCAS -->\n" +
     "\n" +
-    "\n" +
+    "<contacto-directiva></contacto-directiva>\n" +
     "\n" +
     "<!-- SECCION BLOG-->\n" +
     "<div class=\"container-fluid blog\" id=\"blog\">\n" +
