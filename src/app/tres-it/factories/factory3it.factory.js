@@ -11,15 +11,22 @@
         $http,
         URI_POST_MAIL){
 
-        function sendMail(data){
+        function sendMail( data  ){
+
+
             return $http({
                 url: URI_POST_MAIL,
                 method: 'POST',
-                data: data,
+                params: data,
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
+
+
+
+
+
         }
         return{
             sendMail:sendMail

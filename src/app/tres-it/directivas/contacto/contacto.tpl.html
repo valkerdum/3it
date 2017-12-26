@@ -35,19 +35,19 @@
                     <h2 class="mb-40 text-center">Completa tus datos:</h2>
                     <form class="form-text">
                         <div class="group">
-                            <input type="text" required>
+                            <input type="text" required ng-model="tresContacto.nombre">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Nombre</label>
                         </div>
                         <div class="group">
-                            <input type="text" required>
+                            <input type="text" required ng-model="tresContacto.email">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>E-mail</label>
                         </div>
                         <div class="group">
-                            <input type="text" required>
+                            <input type="text" required ng-model="tresContacto.telefono">
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Teléfono</label>
@@ -68,7 +68,7 @@
                     <form class="form-text">
                         <div class="group">
                             <div class="styled-select" ng-click="uploadClick=true">
-                                <select name="" id="">
+                                <select name="" id="" ng-model="tresContacto.servicio">>
                                     <option value="" selected="" disabled="true"> </option>
                                     <option value="">Servicio 1</option>
                                     <option value="">Servicio 2</option>
@@ -80,7 +80,7 @@
                             <label ng-class="{activeLabel : uploadClick}">Selecciona un servicio</label>
                         </div>
                         <div class="group">
-                            <input type="text" required>
+                            <input type="text" required ng-model="tresContacto.descripcion">>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Descríbenos tu proyecto</label>
@@ -95,7 +95,7 @@
                             <label ng-class="{activeLabel : uploadClick}">Deseas adjuntar un documento</label>
                         </div>
                         <div class="col-xs-12 text-center">
-                            <button type="button" ng-click="tres2Contacto.onSendMail();step1=false;step2=false;step3=false;step4=true" class="btn-transparent">SIGUIENTE</button>
+                            <button type="button" ng-click="tresContacto.onSendMail();step1=false;step2=false;step3=false;step4=true" class="btn-transparent">SIGUIENTE</button>
                             <br>
                             <button class="btn-reload mt-20" ng-click="step1=true;step2=false">
                                 <i class="custom-icon icon-reload"></i>

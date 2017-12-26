@@ -106,19 +106,19 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                    <h2 class=\"mb-40 text-center\">Completa tus datos:</h2>\n" +
     "                    <form class=\"form-text\">\n" +
     "                        <div class=\"group\">\n" +
-    "                            <input type=\"text\" required>\n" +
+    "                            <input type=\"text\" required ng-model=\"tresContacto.nombre\">\n" +
     "                            <span class=\"highlight\"></span>\n" +
     "                            <span class=\"bar\"></span>\n" +
     "                            <label>Nombre</label>\n" +
     "                        </div>\n" +
     "                        <div class=\"group\">\n" +
-    "                            <input type=\"text\" required>\n" +
+    "                            <input type=\"text\" required ng-model=\"tresContacto.email\">\n" +
     "                            <span class=\"highlight\"></span>\n" +
     "                            <span class=\"bar\"></span>\n" +
     "                            <label>E-mail</label>\n" +
     "                        </div>\n" +
     "                        <div class=\"group\">\n" +
-    "                            <input type=\"text\" required>\n" +
+    "                            <input type=\"text\" required ng-model=\"tresContacto.telefono\">\n" +
     "                            <span class=\"highlight\"></span>\n" +
     "                            <span class=\"bar\"></span>\n" +
     "                            <label>Teléfono</label>\n" +
@@ -139,7 +139,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                    <form class=\"form-text\">\n" +
     "                        <div class=\"group\">\n" +
     "                            <div class=\"styled-select\" ng-click=\"uploadClick=true\">\n" +
-    "                                <select name=\"\" id=\"\">\n" +
+    "                                <select name=\"\" id=\"\" ng-model=\"tresContacto.servicio\">>\n" +
     "                                    <option value=\"\" selected=\"\" disabled=\"true\"> </option>\n" +
     "                                    <option value=\"\">Servicio 1</option>\n" +
     "                                    <option value=\"\">Servicio 2</option>\n" +
@@ -151,7 +151,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            <label ng-class=\"{activeLabel : uploadClick}\">Selecciona un servicio</label>\n" +
     "                        </div>\n" +
     "                        <div class=\"group\">\n" +
-    "                            <input type=\"text\" required>\n" +
+    "                            <input type=\"text\" required ng-model=\"tresContacto.descripcion\">>\n" +
     "                            <span class=\"highlight\"></span>\n" +
     "                            <span class=\"bar\"></span>\n" +
     "                            <label>Descríbenos tu proyecto</label>\n" +
@@ -166,7 +166,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            <label ng-class=\"{activeLabel : uploadClick}\">Deseas adjuntar un documento</label>\n" +
     "                        </div>\n" +
     "                        <div class=\"col-xs-12 text-center\">\n" +
-    "                            <button type=\"button\" ng-click=\"tres2Contacto.onSendMail();step1=false;step2=false;step3=false;step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "                            <button type=\"button\" ng-click=\"tresContacto.onSendMail();step1=false;step2=false;step3=false;step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "                            <br>\n" +
     "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false\">\n" +
     "                                <i class=\"custom-icon icon-reload\"></i>\n" +
