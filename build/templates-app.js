@@ -165,6 +165,14 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            <span class=\"bar\"></span>\n" +
     "                            <label ng-class=\"{activeLabel : uploadClick}\">Deseas adjuntar un documento</label>\n" +
     "                        </div>\n" +
+    "                        <div\n" +
+    "                            vc-recaptcha\n" +
+    "                            theme=\"'light'\"\n" +
+    "                            key=\"tresContacto.key\"\n" +
+    "                            on-create=\"tresContacto.setWidgetId(tresContacto.widgetId)\"\n" +
+    "                            on-success=\"tresContacto.setResponse(tresContacto.response)\"\n" +
+    "                            on-expire=\"tresContacto.cbExpiration()\"\n" +
+    "                        ></div>\n" +
     "                        <div class=\"col-xs-12 text-center\">\n" +
     "                            <button type=\"button\" ng-click=\"tresContacto.onSendMail();step1=false;step2=false;step3=false;step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "                            <br>\n" +
@@ -172,9 +180,6 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                                <i class=\"custom-icon icon-reload\"></i>\n" +
     "                            </button>\n" +
     "                        </div>\n" +
-    "\n" +
-    "                        <botdetect-captcha styleName=\"exampleCaptcha\"></botdetect-captcha>\n" +
-    "\n" +
     "                    </form>\n" +
     "                </div>\n" +
     "            </div>\n" +

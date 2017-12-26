@@ -94,6 +94,14 @@
                             <span class="bar"></span>
                             <label ng-class="{activeLabel : uploadClick}">Deseas adjuntar un documento</label>
                         </div>
+                        <div
+                            vc-recaptcha
+                            theme="'light'"
+                            key="tresContacto.key"
+                            on-create="tresContacto.setWidgetId(tresContacto.widgetId)"
+                            on-success="tresContacto.setResponse(tresContacto.response)"
+                            on-expire="tresContacto.cbExpiration()"
+                        ></div>
                         <div class="col-xs-12 text-center">
                             <button type="button" ng-click="tresContacto.onSendMail();step1=false;step2=false;step3=false;step4=true" class="btn-transparent">SIGUIENTE</button>
                             <br>

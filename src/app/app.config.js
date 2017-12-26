@@ -4,6 +4,7 @@ angular
 		.config(myAppConfig);
 
 function myAppConfig($stateProvider, $urlRouterProvider,$animateProvider) {
+    
     $animateProvider.classNameFilter(/animate-/);
     $stateProvider.state('root', {
         abstract: true,

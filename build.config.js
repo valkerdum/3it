@@ -99,7 +99,8 @@ module.exports = {
             'vendor/slick-carousel/slick/slick.js',
             'vendor/ngmap/build/scripts/ng-map.min.js',
             'vendor/angular-scroll/angular-scroll.js',
-            'vendor/angular-upload/angular-upload.min.js'
+            'vendor/angular-upload/angular-upload.min.js',
+            'vendor/angular-recaptcha/release/angular-recaptcha.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',

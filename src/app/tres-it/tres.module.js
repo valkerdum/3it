@@ -10,6 +10,7 @@
         'highcharts-ng',
         'ui-rangeSlider',
         'angular-ladda',
-        'ui.carousel'
+        'ui.carousel',
+        'vcRecaptcha'
     ]);
 })();
