@@ -151,7 +151,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            <label ng-class=\"{activeLabel : uploadClick}\">Selecciona un servicio</label>\n" +
     "                        </div>\n" +
     "                        <div class=\"group\">\n" +
-    "                            <input type=\"text\" required ng-model=\"tresContacto.descripcion\">>\n" +
+    "                            <input type=\"text\" required ng-model=\"tresContacto.descripcion\">\n" +
     "                            <span class=\"highlight\"></span>\n" +
     "                            <span class=\"bar\"></span>\n" +
     "                            <label>Descríbenos tu proyecto</label>\n" +
@@ -172,6 +172,9 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                                <i class=\"custom-icon icon-reload\"></i>\n" +
     "                            </button>\n" +
     "                        </div>\n" +
+    "\n" +
+    "                        <botdetect-captcha styleName=\"exampleCaptcha\"></botdetect-captcha>\n" +
+    "\n" +
     "                    </form>\n" +
     "                </div>\n" +
     "            </div>\n" +
