@@ -73,9 +73,9 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "    <section class=\"view-contacto flex relative\" id=\"contacto\">\n" +
     "        <div class=\"col-lg-8 col-sm-7 col-xs-12 padd-none wrap-step\">\n" +
     "            <ul class=\"steps\" ng-hide=\"step4 == true\">\n" +
-    "                <li ng-class='{activo: !step1, inactivo: step1}'>1</li>\n" +
-    "                <li ng-class='{activo: step2}'>2</li>\n" +
-    "                <li ng-class='{activo: step3}'>3</li>\n" +
+    "                <li class=\"activo\" ng-class='{activo: clase1}'>1</li>\n" +
+    "                <li ng-class='{activo: clase2}'>2</li>\n" +
+    "                <li ng-class='{activo: clase3}'>3</li>\n" +
     "            </ul>\n" +
     "        </div>\n" +
     "        <div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 col-sm-7 col-xs-12 flex relative backgorund-logo\">\n" +
@@ -96,7 +96,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            </ul>\n" +
     "                        </div>\n" +
     "                        <div class=\"col-xs-12 text-center mt-100\">\n" +
-    "                            <button type=\"button\" ng-click=\"step1=true;step2=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "                            <button type=\"button\" ng-click=\"step1=true;step2=true;clase1=true;clase2=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "                        </div>\n" +
     "                    </form>\n" +
     "                </div>\n" +
@@ -124,9 +124,9 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            <label>Teléfono</label>\n" +
     "                        </div>\n" +
     "                        <div class=\"col-xs-12 text-center\">\n" +
-    "                            <button type=\"button\" ng-click=\"step1=true;step2=false;step3=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "                            <button type=\"button\" ng-click=\"step1=true;step2=false;step3=true;clase1=true;clase2=true;clase3=true;\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "                            <br>\n" +
-    "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false\">\n" +
+    "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false;clase1=true;clase2=false;clase3=false;\">\n" +
     "                                <i class=\"custom-icon icon-reload\"></i>\n" +
     "                            </button>\n" +
     "                        </div>\n" +
@@ -135,7 +135,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "            </div>\n" +
     "            <div class=\"col-xs-12 vertical-align\" ng-show=\"step3\">\n" +
     "                <div class=\"w-50\">\n" +
-    "                    <h2 class=\"mb-40 text-center\">¿Qué tienes en mente?</h2>\n" +
+    "                    <h2 class=\"mb-40 text-center center-title\">¿Qué tienes en mente?</h2>\n" +
     "                    <form class=\"form-text\">\n" +
     "                        <div class=\"group\">\n" +
     "                            <div class=\"styled-select\" ng-click=\"uploadClick=true\">\n" +
@@ -173,10 +173,10 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            on-success=\"tresContacto.setResponse(tresContacto.response)\"\n" +
     "                            on-expire=\"tresContacto.cbExpiration()\"\n" +
     "                        ></div>\n" +
-    "                        <div class=\"col-xs-12 text-center\">\n" +
+    "                        <div class=\"col-xs-12 text-center mt-20\">\n" +
     "                            <button type=\"button\" ng-click=\"tresContacto.onSendMail();step1=false;step2=false;step3=false;step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "                            <br>\n" +
-    "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false\">\n" +
+    "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false;step3=false;clase1=true;clase2=false;clase3=false;\">\n" +
     "                                <i class=\"custom-icon icon-reload\"></i>\n" +
     "                            </button>\n" +
     "                        </div>\n" +

@@ -2,9 +2,9 @@
     <section class="view-contacto flex relative" id="contacto">
         <div class="col-lg-8 col-sm-7 col-xs-12 padd-none wrap-step">
             <ul class="steps" ng-hide="step4 == true">
-                <li ng-class='{activo: !step1, inactivo: step1}'>1</li>
-                <li ng-class='{activo: step2}'>2</li>
-                <li ng-class='{activo: step3}'>3</li>
+                <li class="activo" ng-class='{activo: clase1}'>1</li>
+                <li ng-class='{activo: clase2}'>2</li>
+                <li ng-class='{activo: clase3}'>3</li>
             </ul>
         </div>
         <div ng-parallax pattern="'./assets/images/contacto-background.jpg'" class="col-lg-8 col-sm-7 col-xs-12 flex relative backgorund-logo">
@@ -25,7 +25,7 @@
                             </ul>
                         </div>
                         <div class="col-xs-12 text-center mt-100">
-                            <button type="button" ng-click="step1=true;step2=true" class="btn-transparent">SIGUIENTE</button>
+                            <button type="button" ng-click="step1=true;step2=true;clase1=true;clase2=true" class="btn-transparent">SIGUIENTE</button>
                         </div>
                     </form>
                 </div>
@@ -53,9 +53,9 @@
                             <label>Teléfono</label>
                         </div>
                         <div class="col-xs-12 text-center">
-                            <button type="button" ng-click="step1=true;step2=false;step3=true" class="btn-transparent">SIGUIENTE</button>
+                            <button type="button" ng-click="step1=true;step2=false;step3=true;clase1=true;clase2=true;clase3=true;" class="btn-transparent">SIGUIENTE</button>
                             <br>
-                            <button class="btn-reload mt-20" ng-click="step1=true;step2=false">
+                            <button class="btn-reload mt-20" ng-click="step1=true;step2=false;clase1=true;clase2=false;clase3=false;">
                                 <i class="custom-icon icon-reload"></i>
                             </button>
                         </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-xs-12 vertical-align" ng-show="step3">
                 <div class="w-50">
-                    <h2 class="mb-40 text-center">¿Qué tienes en mente?</h2>
+                    <h2 class="mb-40 text-center center-title">¿Qué tienes en mente?</h2>
                     <form class="form-text">
                         <div class="group">
                             <div class="styled-select" ng-click="uploadClick=true">
@@ -102,10 +102,10 @@
                             on-success="tresContacto.setResponse(tresContacto.response)"
                             on-expire="tresContacto.cbExpiration()"
                         ></div>
-                        <div class="col-xs-12 text-center">
+                        <div class="col-xs-12 text-center mt-20">
                             <button type="button" ng-click="tresContacto.onSendMail();step1=false;step2=false;step3=false;step4=true" class="btn-transparent">SIGUIENTE</button>
                             <br>
-                            <button class="btn-reload mt-20" ng-click="step1=true;step2=false">
+                            <button class="btn-reload mt-20" ng-click="step1=true;step2=false;step3=false;clase1=true;clase2=false;clase3=false;">
                                 <i class="custom-icon icon-reload"></i>
                             </button>
                         </div>
