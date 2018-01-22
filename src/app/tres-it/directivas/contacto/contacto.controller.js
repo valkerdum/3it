@@ -51,6 +51,17 @@
                 };
                 factory3it.sendMail( request ).then(function(data){
                    //hacer algo
+                   alert("¡Gracias por ponerte en contacto con nosotros! Tus datos han sido recepcionados con éxito y muy pronto te contactáremos.");
+                   $scope.step1=true;
+                   $scope.step2=false;
+                   $scope.step3=false;
+                   $scope.clase1=true;
+                   $scope.clase2=false;
+                   $scope.clase3=false;
+                   clear();
+                },
+                function(error){
+
                 });
 
             } else {
@@ -61,7 +72,13 @@
 
         }
 
-
+        function clear(){
+            vm.nombre = '';
+            vm.email = '';
+            vm.telefono = '';
+            vm.servicio = '';
+            vm.descripcion = '';
+        }
     }
 
 

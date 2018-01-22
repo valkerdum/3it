@@ -174,7 +174,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            on-expire=\"tresContacto.cbExpiration()\"\n" +
     "                        ></div>\n" +
     "                        <div class=\"col-xs-12 text-center mt-20\">\n" +
-    "                            <button type=\"button\" ng-click=\"tresContacto.onSendMail();step1=false;step2=false;step3=false;step4=true\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "                            <button type=\"button\" ng-click=\"tresContacto.onSendMail();\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "                            <br>\n" +
     "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false;step3=false;clase1=true;clase2=false;clase3=false;\">\n" +
     "                                <i class=\"custom-icon icon-reload\"></i>\n" +
