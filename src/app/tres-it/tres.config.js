@@ -5,7 +5,7 @@ function bancoChileConfig( $stateProvider ) {
     var urlBase = 'tres-it/';
     $stateProvider.state('tres', {
         parent: 'root',
-        url: '/',
+        url: '/home',
         views: {
             "main@": {
                 controller: 'mainCtrl',
@@ -14,7 +14,27 @@ function bancoChileConfig( $stateProvider ) {
             }
         },
         data:{ pageTitle: 'Home' }
+    })
+    .state('3itfelicidades', {
+        parent: 'root',
+        url: '/felicidades',
+        views: {
+            "main@": {
+                controller: 'felicidadesController',
+                controllerAs: 'felicidades',
+                templateUrl: urlBase + 'felicidades/felicidades.tpl.html'
+            }
+        },
+        data: { pageTitle: 'felicidades' }
     });
+    // .state('3itfelicidades', {
+    //     parent: '3itfelicidades',
+    //     url: '/felicidades',
+    //     controller: 'felicidadesController',
+    //     controllerAs: 'felicidades',
+    //     templateUrl: urlBase + 'felicidades/felicidades.tpl.html',
+    //     data: { pageTitle: 'felicidades' }
+    // });
 }
 
 })();

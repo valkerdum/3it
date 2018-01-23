@@ -25,7 +25,8 @@ function myAppConfig($stateProvider, $urlRouterProvider,$animateProvider) {
             }
         }
     });
-    $urlRouterProvider.otherwise('/');
+    
+    $urlRouterProvider.otherwise('/home');
 }
 
 })();

@@ -1,4 +1,4 @@
-angular.module('templates-app', ['tres-it/directivas/blog/blog.tpl.html', 'tres-it/directivas/contacto/contacto.tpl.html', 'tres-it/directivas/innovacion/innovacion.tpl.html', 'tres-it/directivas/marcas/marcas.tpl.html', 'tres-it/directivas/misionVisionValores/misionVisionValores.tpl.html', 'tres-it/directivas/seccionPrincipal/principal.tpl.html', 'tres-it/directivas/servicios/servicios.tpl.html', 'tres-it/main.tpl.html']);
+angular.module('templates-app', ['tres-it/directivas/blog/blog.tpl.html', 'tres-it/directivas/contacto/contacto.tpl.html', 'tres-it/directivas/innovacion/innovacion.tpl.html', 'tres-it/directivas/marcas/marcas.tpl.html', 'tres-it/directivas/misionVisionValores/misionVisionValores.tpl.html', 'tres-it/directivas/seccionPrincipal/principal.tpl.html', 'tres-it/directivas/servicios/servicios.tpl.html', 'tres-it/felicidades/felicidades.tpl.html', 'tres-it/main.tpl.html']);
 
 angular.module("tres-it/directivas/blog/blog.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/directivas/blog/blog.tpl.html",
@@ -580,9 +580,20 @@ angular.module("tres-it/directivas/servicios/servicios.tpl.html", []).run(["$tem
     "<!-- END SECCION SERVICIOS  -->");
 }]);
 
+angular.module("tres-it/felicidades/felicidades.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("tres-it/felicidades/felicidades.tpl.html",
+    "<div>\n" +
+    "    <h1>{{felicidades.txt}}</h1>\n" +
+    "    <h2>llego?</h2>\n" +
+    "    <button ng-click=\"felicidades.volverAtras()\">\n" +
+    "    </button>\n" +
+    "\n" +
+    "</div>");
+}]);
+
 angular.module("tres-it/main.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/main.tpl.html",
-    "<principal-directiva></principal-directiva>\n" +
+    "<!-- <principal-directiva></principal-directiva>\n" +
     "\n" +
     "<mision-vision-valores-directiva></mision-vision-valores-directiva>\n" +
     "\n" +
@@ -590,9 +601,9 @@ angular.module("tres-it/main.tpl.html", []).run(["$templateCache", function($tem
     "\n" +
     "<innovacion-directiva></innovacion-directiva>\n" +
     "\n" +
-    "<marcas-directiva></marcas-directiva>\n" +
+    "<marcas-directiva></marcas-directiva> -->\n" +
     "\n" +
-    "<contacto-directiva></contacto-directiva>\n" +
-    "\n" +
-    "<blog-directiva></blog-directiva>");
+    "<contacto-directiva ></contacto-directiva>\n" +
+    "<!-- <blog-directiva></blog-directiva> -->\n" +
+    "");
 }]);
