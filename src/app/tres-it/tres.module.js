@@ -11,6 +11,7 @@
         'ui-rangeSlider',
         'angular-ladda',
         'ui.carousel',
-        'vcRecaptcha'
+        'vcRecaptcha',
+        'ngMaterial'
     ]);
 })();

@@ -94,6 +94,7 @@
                             <span class="bar"></span>
                             <label ng-class="{activeLabel : uploadClick}">Deseas adjuntar un documento</label>
                         </div>
+
                         <div
                             vc-recaptcha
                             theme="'light'"
@@ -102,8 +103,9 @@
                             on-success="tresContacto.setResponse(tresContacto.response)"
                             on-expire="tresContacto.cbExpiration()"
                         ></div>
-                        <div class="col-xs-12 text-center mt-20">
-                            <button type="button" ng-click="tresContacto.onSendMail();" class="btn-transparent">SIGUIENTE</button>
+
+                        <div class="col-xs-12 text-center mt-20" id="popcontainer">
+                            <button type="button" ng-click="tresContacto.Abrir_ventana($event);" class="btn-transparent">SIGUIENTE</button>
                             <br>
                             <button class="btn-reload mt-20" ng-click="step1=true;step2=false;step3=false;clase1=true;clase2=false;clase3=false;">
                                 <i class="custom-icon icon-reload"></i>
@@ -112,12 +114,13 @@
                     </form>
                 </div>
             </div>
-            <div class="col-xs-12 text-center text-white vertical-align" ng-show="step4">
-                <div class="w-50">
-                    <i class="custom-icon icon-checkmail fa-4x"></i>
-                    <h3>¡Gracias por ponerte en contacto con nosotros! Tus datos han sido recepcionados con éxito y muy pronto te contactáremos.</h3>
-                </div>
-            </div>
+
+                        <div class="col-xs-12 text-center text-white vertical-align" ng-show="step4">
+                            <div class="w-50">
+                                <i class="custom-icon icon-checkmail fa-4x"></i>
+                                <h3>¡Gracias por ponerte en contacto con nosotros! Tus datos han sido recepcionados con éxito y muy pronto te contactáremos.</h3>
+                            </div>
+                        </div>
 
         </div>
         <div class="col-lg-4 col-sm-5 col-xs-12 padd-none">

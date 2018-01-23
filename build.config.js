@@ -100,7 +100,9 @@ module.exports = {
             'vendor/ngmap/build/scripts/ng-map.min.js',
             'vendor/angular-scroll/angular-scroll.js',
             'vendor/angular-upload/angular-upload.min.js',
-            'vendor/angular-recaptcha/release/angular-recaptcha.js'
+            'vendor/angular-recaptcha/release/angular-recaptcha.js',
+            'vendor/angular-aria/angular-aria.js',
+            'vendor/angular-material/angular-material.js'
         ],
         css: [
             'vendor/angular-ui-select/dist/select.css',

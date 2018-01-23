@@ -40,6 +40,11 @@ angular.module( 'Tres.template')
 			$document.scrollToElementAnimated(contacto);
 		};
 
+        var ventana = angular.element(document.getElementById('ventana'));
+        vm.tocontacto = function() {
+            $document.scrollToElementAnimated(ventana);
+        };
+
 
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();

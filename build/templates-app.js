@@ -1,4 +1,4 @@
-angular.module('templates-app', ['tres-it/directivas/blog/blog.tpl.html', 'tres-it/directivas/contacto/contacto.tpl.html', 'tres-it/directivas/innovacion/innovacion.tpl.html', 'tres-it/directivas/marcas/marcas.tpl.html', 'tres-it/directivas/misionVisionValores/misionVisionValores.tpl.html', 'tres-it/directivas/seccionPrincipal/principal.tpl.html', 'tres-it/directivas/servicios/servicios.tpl.html', 'tres-it/main.tpl.html']);
+angular.module('templates-app', ['tres-it/directivas/blog/blog.tpl.html', 'tres-it/directivas/contacto/contacto.tpl.html', 'tres-it/directivas/innovacion/innovacion.tpl.html', 'tres-it/directivas/marcas/marcas.tpl.html', 'tres-it/directivas/misionVisionValores/misionVisionValores.tpl.html', 'tres-it/directivas/seccionPrincipal/principal.tpl.html', 'tres-it/directivas/servicios/servicios.tpl.html', 'tres-it/directivas/ventana/ventana.tpl.html', 'tres-it/main.tpl.html']);
 
 angular.module("tres-it/directivas/blog/blog.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/directivas/blog/blog.tpl.html",
@@ -165,6 +165,7 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            <span class=\"bar\"></span>\n" +
     "                            <label ng-class=\"{activeLabel : uploadClick}\">Deseas adjuntar un documento</label>\n" +
     "                        </div>\n" +
+    "\n" +
     "                        <div\n" +
     "                            vc-recaptcha\n" +
     "                            theme=\"'light'\"\n" +
@@ -173,8 +174,9 @@ angular.module("tres-it/directivas/contacto/contacto.tpl.html", []).run(["$templ
     "                            on-success=\"tresContacto.setResponse(tresContacto.response)\"\n" +
     "                            on-expire=\"tresContacto.cbExpiration()\"\n" +
     "                        ></div>\n" +
-    "                        <div class=\"col-xs-12 text-center mt-20\">\n" +
-    "                            <button type=\"button\" ng-click=\"tresContacto.onSendMail();\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
+    "\n" +
+    "                        <div class=\"col-xs-12 text-center mt-20\" id=\"popcontainer\">\n" +
+    "                            <button type=\"button\" ng-click=\"tresContacto.Abrir_ventana($event);\" class=\"btn-transparent\">SIGUIENTE</button>\n" +
     "                            <br>\n" +
     "                            <button class=\"btn-reload mt-20\" ng-click=\"step1=true;step2=false;step3=false;clase1=true;clase2=false;clase3=false;\">\n" +
     "                                <i class=\"custom-icon icon-reload\"></i>\n" +
@@ -580,6 +582,26 @@ angular.module("tres-it/directivas/servicios/servicios.tpl.html", []).run(["$tem
     "<!-- END SECCION SERVICIOS  -->");
 }]);
 
+angular.module("tres-it/directivas/ventana/ventana.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("tres-it/directivas/ventana/ventana.tpl.html",
+    "<html>\n" +
+    "<body>\n" +
+    "\n" +
+    "<div ng-parallax pattern=\"'./assets/images/contacto-background.jpg'\" class=\"col-lg-8 col-sm-7 col-xs-12 flex relative backgorund-logo\">\n" +
+    "<div class=\"col-xs-12 text-center text-black vertical-align\" ng-show=\"step4\">\n" +
+    "    <div class=\"w-50\">\n" +
+    "        <i class=\"custom-icon icon-checkmail fa-4x\"></i>\n" +
+    "        <h3>¡Gracias por ponerte en contacto con nosotros! Tus datos han sido recepcionados con éxito y muy pronto te contactáremos.</h3>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "</body>\n" +
+    "\n" +
+    "\n" +
+    "</html>\n" +
+    "");
+}]);
+
 angular.module("tres-it/main.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("tres-it/main.tpl.html",
     "<principal-directiva></principal-directiva>\n" +
@@ -594,5 +616,7 @@ angular.module("tres-it/main.tpl.html", []).run(["$templateCache", function($tem
     "\n" +
     "<contacto-directiva></contacto-directiva>\n" +
     "\n" +
-    "<blog-directiva></blog-directiva>");
+    "<blog-directiva></blog-directiva>\n" +
+    "\n" +
+    "");
 }]);
